@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Keeper — Support & Feedback</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="index.html"><span class="glyph">⛯</span><span class="brand-text">Keeper</span></a>
+    <nav class="links"><a href="index.html#features">Features</a><a href="index.html#why">Why</a><a href="index.html#download">Download</a></nav>
+  </header>
+
+  <main class="panel">
+    <div class="panel-inner">
+      <h1>Support & Feedback</h1>
+      <p class="muted">Share an issue or suggestion, and a copy will be saved locally with a mailto fallback for quick contact.</p>
+
+      <form id="supportForm" class="grid" style="grid-template-columns:1fr 1fr;gap:1rem;max-width:900px">
+        <label style="display:grid;gap:.3rem">
+          <span>Name</span>
+          <input name="name" required placeholder="Full name" style="padding:.8rem;border-radius:10px;border:1px solid var(--line);background:#0c0c0c;color:#fff"/>
+        </label>
+        <label style="display:grid;gap:.3rem">
+          <span>Email</span>
+          <input name="email" type="email" required placeholder="email@example.com" style="padding:.8rem;border-radius:10px;border:1px solid var(--line);background:#0c0c0c;color:#fff"/>
+        </label>
+        <label style="grid-column:1 / -1;display:grid;gap:.3rem">
+          <span>Category</span>
+          <select name="category" style="padding:.8rem;border-radius:10px;border:1px solid var(--line);background:#0c0c0c;color:#fff">
+            <option>Bug</option>
+            <option>Feature request</option>
+            <option>Design</option>
+            <option>Other</option>
+          </select>
+        </label>
+        <label style="grid-column:1 / -1;display:grid;gap:.3rem">
+          <span>Message</span>
+          <textarea name="message" rows="6" required placeholder="Describe the issue or idea…" style="padding:.8rem;border-radius:10px;border:1px solid var(--line);background:#0c0c0c;color:#fff"></textarea>
+        </label>
+        <div style="grid-column:1 / -1;display:flex;gap:.8rem">
+          <button class="btn primary" type="submit">Send</button>
+          <a class="btn ghost" href="index.html">Back</a>
+        </div>
+      </form>
+
+      <div id="toast" role="status" aria-live="polite"></div>
+    </div>
+  </main>
+
+  <footer class="foot"><p>© <span id="year"></span> Keeper</p></footer>
+
+  <script>
+    const form = document.getElementById('supportForm');
+    const toast = (t)=>{
+      const el = document.getElementById('toast');
+      el.textContent=t; el.style.opacity=1; el.style.transform='translateY(0)';
+      clearTimeout(window.__t); window.__t=setTimeout(()=>{el.style.opacity=0;el.style.transform='translateY(10px)'},1800);
+    };
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    form.addEventListener('submit', e=>{
+      e.preventDefault();
+      const data = Object.fromEntries(new FormData(form).entries());
+      const key = 'keeper-feedback';
+      const prev = JSON.parse(localStorage.getItem(key) || '[]');
+      prev.push({...data, ts: new Date().toISOString()});
+      localStorage.setItem(key, JSON.stringify(prev));
+      toast('Saved locally. Opening mail…');
+      const to = 'business.theyashsrivastava07@gmail.com';
+      const subject = encodeURIComponent(`Keeper ${data.category} from ${data.name}`);
+      const body = encodeURIComponent(`${data.message}\n\nContact: ${data.email}`);
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+      form.reset();
+    });
+  </script>
+</body>
+</html>

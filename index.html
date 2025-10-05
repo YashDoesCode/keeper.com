@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Keeper — One secure hub</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+
+<body class="booting" data-owner-name="Yash Srivastava" data-owner-email="business.theyashsrivastava07@gmail.com">
+
+  <div id="boot" class="boot" aria-hidden="true">
+
+    <video id="bootVideo" class="boot-media" src="assets/boot.mp4"
+           muted playsinline preload="auto"></video>
+
+
+    <img id="bootGif" class="boot-media" src="Assets/Logomark/Keeper Logo.gif"
+         alt="Keeper boot animation" data-duration="3.6" />
+  </div>
+  <header class="nav">
+    <a class="brand" href="#home" aria-label="Keeper Home">
+      <span class="glyph">⛯</span>
+      <span class="brand-text">Keeper</span>
+    </a>
+    <nav class="links" aria-label="Primary">
+      <a href="#features">Features</a>
+      <a href="#why">Why Keeper</a>
+      <a href="#story">Story</a>
+      <a href="#download">Download</a>
+      <a href="support.html">Support</a>
+    </nav>
+    <button id="themeToggle" class="icon" aria-label="Toggle theme">●</button>
+  </header>
+
+  <!-- Hero -->
+  <main id="home" class="hero">
+    <div class="hero-copy">
+      <h1>One secure hub for every online identity</h1>
+      <p class="subtitle">Unified protection for passwords, devices, and access—designed for speed, clarity, and absolute privacy.</p>
+      <div class="cta">
+        <a href="#features" class="btn primary">Explore Features</a>
+        <a href="#download" class="btn ghost">Get the App</a>
+      </div>
+    </div>
+    <div class="hero-art">
+      <img src="assets/keeper-logo.gif" alt="Keeper motion glyph" />
+    </div>
+  </main>
+
+  <!-- Features -->
+  <section id="features" class="panel feature-hero" aria-label="Keeper Features">
+    <div class="feature-hero-backdrop" role="img" aria-label="Designing digital product backdrop"></div>
+    <div class="panel-inner">
+      <h2>Everything needed to stay safe</h2>
+      <p>Keeper unifies multiple security tools into a single, elegant experience so protection never slows life down.</p>
+
+      <div class="grid features">
+        <article class="card">
+          <h3>Password Manager</h3>
+          <p>Zero-knowledge vault with offline export, breach alerts, and passkey-ready auth.</p>
+        </article>
+        <article class="card">
+          <h3>Malware Scan</h3>
+          <p>On-demand and scheduled scanning with behavioral heuristics and quarantine.</p>
+        </article>
+        <article class="card">
+          <h3>File Encryption</h3>
+          <p>Local AES-256 with optional multi-share links and automatic integrity checks.</p>
+        </article>
+        <article class="card">
+          <h3>Account Manager</h3>
+          <p>Unified dashboard across email, social, banking, and developer accounts.</p>
+        </article>
+        <article class="card">
+          <h3>SSH/Key Vault</h3>
+          <p>Secure enclave for SSH, API keys, and tokens with quick, audited retrieval.</p>
+        </article>
+        <article class="card">
+          <h3>Authenticator</h3>
+          <p>TOTP/Push with offline backup codes and device transfer in seconds.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Keeper -->
+  <section id="why" class="panel">
+    <div class="panel-inner">
+      <h2>Why choose Keeper</h2>
+      <p class="muted">Privacy-first design with on-device cryptography and no analytics by default.</p>
+      <p class="muted">AMOLED-perfect UI with motion that respects reduced-motion preferences.</p>
+      <p class="muted">Built for students, creators, and engineers who need speed without compromise.</p>
+    </div>
+  </section>
+
+  <!-- Story -->
+  <section id="story" class="panel">
+    <div class="panel-inner">
+      <h2>Why Keeper exists</h2>
+      <p>Keeper is a personal initiative by Yash Srivastava to make cybersecurity simpler and more human, drawing from early coding experience and visual storytelling skills.</p>
+      <p>As an AI/ML undergraduate and community builder, the focus is practical security—fast, intuitive, and reliable.</p>
+      <div class="bio">
+        <span class="tag">Creator</span>
+        <h3>Yash Srivastava</h3>
+        <p class="meta">Computer Science & AI • VFX/SFX background • New Delhi</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download (Coming Soon) -->
+  <section id="download" class="panel">
+    <div class="panel-inner">
+      <h2>Download Keeper</h2>
+      <p class="muted">All platforms are in development—tap a button to see status.</p>
+      <div class="grid downloads">
+        <button class="btn dl" data-os="macOS"><span class="ico"></span> macOS</button>
+        <button class="btn dl" data-os="Windows"><span class="ico">⊞</span> Windows</button>
+        <button class="btn dl" data-os="Android"><span class="ico">🤖</span> Android</button>
+        <button class="btn dl" data-os="iOS"><span class="ico">📱</span> iPhone (iOS)</button>
+      </div>
+      <p class="tiny">Early-access builds and public roadmap are planned.</p>
+    </div>
+  </section>
+
+  <!-- Support CTA -->
+  <section class="panel">
+    <div class="panel-inner">
+      <h2>Need help or want to share feedback?</h2>
+      <p>Use the Support & Feedback page to send details instantly or email directly.</p>
+      <div class="cta">
+        <a class="btn primary" href="support.html">Open Support</a>
+        <a class="btn ghost" id="emailOwner" href="#">Email</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <p>© <span id="year"></span> Keeper • Built by <span class="owner">Yash Srivastava</span></p>
+  </footer>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
+</body>
+</html>
