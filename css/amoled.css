@@ -32,11 +32,13 @@ body {
 }
 
 .boot-logo {
-    width: 120px;
+    width: 480px;
     height: auto;
     opacity: 0;
     transform: scale(0.8);
-    animation: logoAppear 0.3s ease-out forwards;
+    animation: logoAppear 0.4s ease-out forwards;
+    max-width: 85vw;
+    object-fit: contain;
 }
 
 @keyframes logoAppear {
