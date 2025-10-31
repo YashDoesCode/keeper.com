@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
     bootScreen.className = 'boot-screen';
     
     const logo = document.createElement('img');
-    logo.src = 'Logomark/Keeper-Rebrand.png';
+    logo.src = 'Assets/Logomark/Keeper-Rebrand.png';
     logo.alt = 'Keeper';
     logo.className = 'boot-logo';
     bootScreen.appendChild(logo);
@@ -13,8 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainContent = document.querySelector('.main-content');
     mainContent.style.visibility = 'hidden';
     
-    const isReload = sessionStorage.getItem('hasLoaded');
-    const bootDuration = isReload ? 1000 : 1200;
+    const bootDuration = 1500;
     
     setTimeout(() => {
         bootScreen.classList.add('fade-out');
