@@ -1,26 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Keeper — One secure hub</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/amoled.css">
+    <title>Keeper</title>
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 
-<body class="booting" data-owner-name="Yash Srivastava" data-owner-email="business.theyashsrivastava07@gmail.com">
-
-  <div id="boot" class="boot" aria-hidden="true">
-
-    <video id="bootVideo" class="boot-media" src="assets/Logomark/Keeper Logo.gif"
-           muted playsinline preload="auto"></video>
+<body>
+    <div class="main-content">
+    <header>
 
 
-    <img id="bootGif" class="boot-media" src="Assets/Logomark/Keeper Security.png"
-         alt="Keeper boot animation" data-duration="1.0" />
-  </div>
   <header class="nav">
     <a class="brand" href="#home" aria-label="Keeper Home">
       <span class="glyph">⛯</span>
@@ -138,11 +133,12 @@
     </div>
   </section>
 
-  <footer class="foot">
-    <p>© <span id="year"></span> Keeper • Built by <span class="owner">Yash Srivastava</span></p>
-  </footer>
+      <footer>
+    </footer>
+    </div>
 
   <div id="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
+    <script src="js/boot-animation.js"></script>
 </body>
 </html>
