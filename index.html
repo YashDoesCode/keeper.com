@@ -4,34 +4,110 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/amoled.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layout.css">
     <title>Keeper</title>
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
-  <link rel="stylesheet" href="styles.css" />
 </head>
 
 
 <body>
     <div class="main-content">
-    <header>
+  <header class="header dark-bar">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="Keeper Home">
+        <img class="brand-logo" src="Assets/Logomark/Keeper-Rebrand.png" alt="Keeper logo">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <div class="nav-item has-dropdown">
+          <a href="#" class="nav-link">Products</a>
+          <div class="dropdown">
+            <div class="dropdown-grid">
+              <div class="col-left">
+                <small class="col-label">Shop</small>
+                <ul>
+                  <li><a href="#">Keeper One</a></li>
+                  <li><a href="#">Keeper Guardian</a></li>
+                  <li><a href="#">Keeper Authenticator</a></li>
+                  <li><a href="#">Keeper Knight</a></li>
+                </ul>
+              </div>
+              <div class="col-center">
+                <small class="col-label">Quick Links</small>
+                <ul>
+                  <li><a href="#">Find a Store</a></li>
+                  <li><a href="#">Order Status</a></li>
+                  <li><a href="#">Trade In</a></li>
+                  <li><a href="#">Financing</a></li>
+                </ul>
+              </div>
+              <div class="col-right">
+                <small class="col-label">Shop Special Stores</small>
+                <ul>
+                  <li><a href="#">Certified Refurbished</a></li>
+                  <li><a href="#">Education</a></li>
+                  <li><a href="#">Business</a></li>
+                  <li><a href="#">Government</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <div class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></div>
 
-  <header class="nav">
-    <a class="brand" href="#home" aria-label="Keeper Home">
-      <span class="glyph">⛯</span>
-      <span class="brand-text">Keeper</span>
-    </a>
-    <nav class="links" aria-label="Primary">
-      <a href="#features">Features</a>
-      <a href="#why">Why Keeper</a>
-      <a href="#story">Story</a>
-      <a href="#download">Download</a>
-      <a href="support.html">Support</a>
-    </nav>
-    <button id="themeToggle" class="icon" aria-label="Toggle theme">●</button>
+        <div class="nav-item has-dropdown">
+          <a href="#download" class="nav-link">Download</a>
+          <div class="dropdown">
+            <div class="dropdown-grid">
+              <ul>
+                <li><a href="#">Windows</a></li>
+                <li><a href="#">macOS</a></li>
+                <li><a href="#">Android</a></li>
+                <li><a href="#">iOS</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+
+        <div class="nav-item has-dropdown">
+          <a href="blogs.html" class="nav-link">Blogs</a>
+          <div class="dropdown">
+            <div class="dropdown-grid">
+              <ul>
+                <li><a href="#">How to stay secure in today's modern world</a></li>
+                <li><a href="#">The Rise of AI in Cyber Defense and Threat Detection</a></li>
+                <li><a href="#">Ransomware and Strategies for Prevention</a></li>
+                <li><a href="#">Ethical Hacking and the Role of Penetration Testing in Modern Security</a></li>
+                <li><a href="#">Data Breaches and the Future of Digital Privacy</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-item has-dropdown">
+          <a href="support.html" class="nav-link">Support</a>
+          <div class="dropdown">
+            <div class="dropdown-grid">
+              <ul>
+                <li><a href="#">Report an Issue</a></li>
+                <li><a href="#">Sponsor</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">●</button>
+    </div>
+    <div class="nav-backdrop" aria-hidden="true"></div>
   </header>
 
   <!-- Hero -->
+  <div class="container">
   <main id="home" class="hero">
     <div class="hero-copy">
       <h1>One secure hub for every online identity</h1>
@@ -131,14 +207,16 @@
         <a class="btn ghost" id="emailOwner" href="#">Email</a>
       </div>
     </div>
-  </section>
+      </section>
 
+  </div>
       <footer>
     </footer>
     </div>
 
   <div id="toast" role="status" aria-live="polite"></div>
   <script src="script.js"></script>
+    <script src="js/nav.js"></script>
     <script src="js/boot-animation.js"></script>
 </body>
 </html>

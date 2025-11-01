@@ -12,6 +12,7 @@ body {
     padding: 0;
 }
 
+/* Boot Animation - Temporarily Disabled
 .boot-screen {
     position: fixed;
     top: 0;
@@ -60,3 +61,4 @@ body {
 .main-content.visible {
     opacity: 1;
 }
+*/
