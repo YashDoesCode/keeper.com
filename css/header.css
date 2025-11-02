@@ -2,48 +2,137 @@
     --amoled-black: #000000;
     --white: #ffffff;
     --muted: #9b9b9b;
+    --accent-color: #8A2BE2;
+    --card-background: #121212;
 }
 
-/* Boot overlay */
-.boot-screen{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:var(--amoled-black);z-index:2000}
-.boot-screen.fade-out{opacity:0;transition:opacity .36s ease;pointer-events:none}
-.boot-logo{max-width:42vw;max-height:42vh;width:auto;height:auto;display:block}
+/* Header */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent;
+    z-index: 1001;
+    transition: background 0.3s ease;
+}
+.header.scrolled {
+    background: rgba(0,0,0,0.8);
+    backdrop-filter: blur(10px);
+}
+.header-inner{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding: 20px 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
 
-.header{background:transparent}
+.brand{
+    display:flex;
+    align-items:center;
+    gap:6px;
+    color:var(--white);
+    text-decoration:none;
+    font-weight:600;
+    font-size:16px;
+}
+.brand-logo{
+    height:28px;
+    width:auto;
+    display:block;
+    transition:transform .22s ease, filter .22s ease;
+}
 
-.dark-bar{background:var(--amoled-black);border-bottom:1px solid rgba(255,255,255,0.02);position:relative;z-index:1001}
-.header-inner{display:flex;align-items:center;justify-content:space-between;padding:2px 6px}
+.nav-links{
+    display:flex;
+    gap: 24px;
+    align-items:center;
+}
+.nav-item{
+    position:relative;
+}
+.nav-link{
+    color:var(--white);
+    text-decoration:none;
+    padding:8px 12px;
+    display:inline-block;
+    font-size:16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-link:hover {
+    color: var(--accent-color);
+}
 
-.brand{display:flex;align-items:center;gap:6px;color:var(--white);text-decoration:none;font-weight:600;font-size:12px}
-.brand-logo{height:22px;width:auto;display:block;transition:transform .22s ease, filter .22s ease}
+.icon-btn{
+    background:transparent;
+    border:0;
+    color:var(--white);
+    font-size:14px;
+    cursor:pointer;
+}
 
-.nav-links{display:flex;gap:8px;align-items:center}
-.nav-item{position:relative}
-.nav-link{color:var(--white);text-decoration:none;padding:3px 4px;display:inline-block;font-size:13px;transition:transform .18s ease, text-shadow .18s ease, color .12s ease, filter .18s ease}
+/* Dropdown Menu */
+.dropdown{
+    position:absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 100%;
+    width: max-content;
+    opacity:0;
+    visibility:hidden;
+    pointer-events:none;
+    transition:opacity .36s cubic-bezier(.2,.9,.2,1),transform .36s cubic-bezier(.2,.9,.2,1);
+    will-change:opacity,transform;
+    z-index:1002;
+    background: var(--card-background);
+    border: 1px solid #222;
+    box-shadow:0 10px 50px rgba(0,0,0,0.6);
+    border-radius: 16px;
+    padding: 24px;
+}
+.dropdown-grid{
+    display:grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+.dropdown ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+}
+.dropdown li{
+    margin:0;
+}
+.dropdown a{
+    color: var(--pure-white);
+    text-decoration:none;
+    font-size:16px;
+    padding: 12px 16px;
+    display: block;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+.dropdown a:hover {
+    background-color: var(--accent-color);
+    color: var(--pure-white);
+}
 
-.icon-btn{background:transparent;border:0;color:var(--white);font-size:14px;cursor:pointer}
+.has-dropdown:hover .dropdown,
+.has-dropdown:focus-within .dropdown,
+.has-dropdown.open .dropdown{
+    opacity:1;
+    visibility:visible;
+    pointer-events:auto;
+    transform: translateX(-50%) translateY(10px);
+}
 
-.dropdown{position:absolute;left:0;top:100%;width:100%;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .36s cubic-bezier(.2,.9,.2,1),transform .36s cubic-bezier(.2,.9,.2,1);will-change:opacity,transform;z-index:1002;background:#1f1f1f;border-top:1px solid rgba(255,255,255,0.02);box-shadow:0 10px 50px rgba(0,0,0,0.6);transform:translateY(10px);padding:30px 0}
-.dropdown-grid{max-width:1120px;margin:0 auto;padding:0 48px;display:grid;grid-template-columns:360px 1fr 260px;gap:48px;align-items:start;background:transparent;border-radius:0}
-.dropdown ul{list-style:none;margin:0;padding:0}
-.dropdown li{margin:6px 0}
-.dropdown a{color:#d6d6d6;text-decoration:none;font-size:15px;line-height:1.45;white-space:normal;word-break:break-word;overflow-wrap:anywhere}
+.nav-backdrop{
+    display: none; /* Not needed for this design */
+}
 
-.dropdown .col-left ul a{font-size:30px;font-weight:600;color:#ffffff;display:block;padding:10px 0}
-.dropdown .col-left .col-label{display:block;color:var(--muted);margin-bottom:10px;font-size:13px}
-.dropdown .col-center .col-label,.dropdown .col-right .col-label{display:block;color:var(--muted);margin-bottom:10px;font-size:13px}
-.dropdown .col-center ul a,.dropdown .col-right ul a{font-size:14px;color:#d0d0d0;padding:6px 0}
-
-.has-dropdown:hover .dropdown,.has-dropdown:focus-within .dropdown,.has-dropdown.open .dropdown{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
-.has-dropdown .dropdown:hover{opacity:1;visibility:visible;pointer-events:auto;transform:translateY(0)}
-
-.nav-link:hover{color:var(--white);transform:translateY(-1px);filter:drop-shadow(0 6px 18px rgba(0,0,0,0.12))}
-
-.brand-logo:hover{transform:scale(1.02) translateY(-1px);filter:drop-shadow(0 8px 22px rgba(0,0,0,0.12))}
-/* brand text removed */
-
-.nav-backdrop{position:fixed;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,0.28);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);opacity:0;visibility:hidden;transition:opacity .45s cubic-bezier(.2,.9,.2,1);z-index:1000}
-.nav-backdrop.show{opacity:1;visibility:visible}
-.has-dropdown:hover ~ .nav-backdrop,.has-dropdown:focus-within ~ .nav-backdrop{opacity:1;visibility:visible}
-
-@media(max-width:800px){.nav-links{display:none}}
+@media(max-width:800px){
+    .nav-links{display:none}
+}
