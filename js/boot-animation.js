@@ -1,7 +1,7 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const GIF_PATH = 'Assets/Logomark/Keeper-BootIn.gif';
+    const GIF_PATH = 'Assets/Logomark/Keeper-Hover Metal Animation.gif';
     const STORAGE_KEY = 'keeperBootPlayed';
     const FALLBACK_MS = 2500; 
 
