@@ -47,3 +47,21 @@ body {
 .main-content.visible {
     opacity: 1;
 }
+
+.downloads .btn.dl {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: background-color 0.3s ease;
+  }
+
+  .downloads .btn.dl .logo {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+  }
+
+  .downloads .btn.dl:hover {
+    background-color: #2a2a2a;
+  }

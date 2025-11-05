@@ -107,6 +107,7 @@ body{margin:0;color:var(--pure-white);background:var(--amoled-black)}
   text-decoration: none;
   color: inherit;
 }
+
 .card h3 {
     font-size: 24px;
     font-weight: 700;
