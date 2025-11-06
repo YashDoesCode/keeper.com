@@ -5,20 +5,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const STORAGE_KEY = 'keeperBootPlayed';
     const FALLBACK_MS = 2500; 
 
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+
         
         const urlParams = new URLSearchParams(window.location.search);
         const forcePlay = urlParams.get('boot') === '1' || urlParams.get('replayBoot') === '1' || urlParams.get('forceBoot') === '1';
 
         
-        // try {
-        //     if (!forcePlay && localStorage.getItem(STORAGE_KEY) === '1') return;
+        try {
+            if (!forcePlay && localStorage.getItem(STORAGE_KEY) === '1') return;
             
-        //     if (forcePlay) {
-        //         try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
-        //     }
-        // } catch (e) {
+            if (forcePlay) {
+                try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+            }
+        } catch (e) {
             
-        // }
+        }
 
     const mainContent = document.querySelector('.main-content');
     if (!mainContent) return;
@@ -32,8 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
     logo.alt = 'Keeper';
     bootScreen.appendChild(logo);
     document.body.appendChild(bootScreen);
-    
-    mainContent.style.visibility = 'hidden';
 
     
     function parseGifDuration(buffer) {
@@ -116,13 +116,12 @@ document.addEventListener('DOMContentLoaded', () => {
         
         setTimeout(() => {
             bootScreen.classList.add('fade-out');
-            mainContent.style.visibility = 'visible';
             mainContent.classList.add('visible');
             setTimeout(() => {
                 bootScreen.remove();
             }, 360);
 
-            // try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+            try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
         }, playMs);
     }).catch(err => {
         
@@ -131,7 +130,7 @@ document.addEventListener('DOMContentLoaded', () => {
             mainContent.style.visibility = 'visible';
             mainContent.classList.add('visible');
             setTimeout(() => bootScreen.remove(), 360);
-            // try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
+            try { localStorage.setItem(STORAGE_KEY, '1'); } catch (e) {}
         }, FALLBACK_MS);
     });
 });

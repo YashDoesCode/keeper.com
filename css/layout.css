@@ -12,6 +12,9 @@ body{margin:0;color:var(--pure-white);background:var(--amoled-black)}
     height: 100vh;
     text-align: center;
     padding: 0 24px;
+    background-image: url('../Assets/Logomark/CyberNetowork-Rewamped.gif');
+    background-size: cover;
+    background-position: center;
 }
 .hero h1{
     font-size: 64px;
@@ -119,4 +122,64 @@ body{margin:0;color:var(--pure-white);background:var(--amoled-black)}
     margin: 0;
 }
 
+/* Support Form */
+#supportForm {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+#supportForm label {
+    display: grid;
+    gap: .3rem;
+}
+
+#supportForm input,
+#supportForm select,
+#supportForm textarea {
+    padding: .8rem;
+    border-radius: 10px;
+    border: 1px solid #222;
+    background: #0c0c0c;
+    color: #fff;
+    width: 100%;
+}
+
+#supportForm select {
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath d='M8 11.293l-4.646-4.647a.5.5 0 0 1 .708-.708L8 9.879l4.939-4.939a.5.5 0 0 1 .708.708L8 11.293z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right .8rem center;
+    background-size: 1em;
+}
+
+#supportForm div {
+    grid-column: 1 / -1;
+    display: flex;
+    gap: .8rem;
+}
+
 .footer{padding:30px 0;text-align:center;color:#9b9b9b}
+
+::-webkit-scrollbar {
+  width: 12px;
+  height: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.2);
+}

@@ -40,11 +40,13 @@ body {
 
 .main-content {
     opacity: 0;
+    display: none;
     transition: opacity 0.3s ease-in;
 }
 
 .main-content.visible {
     opacity: 1;
+    display: block;
 }
 
 .downloads .btn.dl {

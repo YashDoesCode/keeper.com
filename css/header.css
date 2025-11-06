@@ -12,6 +12,8 @@
     top: 0;
     left: 0;
     width: 100%;
+            To set the background image on the homepage (the "hero" section, above "Everything needed to stay safe") to Assets/Logomark/Keeper-Rebrand-Silver-TRN.png and ensure it does not extend beyond the "Everything needed to stay safe" section, you should apply the background image only to the .hero section in your CSS.Steps:Edit your CSS (e.g., in css/layout.css or a new CSS file):.hero {background-image: url('Assets/Logomark/Keeper-Rebrand-Silver-TRN.png');background-size: cover;      / or 'contain' if you want the whole logo visible /background-repeat: no-repeat;background-position: center center;/ Optional: set a min-height if needed for visibility // min-height: 400px; /}Ensure the background is only on the .hero section:The .hero section is defined as:     ...This means the background will not extend into the "Everything needed to stay safe" section, which is a separate .No changes are needed in your HTML—just update the CSS as above.---Summary of what this does:The background image will appear only in the "hero" area at the top of your homepage.It will not go beyond the "Everything needed to stay safe" section, because that section is a different element and does not inherit the .hero background.If you want to fine-tune the image's appearance (opacity, overlay, etc.), you can add more CSS as needed.
+        
     background: transparent;
     z-index: 1001;
     transition: background 0.3s ease;
