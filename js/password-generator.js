@@ -43,51 +43,44 @@ document.addEventListener('DOMContentLoaded', () => {
     copyButton.addEventListener('click', copyToClipboard);
 
     function generatePassword() {
-        const passwordContainer = document.querySelector('.password-display-container');
-        passwordContainer.classList.add('generating');
+        let charset = '';
+        if (includeUppercase.checked) charset += chars.uppercase;
+        if (includeLowercase.checked) charset += chars.lowercase;
+        if (includeNumbers.checked) charset += chars.numbers;
+        if (includeSpecialChars.checked) charset += chars.special;
 
-        setTimeout(() => {
-            let charset = '';
-            if (includeUppercase.checked) charset += chars.uppercase;
-            if (includeLowercase.checked) charset += chars.lowercase;
-            if (includeNumbers.checked) charset += chars.numbers;
-            if (includeSpecialChars.checked) charset += chars.special;
+        if (ambiguityFree.checked) {
+            charset = charset.split('').filter(char => !chars.ambiguous.includes(char)).join('');
+        }
 
-            if (ambiguityFree.checked) {
-                charset = charset.split('').filter(char => !chars.ambiguous.includes(char)).join('');
-            }
+        if (charset === '') {
+            passwordDisplay.value = 'Select at least one character set';
+            return;
+        }
 
-            if (charset === '') {
-                passwordDisplay.value = 'Select at least one character set';
-                passwordContainer.classList.remove('generating');
-                return;
-            }
+        let password = '';
+        let passwordLength = lengthSlider.value;
+        let minNums = parseInt(minNumbers.value, 10);
+        let minSpecs = parseInt(minSpecialChars.value, 10);
 
-            let password = '';
-            let passwordLength = lengthSlider.value;
-            let minNums = parseInt(minNumbers.value, 10);
-            let minSpecs = parseInt(minSpecialChars.value, 10);
+        for (let i = 0; i < minNums; i++) {
+            password += chars.numbers.charAt(Math.floor(Math.random() * chars.numbers.length));
+        }
 
-            for (let i = 0; i < minNums; i++) {
-                password += chars.numbers.charAt(Math.floor(Math.random() * chars.numbers.length));
-            }
+        for (let i = 0; i < minSpecs; i++) {
+            password += chars.special.charAt(Math.floor(Math.random() * chars.special.length));
+        }
 
-            for (let i = 0; i < minSpecs; i++) {
-                password += chars.special.charAt(Math.floor(Math.random() * chars.special.length));
-            }
+        for (let i = password.length; i < passwordLength; i++) {
+            password += charset.charAt(Math.floor(Math.random() * charset.length));
+        }
 
-            for (let i = password.length; i < passwordLength; i++) {
-                password += charset.charAt(Math.floor(Math.random() * charset.length));
-            }
+        password = password.split('').sort(() => 0.5 - Math.random()).join('');
 
-            password = password.split('').sort(() => 0.5 - Math.random()).join('');
-
-            passwordDisplay.value = password;
-            addToHistory(password);
-            updateStrengthIndicator();
-            calculateCrackTime();
-            passwordContainer.classList.remove('generating');
-        }, 500);
+        passwordDisplay.value = password;
+        addToHistory(password);
+        updateStrengthIndicator();
+        calculateCrackTime();
     }
 
     function copyToClipboard() {
