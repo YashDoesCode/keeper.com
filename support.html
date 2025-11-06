@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <title>Keeper — Support & Feedback</title>
-  <link rel="stylesheet" href="styles.css"/>
-  <link rel="stylesheet" href="css/autohide-header.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/amoled.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/autohide-header.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+      body {
+        font-family: 'Roboto', sans-serif;
+      }
+    </style>
+    <title>Keeper — Support & Feedback</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
 </head>
 <body>
-  <header class="nav">
-    <a class="brand" href="index.html"><span class="glyph">⛯</span><span class="brand-text">Keeper</span></a>
-    <nav class="links"><a href="index.html#features">Features</a><a href="index.html#why">Why</a><a href="index.html#download">Download</a></nav>
+    <div class="main-content">
+  <header class="header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Keeper Home">
+        <img class="brand-logo" src="Assets/Logomark/Keeper-Rebrand-Silver-TRN.png" alt="Keeper logo">
+      </a>
+      <nav class="nav-links" aria-label="Primary">
+        <div class="nav-item"><a href="index.html#features" class="nav-link">Features</a></div>
+        <div class="nav-item"><a href="index.html#why" class="nav-link">Why Keeper</a></div>
+        <div class="nav-item"><a href="index.html#download" class="nav-link">Download</a></div>
+        <div class="nav-item"><a href="about.html" class="nav-link">About</a></div>
+        <div class="nav-item"><a href="support.html" class="nav-link">Support</a></div>
+      </nav>
+      <button id="themeToggle" class="icon-btn" aria-label="Toggle theme">●</button>
+    </div>
   </header>
 
   <main class="panel">
@@ -18,29 +43,29 @@
       <h1>Support & Feedback</h1>
       <p class="muted">Share an issue or suggestion, and a copy will be saved locally with a mailto fallback for quick contact.</p>
 
-      <form id="supportForm" class="grid" style="grid-template-columns:1fr 1fr;gap:1rem;max-width:900px">
-        <label style="display:grid;gap:.3rem">
+      <form id="supportForm" class="grid">
+        <label>
           <span>Name</span>
-          <input name="name" required placeholder="Full name" style="padding:.8rem;border-radius:10px;border:1px solid var(--line);background:#0c0c0c;color:#fff"/>
+          <input name="name" required placeholder="Full name"/>
         </label>
-        <label style="display:grid;gap:.3rem">
+        <label>
           <span>Email</span>
-          <input name="email" type="email" required placeholder="email@example.com" style="padding:.8rem;border-radius:10px;border:1px solid var(--line);background:#0c0c0c;color:#fff"/>
+          <input name="email" type="email" required placeholder="email@example.com"/>
         </label>
-        <label style="grid-column:1 / -1;display:grid;gap:.3rem">
+        <label>
           <span>Category</span>
-          <select name="category" style="padding:.8rem;border-radius:10px;border:1px solid var(--line);background:#0c0c0c;color:#fff">
+          <select name="category">
             <option>Bug</option>
             <option>Feature request</option>
             <option>Design</option>
             <option>Other</option>
           </select>
         </label>
-        <label style="grid-column:1 / -1;display:grid;gap:.3rem">
+        <label>
           <span>Message</span>
-          <textarea name="message" rows="6" required placeholder="Describe the issue or idea…" style="padding:.8rem;border-radius:10px;border:1px solid var(--line);background:#0c0c0c;color:#fff"></textarea>
+          <textarea name="message" rows="6" required placeholder="Describe the issue or idea…"></textarea>
         </label>
-        <div style="grid-column:1 / -1;display:flex;gap:.8rem">
+        <div>
           <button class="btn primary" type="submit">Send</button>
           <a class="btn ghost" href="index.html">Back</a>
         </div>
