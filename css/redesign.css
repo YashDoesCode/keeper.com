@@ -1,3 +1,6 @@
+html, body {
+    height: 100%;
+}
 
 :root {
     --background-color: #000000;
@@ -53,7 +56,6 @@ body {
 
 /* Hero Section */
 .hero {
-    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -131,7 +133,7 @@ body {
     background-color: var(--card-background);
     padding: 2rem;
     border-radius: 10px;
-    text-align: left;
+    text-align: center; /* Changed to center for icons */
     border: 1px solid var(--border-color);
     transition: transform 0.3s ease;
 }
@@ -140,10 +142,47 @@ body {
     transform: translateY(-5px);
 }
 
-.feature-card .icon {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
+.icon-wrapper {
+    width: 60px; /* Adjust as needed */
+    height: 60px; /* Adjust as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%; /* For circular icons */
+    margin: 0 auto 1rem auto; /* Center the icon and add margin */
+}
+
+.icon-wrapper::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(
+        transparent,
+        var(--primary-color),
+        var(--hover-color),
+        transparent 30%
+    );
+    animation: rotate 4s linear infinite;
+}
+
+.icon-wrapper .icon {
+    position: relative;
+    z-index: 1;
+    font-size: 2.5rem; /* Adjust as needed */
+    color: var(--text-color); /* Icon color */
+    background-color: var(--card-background); /* Background to mask the gradient */
+    border-radius: 50%;
+    padding: 8px; /* Padding to make the icon smaller than the wrapper */
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
 }
 
 .feature-card h3 {
@@ -204,4 +243,99 @@ body {
     background-color: var(--card-background);
     padding: 4rem 0;
     border-radius: 10px;
+}
+
+.btn-rounded {
+    border-radius: 50px;
+}
+
+.download-buttons-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  margin: 8px;
+  background: #000000;
+  border: 2px solid #333333;
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.download-button:hover {
+  background: #1a1a1a;
+  border-color: #555555;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.download-button:active {
+  transform: translateY(0);
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.footer {
+  padding: 1rem 0;
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--muted-color);
+  border-top: 1px solid var(--border-color);
+  background-color: #111;
+}
+
+.footer a {
+  color: var(--muted-color);
+  text-decoration: none;
+}
+
+.footer a:hover {
+  color: var(--text-color);
+}
+
+.social-icons {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.social-icons a {
+  margin: 0 0.5rem;
+  color: var(--muted-color);
+  transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+  color: var(--text-color);
+}
+
+.social-icons a svg {
+
+  width: 48px;
+
+  height: 48px;
+
+}
+
+.footer p {
+  text-align: center;
+}
+
+.card-link {
+  text-decoration: none;
 }

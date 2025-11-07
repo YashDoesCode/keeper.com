@@ -9,13 +9,18 @@
     backdrop-filter: blur(10px);
     border-radius: 999px;
     z-index: 1001;
-    transition: background 0.3s ease;
+    transition: background 0.3s ease, transform 0.3s ease, opacity 0.3s ease;
     border: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     padding: 0 12px;
 }
 
+.header.hidden {
+    transform: translateX(-50%) translateY(-100px); /* Adjust as needed to hide completely */
+    opacity: 0;
+    pointer-events: none;
+}
 .nav-links{
     display:flex;
     gap: 24px;
