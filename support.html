@@ -16,7 +16,14 @@
   <script src="js/header.js"></script>
 </head>
 <body>
-
+    <nav class="header">
+        <div class="nav-links">
+            <a href="index.html" class="nav-link home-button" aria-label="Home">
+                <span class="material-symbols-outlined">home</span>
+            </a>
+            <!-- Other navigation links will go here -->
+        </div>
+    </nav>
   <div class="container">
     <section class="section">
       <h1 class="section-title">Support & Feedback</h1>
@@ -24,14 +31,17 @@
 
       <form id="supportForm" class="password-settings">
         <label>
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">person</span></div>
           <span>Name</span>
           <input name="name" required placeholder="Full name"/>
         </label>
         <label>
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">email</span></div>
           <span>Email</span>
           <input name="email" type="email" required placeholder="email@example.com"/>
         </label>
         <label>
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">category</span></div>
           <span>Category</span>
           <select name="category">
             <option>Bug</option>
@@ -41,6 +51,7 @@
           </select>
         </label>
         <label>
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">message</span></div>
           <span>Message</span>
           <textarea name="message" rows="6" required placeholder="Describe the issue or idea…"></textarea>
         </label>
@@ -53,6 +64,22 @@
       <div id="toast" role="status" aria-live="polite"></div>
     </section>
   </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/yashsrivastava07" target="_blank" rel="noopener noreferrer">
+                    <img src="Assets/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/YashDoesCode" target="_blank" rel="noopener noreferrer">
+                    <img src="Assets/github.svg" alt="GitHub">
+                </a>
+            </div>
+            <div class="license">
+                <a href="license.html">Usage of this website and its content is governed by our License Agreement</a>
+            </div>
+        </div>
+    </footer>
 
   <script src="js/boot-animation.js"></script>
   <script src="js/footer.js"></script>
