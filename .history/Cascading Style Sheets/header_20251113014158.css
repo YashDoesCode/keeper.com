@@ -365,13 +365,6 @@
     box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
 }
 
-.btn.signup-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-}
-
 .header .btn.primary {
     display: none;
 }

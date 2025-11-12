@@ -1,13 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-  <link rel="stylesheet" href="../Cascading Style Sheets/header.css" />
-  <link rel="stylesheet" href="../Cascading Style Sheets/redesign.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/redesign.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <title>Support - Keeper</title>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/redesign.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Support - Keeper</title>
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
   <style>
@@ -322,14 +333,14 @@
       scroll-margin-top: 120px;
     }
   </style>
-  <script src="../JavaScript/header.js"></script>
+  <script src="js/header.js"></script>
 </head>
 <body>
   <div class="header-container">
     <header class="header">
         <div class="nav-group">
             <a href="index.html" class="logo-link">
-                <img src="../Assets/Logomark/Keeper Security.png" alt="Keeper Logo" class="logo-mark" onerror="this.src='../Assets/Logomark/Keeper Logo.gif'">
+                <img src="Assets/Logomark/Keeper Security.png" alt="Keeper Logo" class="logo-mark" onerror="this.src='Assets/Logomark/Keeper Logo.gif'">
             </a>
         </div>
 
@@ -501,9 +512,8 @@
     </div>
   </div>
 
-  <script src="../JavaScript/support.js"></script>
+  <script src="js/support.js"></script>
   <script>
-    // Handle form submissions
     document.getElementById('raiseIssueForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const formData = {
@@ -513,13 +523,10 @@
         description: document.getElementById('issueDescription').value,
         timestamp: new Date().toISOString()
       };
-      
-      // Save to localStorage
+
       const issues = JSON.parse(localStorage.getItem('keeperIssues') || '[]');
       issues.push(formData);
       localStorage.setItem('keeperIssues', JSON.stringify(issues));
-      
-      // Mailto fallback
       const mailtoLink = `mailto:support@keeper.com?subject=Issue Report: ${formData.type}&body=Name: ${formData.name}%0AEmail: ${formData.email}%0AType: ${formData.type}%0A%0ADescription:%0A${encodeURIComponent(formData.description)}`;
       window.location.href = mailtoLink;
       
@@ -536,21 +543,15 @@
         message: document.getElementById('problemMessage').value,
         timestamp: new Date().toISOString()
       };
-      
-      // Save to localStorage
       const problems = JSON.parse(localStorage.getItem('keeperProblems') || '[]');
       problems.push(formData);
       localStorage.setItem('keeperProblems', JSON.stringify(problems));
-      
-      // Mailto fallback
       const mailtoLink = `mailto:support@keeper.com?subject=Problem Report: ${formData.category}&body=Name: ${formData.name}%0AEmail: ${formData.email}%0ACategory: ${formData.category}%0A%0AMessage:%0A${encodeURIComponent(formData.message)}`;
       window.location.href = mailtoLink;
       
       alert('Problem reported successfully! A copy has been saved locally.');
       this.reset();
     });
-
-    // Smooth scroll to anchor on page load if hash is present
     window.addEventListener('load', () => {
       if (window.location.hash) {
         const element = document.querySelector(window.location.hash);

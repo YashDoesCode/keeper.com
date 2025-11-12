@@ -1,0 +1,21 @@
+# Keeper Sentinel Website Modifications TODO
+
+## Header Redesign
+- [x] Update header in index.html: Move logo to left nav-group, center nav-links (add Partners link), right nav-group with separate login/signup buttons.
+- [x] Modify header.css: Shorten header height (reduce padding), enhance backdrop for dark liquid glass, add grey-silver gradient hover on nav-links, ensure dropdown visibility.
+- [x] Update other HTML pages for consistent header (partners.html, login.html, etc.).
+
+## Animations
+- [x] Update animations.css: Add blur keyframes (1s blur, then text fade-in, header slide-in).
+- [x] Modify boot-animation.js: Change to blur effect on hero background instead of boot screen GIF.
+- [x] Ensure scroll-animation.js enables smooth scroll (already uses Lenis).
+
+## Section Adjustments
+- [x] Update index.html sections: Shorten ai-defense section height, lessen GIF gap in data-protection, remove confidentiality section, modify newsletter (copy button style, remove text).
+- [x] Add hover gradients to headings like "Sentinel" and "Data Privacy".
+
+## Cleanup
+- [ ] Remove all HTML comments from index.html and other pages.
+
+## Testing
+- [x] Test animations, responsiveness, and functionality (server running on port 8001).

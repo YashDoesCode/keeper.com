@@ -179,7 +179,6 @@ body::after {
     box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
 }
 
-/* Beta Banner */
 .beta-banner {
     margin-top: 100px;
     display: flex;
@@ -207,7 +206,6 @@ body::after {
     border-radius: 2px;
 }
 
-/* Hero Section */
 .olsa-hero {
     text-align: center;
     padding: 60px 48px 120px;
@@ -291,7 +289,6 @@ body::after {
     margin-left: 12px;
 }
 
-/* Feature Cards Section */
 .features-section {
     padding: 80px 48px;
     max-width: 1400px;
@@ -363,7 +360,6 @@ body::after {
     border-color: var(--olsa-purple);
 }
 
-/* Exchange Card Specific Styles */
 .exchange-card {
     display: flex;
     flex-direction: column;
@@ -414,7 +410,6 @@ body::after {
     transform: rotate(180deg);
 }
 
-/* Credit Card Styles */
 .credit-card-header {
     display: flex;
     justify-content: space-between;
@@ -450,7 +445,6 @@ body::after {
     font-family: 'Courier New', monospace;
 }
 
-/* Mobile Menu */
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -498,8 +492,6 @@ body::after {
 .mobile-nav a:hover {
     color: var(--olsa-purple-light);
 }
-
-/* Responsive Design */
 @media (max-width: 1024px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -569,8 +561,6 @@ body::after {
         text-align: center;
     }
 }
-
-/* Container for other pages */
 .page-container {
     max-width: 1200px;
     margin: 0 auto;
