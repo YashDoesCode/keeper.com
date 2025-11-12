@@ -7,8 +7,6 @@
     object-fit: cover;
     z-index: 1;
 }
-
-/* Fallback for GIF if video doesn't load */
 .hero-background-gif {
     position: absolute;
     top: 0;
