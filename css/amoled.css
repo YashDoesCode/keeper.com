@@ -1,9 +1,10 @@
+
 :root {
     --amoled-black: #000000;
     --pure-white: #ffffff;
-    --accent-color: #8A2BE2; /* A vibrant purple as an accent */
+    --accent-color: #8A2BE2; 
     --light-gray: #86868b;
-    --card-background: #121212; /* Dark background for cards */
+    --card-background: #121212; 
 }
 
 body {

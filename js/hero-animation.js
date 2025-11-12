@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const heroArt = document.querySelector('.hero-art img');
     if (!heroArt) return;
@@ -79,3 +80,8 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Failed to load or parse hero GIF:', err);
         });
 });
+
+const video = document.getElementById('hero-video');
+if (video) {
+  video.loop = false;
+}

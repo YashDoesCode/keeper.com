@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const headerPlaceholder = document.createElement('div');
   headerPlaceholder.setAttribute('id', 'header-placeholder');

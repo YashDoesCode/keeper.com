@@ -1,12 +1,12 @@
 document.addEventListener('DOMContentLoaded', () => {
     const GIF_PATH = 'Assets/Logomark/Keeper-Hover Metal Animation.gif';
     const STORAGE_KEY = 'keeperBootPlayed';
-    const ANIMATION_DURATION = 2500; // ms
+    const ANIMATION_DURATION = 2500; 
 
     const hasPlayed = sessionStorage.getItem(STORAGE_KEY);
 
     if (hasPlayed) {
-        return; // Don't play the animation again in this session
+        return; 
     }
 
     const bootScreen = document.createElement('div');
@@ -20,12 +20,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
         bootScreen.classList.add('fade-out');
-        window.headerLoaded.then(header => {
-            header.classList.remove('hidden');
-        });
+        if (typeof showHeader === 'function') {
+            showHeader();
+        }
         setTimeout(() => {
             bootScreen.remove();
-        }, 500); // Corresponds to the transition duration in style.css
+        }, 500); 
     }, ANIMATION_DURATION);
 
     sessionStorage.setItem(STORAGE_KEY, '1');

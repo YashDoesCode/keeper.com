@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const themeToggle = document.getElementById('themeToggle');
     if (!themeToggle) return;

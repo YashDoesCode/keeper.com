@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     const passwordDisplay = document.getElementById('passwordDisplay');
     const lengthSlider = document.getElementById('length');
@@ -127,7 +128,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const password = passwordDisplay.value;
         const charsetSize = getCharsetSize();
         const combinations = Math.pow(charsetSize, password.length);
-        const guessesPerSecond = 1e9; // 1 billion guesses per second
+        const guessesPerSecond = 1e9; 
         const seconds = combinations / guessesPerSecond;
 
         if (seconds < 60) {

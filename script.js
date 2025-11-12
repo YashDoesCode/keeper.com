@@ -1,3 +1,12 @@
+document.addEventListener('DOMContentLoaded', () => {
+  const video = document.getElementById('hero-video');
+  if (video) {
+    video.onended = () => {
+      video.pause();
+    };
+  }
+});
+
 const qs = (s, r = document) => r.querySelector(s);
 const qsa = (s, r = document) => [...r.querySelectorAll(s)];
 const toast = (msg) => {
@@ -11,12 +20,12 @@ const toast = (msg) => {
   }, 1800);
 };
 
-/* Year + mail link */
+
 qs('#year').textContent = new Date().getFullYear();
 const ownerEmail = document.body.dataset.ownerEmail || 'hello@example.com';
 qs('#emailOwner')?.setAttribute('href', `mailto:${ownerEmail}?subject=Keeper%20Support`);
 
-/* Download buttons toast */
+
 qsa('.btn.dl').forEach(btn => {
   btn.addEventListener('click', () => {
     const os = btn.dataset.os || 'your platform';
@@ -24,7 +33,7 @@ qsa('.btn.dl').forEach(btn => {
   });
 });
 
-/* Theme toggle: swap accents */
+
 const themeBtn = qs('#themeToggle');
 let alt = false;
 themeBtn?.addEventListener('click', ()=>{
