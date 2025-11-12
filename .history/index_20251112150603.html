@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/redesign.css" />
+  <link rel="stylesheet" href="css/hero-background.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Keeper - Secure Your Digital Life</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="js/header.js"></script>
+  <style>
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+    .hero.loading .hero-background-video {
+      filter: blur(8px);
+    }
+    .hero.loading .hero-content > * {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .header-container.loading {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  </style>
+</head>
+<body>
+  <div class="header-container">
+    <header class="header">
+        <div class="nav-group">
+            <a href="index.html" class="logo-link">
+                <img src="Assets/Logomark/Keeper Security.png" alt="Keeper Logo" class="logo-mark" onerror="this.src='Assets/Logomark/Keeper Logo.gif'">
+            </a>
+        </div>
+
+        <nav class="nav-group nav-links">
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Products</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="password-generator.html" class="dropdown-item">Password Generator</a>
+                        <a href="malware-scanner.html" class="dropdown-item">Malware Scanner</a>
+                        <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+                    </div>
+                </div>
+            </div>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="#download" class="nav-link smooth-scroll">Download</a>
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Support</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
+                        <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
+                        <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="nav-group">
+            <a href="login.html" class="btn login-btn">Log In</a>
+            <button class="hamburger-menu" aria-label="Toggle mobile menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+</div>
+
+<div class="mobile-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">Products</a>
+        <div class="dropdown">
+            <div class="dropdown-grid">
+                <a href="password-generator.html" class="dropdown-item">Password Generator</a>
+                <a href="malware-scanner.html" class="dropdown-item">Malware Scanner</a>
+                <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+            </div>
+        </div>
+    </div>
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="#download" class="nav-link smooth-scroll">Download</a>
+    <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">Support</a>
+        <div class="dropdown">
+            <div class="dropdown-grid">
+                <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
+                <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
+                <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-nav-buttons">
+        <a href="login.html" class="btn login-btn">Log In</a>
+    </div>
+</div>
+
+  <div class="hero">
+    <video autoplay muted playsinline loop class="hero-background-video" id="hero-video" poster="Assets/Background/Shine-Factor.gif">
+      <source src="Assets/Background/Shine-Mod-2.mp4" type="video/mp4">
+      <source src="Assets/Logomark/Cyber-Network.mp4" type="video/mp4">
+    </video>
+    <img src="Assets/Logomark/Background-homepage.gif" alt="Background" class="hero-background-gif" id="hero-gif">
+    <div class="container">
+      <div class="hero-content">
+        <h1>K E E P E R</h1>
+        <p class="subtitle">
+          Keeper is the most secure way to store your passwords and private information.
+          Prevent data breaches, ransomware and other cyber threats.
+        </p>
+        <div class="cta-buttons">
+          <a href="download.html" class="btn primary">Get Started</a>
+          <a href="why-keeper.html" class="btn ghost">Learn More</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <main class="main-content">
+  <section class="social-proof section">
+    <div class="container">
+      <div class="logos">
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+1" alt="Client Logo 1">
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+2" alt="Client Logo 2">
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+3" alt="Client Logo 3">
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+4" alt="Client Logo 4">
+        <img src="https://via.placeholder.com/150x40.png?text=Logo+5" alt="Client Logo 5">
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title">Keeper Sentinel - All-in-One Security</h2>
+      <p class="section-subtitle">
+        A standalone all-in-one product that unifies multiple security tools into a single, elegant experience.
+        These are the features of Keeper Sentinel.
+      </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="try-button-wrapper">
+              <a href="password-generator.html" class="try-button" title="Try Password Generator">Try</a>
+          </div>
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">password</span></div>
+          <h3>Password Manager</h3>
+          <p>Zero-knowledge password manager using Argon2id + SHA256-Bit-CBC encryption. Store and manage all your passwords securely with offline export, breach alerts, and passkey-ready authentication.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">pin</span></div>
+          <h3>2FA & Passkey Authenticator</h3>
+          <p>Two-factor authentication and passkey support for enhanced security. TOTP/Push notifications with offline backup codes and seamless device transfer.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">vpn_key</span></div>
+          <h3>Advanced VPN</h3>
+          <p>Site-specific VPN or full computer protection. Features industry-standard encryption, tunneling, kill switch, layering, cookie protection, and optional Onion Router (Tor) integration.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">manage_accounts</span></div>
+          <h3>Account Creator & Manager</h3>
+          <p>Create and manage accounts (Google, Microsoft, etc.) with admin console access. Monitor and recover hacked accounts, revoke service access, request data deletion via AI, and access direct account deletion links.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">enhanced_encryption</span></div>
+          <h3>BitLocker & File Encrypter</h3>
+          <p>Argon2id + SHA256-Bit-CBC encryption for files and folders. Integration with Windows File Manager and macOS Finder, fingerprint/Windows Hello unlock, stealth mode (PNG disguise), hidden folders, and Google Drive encryption.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">shield</span></div>
+          <h3>Antivirus & Web Security</h3>
+          <p>World's first lightweight solution combining recognized malware databases (partnered with Kaspersky, McAfee, etc.) and Google's dark web scan in a single scan.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">security</span></div>
+          <h3>Web Guard & Ad Blocker</h3>
+          <p>Chromium-based browser extension with safe site indicators, custom ad blocking, phishing protection, LAN intrusion prevention, and configurable filters.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy" class="section">
+    <div class="container">
+      <h2 class="section-title">Privacy & Security</h2>
+      <p class="section-subtitle">
+        Industry-leading encryption that goes beyond standard security measures.
+      </p>
+      <div class="content-block">
+        <div class="content-paragraph">
+          <h3>Award-Winning Encryption</h3>
+          <p>Keeper implements the award-winning Argon2id algorithm along with SHA256-Bit-CBC encryption, going beyond industry standards. Our lightweight application delivers impossible-to-crack security with multiple parameters, achieving almost 3X the industry standards compared to other password managers.</p>
+        </div>
+        <div class="content-paragraph">
+          <h3>Zero-Knowledge Architecture</h3>
+          <p>Keeper operates on a zero-knowledge password manager architecture, meaning we never have access to your master password or encrypted data. Your data is encrypted on your device before it's stored, ensuring complete privacy and security.</p>
+        </div>
+        <div class="content-paragraph">
+          <h3>Zero-Trust Architecture</h3>
+          <p>Our zero-trust architecture ensures that every access request is verified, regardless of origin. This multi-layered security approach protects your data from both external threats and internal vulnerabilities, providing comprehensive protection for your digital life.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="section">
+    <div class="container">
+        <h2 class="section-title">Download Keeper</h2>
+        <p class="section-subtitle">Get started with Keeper on your favorite platform.</p>
+        <div class="device-preview-placeholder">
+          <p>Device previews will be displayed here</p>
+        </div>
+        <div class="download-buttons-container">
+            <a href="#" class="download-button macos-button" aria-label="Download for macOS" onclick="showComingSoon(); return false;">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.09l-.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" fill="currentColor" /></svg>
+                Coming Soon - macOS
+            </a>
+            <a href="#" class="download-button windows-button" aria-label="Download for Windows" onclick="showComingSoon(); return false;">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.45v6.11l8.78-.05V3.4L3 5.45zm8.78 6.87l-8.78-.05v6.18l8.78 2.05v-8.18zM12.95 3v8.45l8.05.05V4.77L12.95 3zm8.05 8.72l-8.05.05v8.45l8.05-1.73v-6.77z" fill="currentColor" /></svg>
+                Coming Soon - Windows
+            </a>
+            <a href="#" class="download-button android-button" aria-label="Download for Android" onclick="showComingSoon(); return false;">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6 9.48l1.84-3.18c.16-.31.04-.69-.26-.85-.29-.15-.65-.06-.83.22l-1.88 3.24c-2.86-1.21-6.08-1.21-8.94 0L5.65 5.67c-.19-.28-.54-.37-.83-.22-.3.16-.42.54-.26.85l1.84 3.18C4.1 11.36 2.5 14.5 2.5 17.5h19c0-3-.6-6.14-3.9-8.02zM7 15.25c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25zm10 0c-.69 0-1.25-.56-1.25-1.25s.56-1.25 1.25-1.25 1.25.56 1.25 1.25-.56 1.25-1.25 1.25z" fill="currentColor" /></svg>
+                Coming Soon - Android
+            </a>
+            <a href="#" class="download-button ios-button" aria-label="Download for iOS" onclick="showComingSoon(); return false;">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" fill="currentColor" /></svg>
+                Coming Soon - iOS
+            </a>
+        </div>
+    </div>
+  </section>
+
+  <section id="how-it-works" class="section">
+    <div class="container">
+        <h2 class="section-title">How It Works</h2>
+        <p class="section-subtitle">A simple and secure process to protect your digital life.</p>
+        <div class="how-it-works-steps">
+            <div class="step">
+                <div class="step-number">1</div>
+                <h3>Create Your Vault</h3>
+                <p>Download Keeper and create your master password. This is the only password you'll ever need to remember.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <h3>Add Your Data</h3>
+                <p>Easily import your passwords, or add new items like credit cards, notes, and more.</p>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <h3>Stay Secure</h3>
+                <p>Keeper automatically fills your passwords, generates strong new ones, and alerts you to any security risks.</p>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+        <h2 class="section-title">What Our Users Say</h2>
+        <div class="testimonial-card">
+            <p class="quote">"Keeper has been a game-changer for my online security. I feel so much safer knowing all my passwords are secure in one place."</p>
+            <p class="author">- Jane Doe, Freelance Writer</p>
+        </div>
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container">
+        <h2 class="section-title">Get Started with Keeper Today</h2>
+        <p class="section-subtitle">Take control of your digital security. It's free to get started.</p>
+        <div class="cta-buttons">
+            <a href="download.html" class="btn primary">Download Now</a>
+            <a href="support.html" class="btn ghost">Contact Support</a>
+        </div>
+    </div>
+  </section>
+  </main>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+  <script src="script.js"></script>
+  <script src="js/nav.js"></script>
+  <script src="js/footer-loader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="js/scroll-animation.js"></script>
+  <script src="js/video-control.js"></script>
+  <script src="js/boot-animation.js"></script>
+  <script>
+    function showComingSoon() {
+      alert('Coming soon!');
+    }
+    
+    const lenis = new Lenis({
+      lerp: 0.05,
+      wheelMultiplier: 2.0,
+    });
+    
+    window.lenisInstance = lenis;
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const hasPlayed = sessionStorage.getItem('keeperBootPlayed');
+      const hero = document.querySelector('.hero');
+      const heroContent = document.querySelector('.hero-content');
+      const headerContainer = document.querySelector('.header-container');
+      const video = document.getElementById('hero-video');
+
+      if (!hasPlayed) {
+        hero.classList.add('loading');
+        headerContainer.classList.add('loading');
+
+        const tl = anime.timeline({
+          easing: 'easeOutExpo',
+          complete: () => {
+            hero.classList.remove('loading');
+            headerContainer.classList.remove('loading');
+            sessionStorage.setItem('keeperBootPlayed', 'true');
+          }
+        });
+
+        tl.add({
+          targets: video,
+          filter: ['blur(8px)', 'blur(0px)'],
+          duration: 1000,
+          delay: 500
+        });
+
+        tl.add({
+          targets: '.hero-content > *',
+          opacity: [0, 1],
+          translateY: [20, 0],
+          delay: anime.stagger(150, {start: 200})
+        }, '-=500');
+
+        tl.add({
+          targets: headerContainer,
+          opacity: [0, 1],
+          translateY: ['-100%', '0%'],
+          duration: 800
+        }, '-=800');
+      }
+    });
+  </script>
+</body>
+</html>

@@ -17,6 +17,26 @@
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="js/header.js"></script>
+  <style>
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+
+
+    .hero.loading .hero-background-video {
+      filter: blur(8px);
+    }
+    .hero.loading .hero-content > * {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    .header-container.loading {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+  </style>
 </head>
 <body>
   <div class="header-container">
@@ -92,13 +112,11 @@
     </div>
 </div>
 
-  <!-- Hero Section with Background Video -->
   <div class="hero">
     <video autoplay muted playsinline loop class="hero-background-video" id="hero-video" poster="Assets/Background/Shine-Factor.gif">
       <source src="Assets/Background/Shine-Mod-2.mp4" type="video/mp4">
       <source src="Assets/Logomark/Cyber-Network.mp4" type="video/mp4">
     </video>
-    <!-- Fallback GIF if video fails to load -->
     <img src="Assets/Logomark/Background-homepage.gif" alt="Background" class="hero-background-gif" id="hero-gif">
     <div class="container">
       <div class="hero-content">
@@ -205,7 +223,7 @@
     <div class="container">
         <h2 class="section-title">Download Keeper</h2>
         <p class="section-subtitle">Get started with Keeper on your favorite platform.</p>
-        <!-- Placeholder for MacBook and iPhone animations -->
+
         <div class="device-preview-placeholder">
           <p>Device previews will be displayed here</p>
         </div>
@@ -280,11 +298,7 @@
   <script src="js/main.js"></script>
   <script src="script.js"></script>
   <script src="js/nav.js"></script>
-  <script src="js/footer-loader.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="js/scroll-animation.js"></script>
   <script src="js/video-control.js"></script>
-  <script src="js/boot-animation.js"></script>
   <script>
     function showComingSoon() {
       alert('Coming soon!');
@@ -295,7 +309,6 @@
       wheelMultiplier: 2.0,
     });
     
-    // Store lenis instance globally for header.js to use
     window.lenisInstance = lenis;
 
     function raf(time) {
@@ -303,6 +316,48 @@
       requestAnimationFrame(raf);
     }
     requestAnimationFrame(raf);
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const hasPlayed = sessionStorage.getItem('keeperBootPlayed');
+      const hero = document.querySelector('.hero');
+      const heroContent = document.querySelector('.hero-content');
+      const headerContainer = document.querySelector('.header-container');
+      const video = document.getElementById('hero-video');
+
+      if (!hasPlayed) {
+        hero.classList.add('loading');
+        headerContainer.classList.add('loading');
+
+        const tl = anime.timeline({
+          easing: 'easeOutExpo',
+          complete: () => {
+            hero.classList.remove('loading');
+            headerContainer.classList.remove('loading');
+            sessionStorage.setItem('keeperBootPlayed', 'true');
+          }
+        });
+
+        tl.add({
+          targets: video,
+          filter: ['blur(8px)', 'blur(0px)'],
+          duration: 1000,
+          delay: 500 
+        });
+
+        tl.add({
+          targets: '.hero-content > *',
+          opacity: [0, 1],
+          translateY: [20, 0],
+          delay: anime.stagger(150, {start: 200})
+        }, '-=500'); 
+        tl.add({
+          targets: headerContainer,
+          opacity: [0, 1],
+          translateY: ['-100%', '0%'],
+          duration: 800
+        }, '-=800');
+      }
+    });
   </script>
 </body>
 </html>
