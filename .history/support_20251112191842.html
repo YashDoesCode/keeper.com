@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/redesign.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Support - Keeper</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/redesign.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Support - Keeper</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <style>
+    .support-page {
+      min-height: 100vh;
+      padding: 120px 20px 80px;
+      background: #000000;
+    }
+
+    .support-section {
+      margin-bottom: 64px;
+    }
+
+    .support-form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .support-form::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.6s ease;
+      z-index: 0;
+    }
+
+    .support-form:hover::before {
+      left: 100%;
+    }
+
+    .support-form > * {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .form-group {
+      margin-bottom: 24px;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 14px;
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      color: var(--text-color);
+      font-size: 15px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: rgba(138, 43, 226, 0.5);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+    }
+    
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .form-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn-submit {
+      padding: 14px 28px;
+      background: rgba(138, 43, 226, 0.3);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(138, 43, 226, 0.5);
+      border-radius: 12px;
+      color: var(--text-color);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-submit::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s ease;
+      z-index: 0;
+    }
+
+    .btn-submit:hover::before {
+      left: 100%;
+    }
+
+    .btn-submit:hover {
+      background: rgba(138, 43, 226, 0.5);
+      border-color: rgba(138, 43, 226, 0.7);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
+    }
+
+    .btn-back {
+      padding: 14px 28px;
+      background: rgba(255, 255, 255, 0.05);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      color: var(--text-color);
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-back:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .section-anchor {
+      scroll-margin-top: 120px;
+    }
+  </style>
+  <style>
+    .support-page {
+      min-height: 100vh;
+      padding: 120px 20px 80px;
+      background: #000000;
+    }
+
+    .support-section {
+      margin-bottom: 64px;
+    }
+
+    .support-form {
+      max-width: 700px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.05);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
+      backdrop-filter: blur(20px) saturate(180%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .support-form::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      transition: left 0.6s ease;
+      z-index: 0;
+    }
+
+    .support-form:hover::before {
+      left: 100%;
+    }
+
+    .support-form > * {
+      position: relative;
+      z-index: 1;
+    }
+    
+    .form-group {
+      margin-bottom: 24px;
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text-color);
+      font-weight: 500;
+      font-size: 14px;
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 12px 16px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      color: var(--text-color);
+      font-size: 15px;
+      font-family: inherit;
+      transition: all 0.3s ease;
+      box-sizing: border-box;
+    }
+    
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: rgba(138, 43, 226, 0.5);
+      background: rgba(255, 255, 255, 0.08);
+      box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
+    }
+    
+    .form-textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+    
+    .form-actions {
+      display: flex;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn-submit {
+      padding: 14px 28px;
+      background: rgba(138, 43, 226, 0.3);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(138, 43, 226, 0.5);
+      border-radius: 12px;
+      color: var(--text-color);
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-submit::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+      transition: left 0.6s ease;
+      z-index: 0;
+    }
+
+    .btn-submit:hover::before {
+      left: 100%;
+    }
+
+    .btn-submit:hover {
+      background: rgba(138, 43, 226, 0.5);
+      border-color: rgba(138, 43, 226, 0.7);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
+    }
+
+    .btn-back {
+      padding: 14px 28px;
+      background: rgba(255, 255, 255, 0.05);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 12px;
+      color: var(--text-color);
+      font-size: 16px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-block;
+    }
+
+    .btn-back:hover {
+      background: rgba(255, 255, 255, 0.08);
+      border-color: rgba(255, 255, 255, 0.25);
+    }
+
+    .section-anchor {
+      scroll-margin-top: 120px;
+    }
+  </style>
+  <script src="js/header.js"></script>
+</head>
+<body>
+  <div class="header-container">
+    <header class="header">
+        <div class="nav-group">
+            <a href="index.html" class="logo-link">
+                <img src="Assets/Logomark/Keeper Security.png" alt="Keeper Logo" class="logo-mark" onerror="this.src='Assets/Logomark/Keeper Logo.gif'">
+            </a>
+        </div>
+
+        <nav class="nav-group nav-links">
+            <a href="index.html#features" class="nav-link">Features</a>
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Products</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="password-manager.html" class="dropdown-item">Password Manager</a>
+                        <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
+                        <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
+                        <a href="account-manager.html" class="dropdown-item">Account Manager</a>
+                        <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+                        <a href="antivirus.html" class="dropdown-item">Antivirus</a>
+                        <a href="web-guard.html" class="dropdown-item">Web Guard</a>
+                    </div>
+                </div>
+            </div>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="index.html#download" class="nav-link">Download</a>
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Support</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
+                        <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
+                        <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="nav-group">
+            <a href="login.html" class="btn login-btn">Log In</a>
+            <button class="hamburger-menu" aria-label="Toggle mobile menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+    </header>
+  </div>
+
+  <div class="mobile-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="index.html#features" class="nav-link">Features</a>
+    <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">Products</a>
+        <div class="dropdown">
+            <div class="dropdown-grid">
+                <a href="password-manager.html" class="dropdown-item">Password Manager</a>
+                <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
+                <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
+                <a href="account-manager.html" class="dropdown-item">Account Manager</a>
+                <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+                <a href="antivirus.html" class="dropdown-item">Antivirus</a>
+                <a href="web-guard.html" class="dropdown-item">Web Guard</a>
+            </div>
+        </div>
+    </div>
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="index.html#download" class="nav-link">Download</a>
+    <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">Support</a>
+        <div class="dropdown">
+            <div class="dropdown-grid">
+                <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
+                <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
+                <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
+        </div>
+    </div>
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="index.html#download" class="nav-link">Download</a>
+    <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">Support</a>
+        <div class="dropdown">
+            <div class="dropdown-grid">
+                <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
+                <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
+                <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-nav-buttons">
+        <a href="login.html" class="btn login-btn">Log In</a>
+    </div>
+  </div>
+
+  <div class="support-page">
+    <div class="container">
+      <h2 class="section-title">Support & Feedback</h2>
+      <p class="section-subtitle">We're here to help. Choose an option below to get assistance.</p>
+
+      <section id="raise-issue" class="support-section section-anchor">
+        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 24px;">Raise an Issue/Error</h3>
+        <p class="section-subtitle" style="margin-bottom: 32px;">Report a bug or technical issue you've encountered.</p>
+        <form id="raiseIssueForm" class="support-form">
+          <div class="form-group">
+            <label class="form-label" for="issueName">Name</label>
+            <input type="text" id="issueName" name="name" class="form-input" required placeholder="Full name" />
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="issueEmail">Email</label>
+            <input type="email" id="issueEmail" name="email" class="form-input" required placeholder="email@example.com" />
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="issueType">Issue Type</label>
+            <select id="issueType" name="issueType" class="form-select">
+              <option>Bug</option>
+              <option>Error</option>
+              <option>Crash</option>
+              <option>Performance Issue</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="issueDescription">Issue Description</label>
+            <textarea id="issueDescription" name="description" class="form-textarea" required placeholder="Describe the issue in detail. Include steps to reproduce if possible."></textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">Submit Issue</button>
+            <a href="index.html" class="btn-back">Back to Home</a>
+          </div>
+        </form>
+      </section>
+
+      <section id="report-problem" class="support-section section-anchor">
+        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 24px;">Report a Problem</h3>
+        <p class="section-subtitle" style="margin-bottom: 32px;">Report a general problem or concern with Keeper.</p>
+        <form id="reportProblemForm" class="support-form">
+          <div class="form-group">
+            <label class="form-label" for="problemName">Name</label>
+            <input type="text" id="problemName" name="name" class="form-input" required placeholder="Full name" />
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="problemEmail">Email</label>
+            <input type="email" id="problemEmail" name="email" class="form-input" required placeholder="email@example.com" />
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="problemCategory">Category</label>
+            <select id="problemCategory" name="category" class="form-select">
+              <option>Feature request</option>
+              <option>Design</option>
+              <option>Usability</option>
+              <option>Security concern</option>
+              <option>Other</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="problemMessage">Message</label>
+            <textarea id="problemMessage" name="message" class="form-textarea" required placeholder="Describe the problem or suggestion in detail..."></textarea>
+          </div>
+          
+          <div class="form-actions">
+            <button type="submit" class="btn-submit">Report Problem</button>
+            <a href="index.html" class="btn-back">Back to Home</a>
+          </div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script src="js/support.js"></script>
+  <script>
+    document.getElementById('raiseIssueForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = {
+        name: document.getElementById('issueName').value,
+        email: document.getElementById('issueEmail').value,
+        type: document.getElementById('issueType').value,
+        description: document.getElementById('issueDescription').value,
+        timestamp: new Date().toISOString()
+      };
+
+      const issues = JSON.parse(localStorage.getItem('keeperIssues') || '[]');
+      issues.push(formData);
+      localStorage.setItem('keeperIssues', JSON.stringify(issues));
+      const mailtoLink = `mailto:support@keeper.com?subject=Issue Report: ${formData.type}&body=Name: ${formData.name}%0AEmail: ${formData.email}%0AType: ${formData.type}%0A%0ADescription:%0A${encodeURIComponent(formData.description)}`;
+      window.location.href = mailtoLink;
+      
+      alert('Issue reported successfully! A copy has been saved locally.');
+      this.reset();
+    });
+
+    document.getElementById('reportProblemForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const formData = {
+        name: document.getElementById('problemName').value,
+        email: document.getElementById('problemEmail').value,
+        category: document.getElementById('problemCategory').value,
+        message: document.getElementById('problemMessage').value,
+        timestamp: new Date().toISOString()
+      };
+      const problems = JSON.parse(localStorage.getItem('keeperProblems') || '[]');
+      problems.push(formData);
+      localStorage.setItem('keeperProblems', JSON.stringify(problems));
+      const mailtoLink = `mailto:support@keeper.com?subject=Problem Report: ${formData.category}&body=Name: ${formData.name}%0AEmail: ${formData.email}%0ACategory: ${formData.category}%0A%0AMessage:%0A${encodeURIComponent(formData.message)}`;
+      window.location.href = mailtoLink;
+      
+      alert('Problem reported successfully! A copy has been saved locally.');
+      this.reset();
+    });
+    window.addEventListener('load', () => {
+      if (window.location.hash) {
+        const element = document.querySelector(window.location.hash);
+        if (element) {
+          setTimeout(() => {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }, 100);
+        }
+      }
+    });
+  </script>
+</body>
+</html>
