@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/header.css" />
+  <link rel="stylesheet" href="css/redesign.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Web Guard & Ad Blocker - Keeper</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <style>
+    .feature-page { min-height: 100vh; padding: 120px 20px 80px; background: #000000; }
+    .feature-hero { text-align: center; margin-bottom: 4rem; }
+    .feature-hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-color); }
+    .feature-hero p { font-size: 1.2rem; color: var(--muted-color); max-width: 800px; margin: 0 auto; }
+    .feature-details { max-width: 1200px; margin: 0 auto; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
+    .feature-detail-card { background: rgba(255, 255, 255, 0.05); -webkit-backdrop-filter: blur(20px) saturate(180%); backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 20px; padding: 2rem; transition: all 0.3s ease; }
+    .feature-detail-card:hover { transform: translateY(-5px); border-color: rgba(138, 43, 226, 0.5); box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3); }
+    .feature-detail-card h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--primary-color); }
+    .feature-detail-card p { color: var(--muted-color); line-height: 1.8; }
+    @media (max-width: 768px) { .feature-hero h1 { font-size: 2rem; } }
+  </style>
+  <script src="js/header.js"></script>
+</head>
+<body>
+  <div class="header-container">
+    <header class="header">
+        <div class="nav-group">
+            <a href="index.html" class="logo-link">
+                <img src="Assets/Logomark/Keeper Security.png" alt="Keeper Logo" class="logo-mark" onerror="this.src='Assets/Logomark/Keeper Logo.gif'">
+            </a>
+        </div>
+        <nav class="nav-group nav-links">
+            <a href="index.html#features" class="nav-link">Features</a>
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Products</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="password-manager.html" class="dropdown-item">Password Manager</a>
+                        <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
+                        <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
+                        <a href="account-manager.html" class="dropdown-item">Account Manager</a>
+                        <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+                        <a href="antivirus.html" class="dropdown-item">Antivirus</a>
+                        <a href="web-guard.html" class="dropdown-item">Web Guard</a>
+                    </div>
+                </div>
+            </div>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="index.html#download" class="nav-link">Download</a>
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Support</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
+                        <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
+                        <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="nav-group">
+            <a href="login.html" class="btn login-btn">Log In</a>
+            <button class="hamburger-menu" aria-label="Toggle mobile menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+  </div>
+  <div class="mobile-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <a href="index.html#features" class="nav-link">Features</a>
+    <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">Products</a>
+        <div class="dropdown">
+            <div class="dropdown-grid">
+                <a href="password-manager.html" class="dropdown-item">Password Manager</a>
+                <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
+                <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
+                <a href="account-manager.html" class="dropdown-item">Account Manager</a>
+                <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+                <a href="antivirus.html" class="dropdown-item">Antivirus</a>
+                <a href="web-guard.html" class="dropdown-item">Web Guard</a>
+            </div>
+        </div>
+    </div>
+    <a href="pricing.html" class="nav-link">Pricing</a>
+    <a href="index.html#download" class="nav-link">Download</a>
+    <div class="nav-item has-dropdown">
+        <a href="#" class="nav-link">Support</a>
+        <div class="dropdown">
+            <div class="dropdown-grid">
+                <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
+                <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
+                <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-nav-buttons">
+        <a href="login.html" class="btn login-btn">Log In</a>
+    </div>
+  </div>
+  <div class="feature-page">
+    <div class="container">
+      <div class="feature-hero">
+        <h1>Web Guard & Ad Blocker</h1>
+        <p>Chromium-based browser extension with safe site indicators, custom ad blocking, phishing protection, LAN intrusion prevention, and configurable filters.</p>
+      </div>
+      <div class="feature-details">
+        <div class="feature-grid">
+          <div class="feature-detail-card">
+            <h3>Safe Site Indicators</h3>
+            <p>Visual indicators show the security status of websites you visit. Green indicators show safe sites, while warnings appear for potentially dangerous or suspicious websites.</p>
+          </div>
+          <div class="feature-detail-card">
+            <h3>Custom Ad Blocking</h3>
+            <p>Block ads across all websites with customizable filters. Choose which types of ads to block and customize your browsing experience to be ad-free and distraction-free.</p>
+          </div>
+          <div class="feature-detail-card">
+            <h3>Phishing Protection</h3>
+            <p>Advanced phishing detection identifies and blocks malicious websites designed to steal your credentials. Get instant warnings when visiting known phishing sites.</p>
+          </div>
+          <div class="feature-detail-card">
+            <h3>LAN Intrusion Prevention</h3>
+            <p>Protect against local network attacks and prevent unauthorized access to your device from other devices on the same network. Keep your data safe from local threats.</p>
+          </div>
+          <div class="feature-detail-card">
+            <h3>Configurable Filters</h3>
+            <p>Customize filtering rules to meet your specific needs. Block trackers, malicious scripts, and unwanted content while allowing trusted websites to function normally.</p>
+          </div>
+          <div class="feature-detail-card">
+            <h3>Tracker Blocking</h3>
+            <p>Block tracking cookies and scripts that follow you across the web. Maintain your privacy and prevent advertisers from building profiles based on your browsing behavior.</p>
+          </div>
+          <div class="feature-detail-card">
+            <h3>Malicious Script Protection</h3>
+            <p>Automatically block malicious JavaScript and other scripts that could harm your device or steal your information. Browse safely without worrying about malicious code.</p>
+          </div>
+          <div class="feature-detail-card">
+            <h3>Privacy-First Design</h3>
+            <p>All filtering and blocking happens locally on your device. Your browsing data never leaves your computer, ensuring complete privacy and security.</p>
+          </div>
+          <div class="feature-detail-card">
+            <h3>Cross-Browser Support</h3>
+            <p>Works with all Chromium-based browsers including Chrome, Edge, Brave, and Opera. Install once and enjoy protection across all your browsers.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
+

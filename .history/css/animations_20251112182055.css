@@ -1,0 +1,34 @@
+/* animations.css */
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(128, 0, 128, 0.7), rgba(0, 0, 0, 0)); /* Purple to transparent black */
+  pointer-events: none; /* Allows interaction with elements beneath */
+  z-index: 1;
+}
+
+.animated-keeper-text {
+  font-size: 6em; /* Adjust as needed for larger text */
+  font-weight: bold;
+  color: #fff;
+  opacity: 0; /* Start hidden for animation */
+  transform: translateY(50px); /* Start from slightly below */
+  animation: fadeInMoveUp 2s forwards; /* Animation definition */
+  letter-spacing: 0.1em; /* Spacing for "K E E P E R" */
+  text-align: center;
+}
+
+@keyframes fadeInMoveUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
