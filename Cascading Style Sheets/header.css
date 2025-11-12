@@ -10,6 +10,16 @@
     padding: 0 20px;
 }
 
+.auth-buttons-container {
+    position: fixed;
+    top: 20px; /* Align with header-container's top */
+    right: 20px; /* Align with header-container's right padding */
+    z-index: 1001; /* Same z-index as header-container */
+    display: flex;
+    gap: 16px; /* Space between buttons */
+    align-items: center;
+}
+
 .header {
     max-width: calc(100% - 40px);
     width: auto;
@@ -24,7 +34,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 20px;
+    padding: 8px 10px; /* Reduced padding */
     position: relative;
     overflow: hidden;
 }
@@ -109,39 +119,7 @@
     width: 60%;
 }
 
-.logo-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 6px 12px;
-    border-radius: 20px;
-    transition: all 0.3s ease;
-    position: relative;
-    z-index: 1;
-}
 
-.logo-link:hover {
-    background: rgba(255, 255, 255, 0.1);
-}
-
-.keeper-brand {
-    background: rgba(30, 30, 50, 0.8);
-    border-radius: 999px;
-    font-weight: 600;
-    font-size: 14px;
-    letter-spacing: 0.5px;
-    color: #ffffff;
-}
-
-.logo-mark {
-    height: 28px;
-    width: auto;
-    transition: transform 0.3s ease;
-}
-
-.logo-link:hover .logo-mark {
-    transform: scale(1.1);
-}
 
 .sign-in-link {
     color: #ffffff;
@@ -389,7 +367,7 @@
     .hamburger-menu {
         display: flex;
     }
-    .header .nav-group .btn.login-btn {
+    .auth-buttons-container { /* Hide auth buttons on mobile */
         display: none;
     }
 }
