@@ -4,42 +4,42 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hasPlayed) {
         document.body.style.opacity = '1';
-        // Remove boot-hidden classes for instant visibility
         document.querySelectorAll('.boot-hidden').forEach(el => el.classList.remove('boot-hidden'));
-        // Add content-arrived class to main-content
         const mainContent = document.querySelector('.main-content');
         if (mainContent) mainContent.classList.add('content-arrived');
         return;
     }
 
-    // Phase 1: Blur effect on background GIF
     const hero = document.querySelector('.hero');
     const heroBackground = document.querySelector('.hero-backdrop-image');
     const heroContent = document.querySelector('.hero-intro');
     const heroButtons = document.querySelector('.hero-secondary-actions');
     const heroMetrics = document.querySelector('.hero-metrics');
+    const waitlistInlineForm = document.querySelector('#waitlistInlineForm');
 
     if (hero) {
         hero.classList.add('loading');
     }
 
-    // Phase 2: Cinematic text animation
     setTimeout(() => {
         if (heroContent) {
             heroContent.classList.remove('boot-hidden');
-            heroContent.style.animation = 'textCinematic 1.5s ease-out forwards';
+            heroContent.style.animation = 'textCinematic 2s ease-out forwards';
         }
         if (heroButtons) {
             heroButtons.classList.remove('boot-hidden');
-            heroButtons.style.animation = 'buttonCinematic 1s ease-out 0.3s forwards';
+            heroButtons.style.animation = 'buttonCinematic 1.2s ease-out 0.5s forwards';
         }
         if (heroMetrics) {
             heroMetrics.classList.remove('boot-hidden');
-            heroMetrics.style.animation = 'buttonCinematic 1s ease-out 0.6s forwards';
+            heroMetrics.style.animation = 'buttonCinematic 1.2s ease-out 0.8s forwards';
+        }
+        if (waitlistInlineForm) {
+            waitlistInlineForm.classList.remove('boot-hidden');
+            waitlistInlineForm.style.animation = 'buttonCinematic 1.2s ease-out 1.1s forwards';
         }
     }, 1500);
 
-    // Phase 3: Navigation bar expansion
     const headerContainer = document.querySelector('.header-container');
     const header = document.querySelector('.header');
 
@@ -48,17 +48,14 @@ document.addEventListener('DOMContentLoaded', () => {
             headerContainer.classList.remove('boot-hidden');
             headerContainer.classList.add('loading');
             if (header) {
-                header.style.animation = 'navExpand 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards';
-                setTimeout(() => {
-                    header.style.animation = 'navWave 0.8s ease-out forwards';
-                }, 600);
+                header.style.animation = 'navSlideIn 2s ease-out forwards';
             }
         }
     }, 2500);
 
-    // Phase 4: Logo and buttons fade in
     const keeperLogo = document.querySelector('.header-container img');
     const topRightButtons = document.querySelector('.top-right-buttons');
+    const newsletterForm = document.querySelector('.newsletter-form-inline');
 
     setTimeout(() => {
         if (keeperLogo) {
@@ -69,17 +66,18 @@ document.addEventListener('DOMContentLoaded', () => {
             topRightButtons.classList.remove('boot-hidden');
             topRightButtons.style.animation = 'fadeInCinematic 0.5s ease-out 0.2s forwards';
         }
+        if (newsletterForm) {
+            newsletterForm.classList.remove('boot-hidden');
+            newsletterForm.style.animation = 'fadeInCinematic 0.5s ease-out 0.4s forwards';
+        }
     }, 3500);
 
-    // Remove loading classes and enable scrolling
     setTimeout(() => {
         document.body.style.overflow = '';
         if (hero) hero.classList.remove('loading');
         if (headerContainer) headerContainer.classList.remove('loading');
-        // Add content-arrived class to main-content
         const mainContent = document.querySelector('.main-content');
         if (mainContent) mainContent.classList.add('content-arrived');
         localStorage.setItem(STORAGE_KEY, '1');
-    }, 4000);
+    }, 5000);
 });
-

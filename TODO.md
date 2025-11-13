@@ -1,8 +1,11 @@
-# Homepage Animation Fix TODO
-
-## Tasks
-- [x] Remove inline opacity and transform styles from HTML elements in index.html
-- [x] Add CSS classes for initial hidden states in animations.css
-- [x] Update boot-animation.js to animate background blur removal
-- [x] Update boot-animation.js to add 'content-arrived' class to main-content
-- [x] Test animations to ensure they trigger properly (server running on port 8001)
+- [x] Modify autohide-header.css to change nav animation from transform to top property for sliding from top.
+- [x] Remove HTML comments from all HTML files in Hypertext Markup Language/.
+- [x] Remove CSS comments from all CSS files in Cascading Style Sheets/.
+- [x] Remove JS comments from all JS files in JavaScript/.
+- [x] Verify no comments remain in the project.
+- [x] Test navigation bar animation on scroll.
+- [x] Enhance animations.css: Update textCinematic and buttonCinematic keyframes for cooler cinematic effects (e.g., add blur, scale, glow).
+- [x] Update boot-animation.js: Add animation for waitlistInlineForm to make it visible in sequence.
+- [x] Remove comments from boot-animation.js, animations.css, index.html, hero-background.css.
+- [x] Test the animations on the homepage to ensure cinematic appearance and newsletter visibility.
+- [x] Update TODO.md to reflect completed tasks.

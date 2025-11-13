@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/header.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/redesign.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/hero-background.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/animations.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <title>Keeper by Yash Srivastava</title>
+  <link rel="icon" type="image/gif" href="../Assets/Logomark/Icon TRS.png">
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="../JavaScript/header.js"></script>
+  <style>
+
+    html, body {
+      overflow-x: hidden;
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="header-container boot-hidden">
+    <img src="../Assets/Logomark/Navigation Bar.gif" alt="Navigation Bar Logo" style="position: absolute; top: 10px; left: 10px; height: 40px; z-index: 1002;" class="boot-hidden">
+    <header class="header boot-hidden">
+        <nav class="nav-group nav-links">
+            <div class="nav-item has-dropdown">
+                <a href="#features" class="nav-link smooth-scroll">Features</a>
+                <div class="dropdown dropdown-features">
+                    <div class="dropdown-grid two-column">
+                        <a href="#features" class="dropdown-item smooth-scroll">Keeper Sentinel Overview</a>
+                        <a href="#ai-defense" class="dropdown-item smooth-scroll">AI Threat Intelligence</a>
+                        <a href="#privacy" class="dropdown-item smooth-scroll">Zero-Knowledge Data Vaults</a>
+                        <a href="password-manager.html" class="dropdown-item">Password Manager</a>
+                        <a href="vpn.html" class="dropdown-item">Advanced VPN Mesh</a>
+                        <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+                        <a href="account-manager.html" class="dropdown-item">Account Manager</a>
+                        <a href="password-manager.html#kryptonite" class="dropdown-item">Keeper Kryptonite (Soon)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Products</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="password-manager.html" class="dropdown-item">Password Manager</a>
+                        <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
+                        <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
+                        <a href="account-manager.html" class="dropdown-item">Account Manager</a>
+                        <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+                        <a href="antivirus.html" class="dropdown-item">Antivirus</a>
+                        <a href="web-guard.html" class="dropdown-item">Web Guard</a>
+                    </div>
+                </div>
+            </div>
+            <a href="partners.html" class="nav-link">Partners</a>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="#download" class="nav-link smooth-scroll">Download</a>
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Support</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
+                        <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
+                        <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="nav-group">
+            <button class="hamburger-menu" aria-label="Toggle mobile menu">
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+                <span class="hamburger-bar"></span>
+            </button>
+        </div>
+    </header>
+</div>
+
+<div class="top-right-buttons boot-hidden">
+    <a href="login.html" class="btn login-btn">Log In</a>
+    <a href="login.html#signup" class="btn signup-btn">Sign Up</a>
+</div>
+
+<div class="mobile-nav">
+    <a href="index.html" class="nav-link">Home</a>
+    <div class="nav-item has-dropdown">
+        <a href="#features" class="nav-link smooth-scroll">Features</a>
+        <div class="dropdown dropdown-features">
+            <div class="dropdown-grid two-column">
+                <a href="#features" class="dropdown-item smooth-scroll">Keeper Sentinel Overview</a>
+                <a href="#ai-defense" class="dropdown-item smooth-scroll">AI Threat Intelligence</a>
+                <a href="#privacy" class="dropdown-item smooth-scroll">Zero-Knowledge Data Vaults</a>
+                <a href="password-manager.html" class="dropdown-item">Password Manager</a>
+                <a href="vpn.html" class="dropdown-item">Advanced VPN Mesh</a>
+                        <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+                        <a href="account-manager.html" class="dropdown-item">Account Manager</a>
+                        <a href="password-manager.html#kryptonite" class="dropdown-item">Keeper Kryptonite (Soon)</a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Products</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="password-manager.html" class="dropdown-item">Password Manager</a>
+                        <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
+                        <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
+                        <a href="account-manager.html" class="dropdown-item">Account Manager</a>
+                        <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
+                        <a href="antivirus.html" class="dropdown-item">Antivirus</a>
+                        <a href="web-guard.html" class="dropdown-item">Web Guard</a>
+                    </div>
+                </div>
+            </div>
+            <a href="pricing.html" class="nav-link">Pricing</a>
+            <a href="#download" class="nav-link smooth-scroll">Download</a>
+            <div class="nav-item has-dropdown">
+                <a href="#" class="nav-link">Support</a>
+                <div class="dropdown">
+                    <div class="dropdown-grid">
+                        <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
+                        <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
+                        <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
+                    </div>
+                </div>
+            </div>
+            <div class="mobile-nav-buttons">
+                <a href="login.html" class="btn login-btn">Log In</a>
+            </div>
+        </div>
+
+  <section class="hero hero-overview" id="home-hero">
+    <div class="hero-backdrop" aria-hidden="true">
+      <div class="hero-backdrop-glow"></div>
+      <img src="../Assets/Background/Granimate.gif" alt="" class="hero-backdrop-image">
+    </div>
+    <div class="container hero-frame">
+    <div class="hero-intro boot-hidden">
+        <h1>Encrypted. Empowered. Eternal.</h1>
+        <p class="hero-subtitle">
+          Never miss a threat, identity drift, or rogue session. Keeper unifies intelligence, automation, and encryption so every account, vault, and workflow stays invulnerable.
+        </p>
+      </div>
+      <form class="waitlist-inline boot-hidden" id="waitlistInlineForm">
+        <label class="sr-only" for="waitlistInlineEmail">Email address</label>
+        <div class="waitlist-inline-field">
+          <input type="email" id="waitlistInlineEmail" required placeholder="you@example.com">
+          <button type="submit" class="btn glass primary" data-variant="pulse">Join the waitlist</button>
+        </div>
+        <span class="waitlist-inline-note">Early access members unlock Keeper Neural Shield and Keeper Kryptonite first.</span>
+      </form>
+      <div class="hero-secondary-actions boot-hidden">
+        <a href="#features" class="btn glass secondary" data-variant="halo">Explore platform</a>
+        <a href="pricing.html" class="btn glass tertiary" data-variant="flare">View pricing</a>
+      </div>
+      <div class="hero-metrics boot-hidden">
+        <div class="metric">
+          <span class="metric-value">4.2B+</span>
+          <span class="metric-label">signals scored daily by Keeper AI</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">210+</span>
+          <span class="metric-label">zero-day exploits blocked in-preview</span>
+        </div>
+        <div class="metric">
+          <span class="metric-value">99.997%</span>
+          <span class="metric-label">uptime across global trust grid</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <main class="main-content">
+  <section class="partners-section section" aria-label="Trusted by industry leaders">
+    <div class="container">
+      <div class="partners-header">
+        <span class="partners-eyebrow">Our Partners</span>
+        <h2>Trusted by the world's leading security innovators</h2>
+      </div>
+      <div class="partners-carousel">
+        <div class="partners-track" data-speed="0.22" data-direction="forward">
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://www.nicepng.com/png/full/11-114612_apple-logo-png-ios-6-apple-logo.png" alt="Apple" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://registry.npmmirror.com/@lobehub/icons-static-png/latest/files/dark/aws-color.png" alt="Amazon Web Services" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://companieslogo.com/img/orig/ACN_BIG.D-871a76ce.png?t=1720244490" alt="Accenture" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://kreafolk.com/cdn/shop/articles/ibm-logo-design-history-and-evolution-kreafolk_f6963bf2-5011-41cd-a198-3b9b4dcff48d.jpg?v=1717725060&width=2048" alt="IBM" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://logos-world.net/wp-content/uploads/2022/04/Cloudflare-Emblem.png" alt="Cloudflare" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/1/13/Deloitte.svg" alt="Deloitte" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="" alt="Netflix" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7f/Snowflake_Logo.svg" alt="Snowflake" loading="lazy">
+          </div>
+        </div>
+        <div class="partners-track" data-speed="0.26" data-direction="reverse">
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png" alt="Netflix" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Crowdstrike_logo.svg" alt="CrowdStrike" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://logos-world.net/wp-content/uploads/2021/08/Deloitte-Emblem.png" alt="Deloitte" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Atlassian-logo.svg/1280px-Atlassian-logo.svg.png" alt="Atlassian" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/55/Atlassian-logo.svg" alt="A" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/29/Sony_logo.svg" alt="Sony" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Siemens-logo.svg" alt="Siemens" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Tesla_Motors_logo.svg" alt="Tesla" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/8/88/SAP_2011_logo.svg" alt="SAP" loading="lazy">
+          </div>
+          <div class="partner-logo">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Intel_logo_%282020%2C_dark_blue%29.svg" alt="Intel" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="features" class="section">
+    <div class="container">
+      <h2 class="section-title">Introducing Sentinel</h2>
+      <p class="section-subtitle">
+        A standalone Security System with that perfect User Experience. Engineered for Excellency.
+        <br><br>
+      </p>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="try-button-wrapper">
+              <a href="password-generator.html" class="try-button">Try</a>
+          </div>
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">password</span></div>
+          <h3>Password Manager</h3>
+          <p>Zero-knowledge password manager using Argon2id + SHA256-Bit-CBC encryption. Store and manage all your passwords securely with offline export, breach alerts, and passkey-ready authentication.</p>
+          <a href="password-manager.html" class="feature-link">Learn More →</a>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">pin</span></div>
+          <h3>2FA & Passkey Authenticator</h3>
+          <p>Two-factor authentication and passkey support for enhanced security. TOTP/Push notifications with offline backup codes and seamless device transfer.</p>
+          <a href="2fa-authenticator.html" class="feature-link">Learn More →</a>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">vpn_key</span></div>
+          <h3>Virtual Private Network (VPN)</h3>
+          <p>Site-specific VPN or full computer protection. Features industry-standard encryption, tunneling, kill switch, layering, cookie protection, and optional Onion Router (Tor) integration.</p>
+          <a href="vpn.html" class="feature-link">Learn More →</a>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">manage_accounts</span></div>
+          <h3>Account Manager</h3>
+          <p>Create and manage accounts (Google, Microsoft, etc.) with admin console access. Monitor and recover hacked accounts, revoke service access, request data deletion via AI, and access direct account deletion links.</p>
+          <a href="account-manager.html" class="feature-link">Learn More →</a>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">enhanced_encryption</span></div>
+          <h3>File Encryption</h3>
+          <p>Argon2id + SHA256-Bit-CBC encryption for files and folders. Integration with Windows File Manager and macOS Finder, fingerprint/Windows Hello unlock, stealth mode (PNG disguise), hidden folders, and Google Drive encryption.</p>
+          <a href="file-encryption.html" class="feature-link">Learn More →</a>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">shield</span></div>
+          <h3>Antivirus & Web Security</h3>
+          <p>World's first lightweight solution combining recognized malware databases (partnered with Kaspersky, McAfee, etc.) and Google's dark web scan in a single scan.</p>
+          <a href="antivirus.html" class="feature-link">Learn More →</a>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">security</span></div>
+          <h3>Web Guard & Ad Blocker</h3>
+          <p>Chromium-based browser extension with safe site indicators, custom ad blocking, phishing protection, LAN intrusion prevention, and configurable filters.</p>
+          <a href="web-guard.html" class="feature-link">Learn More →</a>
+        </div>
+        <div class="feature-card">
+          <div class="icon-wrapper"><span class="icon material-symbols-outlined">token</span></div>
+          <h3>Cryptocurrency Vault</h3>
+          <p>Institutional-grade crypto and digital asset command center with MPC wallets, automated compliance attestations, anomaly detection and zero-knowledge hardware escrow.</p>
+          <a href="account-manager.html" class="feature-link">Discover the roadmap →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="ai-defense" class="section ai-defense" style="padding: 60px 0;">
+    <div class="container ai-defense-grid">
+      <div class="ai-defense-copy">
+        <span class="eyebrow">Intelligent protection</span>
+        <h2>Artificial Intelligence (AI) Enabled Monitoring to Protect Your Privacy</h2>
+        <p>Keeper identifies malicious behaviors by correlating device health, behavioral biometrics, deep packet inspection and dark web telemetry. Our adaptive intelligence isolates suspicious actions before they become breaches.</p>
+        <ul class="ai-defense-points">
+          <li>Predictive threat scoring trained on 28 trillion signals</li>
+          <li>Autonomous web guard that blocks phishing paths within 18 milliseconds</li>
+          <li>Self-healing identity graphs that revoke compromised tokens instantly</li>
+          <li>Privacy-preserving federated learning keeps your data encrypted while models improve</li>
+        </ul>
+      </div>
+      <div class="ai-defense-visual">
+        <img src="../Assets/Web-Elements/Panels.gif" alt="Keeper AI defense visualization">
+        <div class="ai-defense-overlay">
+          <div class="overlay-pill">
+            <span class="overlay-label">Live threat feed</span>
+            <span class="overlay-value">74 intrusions deflected</span>
+          </div>
+          <div class="overlay-pill">
+            <span class="overlay-label">Intelligent web filters</span>
+            <span class="overlay-value">Zero unsafe clicks delivered</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="privacy" class="section data-protection-section">
+    <div class="container">
+      <div class="data-protection-header">
+        <h2 class="section-title">Data Protection</h2>
+        <p class="section-subtitle">
+          Zero-knowledge Architecture with builtin Swiss Privacy
+          <br><br>
+        </p>
+      </div>
+      <div class="data-protection-content">
+        <div class="protection-visual">
+          <img src="../Assets/Web-Elements/Lock.gif" alt="Data stream transitioning from raw to encrypted within Keeper" style="margin-bottom: 20px;">
+        </div>
+        <div class="protection-features">
+          <div class="protection-card">
+            <div class="protection-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3>Fast & Reliable</h3>
+            <p>Our VPN connects in seconds, providing you with fast and reliable internet access</p>
+          </div>
+          <div class="protection-card">
+            <div class="protection-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 12l2 2 4-4"/>
+                <path d="M21 12c-1 0-3-1-3-3s2-3 3-3 3 1 3 3-2 3-3 3"/>
+                <path d="M3 12c1 0 3-1 3-3s-2-3-3-3-3 1-3 3 2 3 3 3"/>
+              </svg>
+            </div>
+            <h3>Secure Connections</h3>
+            <p>Keeper's proprietary technology helps maintain secure and stable connections in all countries</p>
+          </div>
+          <div class="protection-card">
+            <div class="protection-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 3l7 4v6c0 5-4 9-7 9s-7-4-7-9V7z"/>
+                <path d="M12 11v4"/>
+                <path d="M9 13h6"/>
+              </svg>
+            </div>
+            <h3>Keeper Trust Grid</h3>
+            <p>Geo-fenced HSM vaults with continuous attestation and immutable audit streams to satisfy the most demanding regulatory environments.</p>
+          </div>
+          <div class="protection-card">
+            <div class="protection-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 8v6"/>
+                <path d="M3 12v6"/>
+                <path d="M7 12v6"/>
+                <path d="M17 4v6"/>
+                <path d="M21 14l-4 4-4-4"/>
+                <path d="M7 18l-4-4 4-4"/>
+              </svg>
+            </div>
+            <h3>Unbreakable Encryption</h3>
+            <p>Layered Argon2id derivation, AES-256, Kyber-ready lattice cryptography and MPC signing ensure Keeper stays future proof.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="download" class="section">
+    <div class="container">
+        <h2 class="section-title">Download Keeper</h2>
+        <p class="section-subtitle">Get started with Keeper on your favorite platform.</p>
+        <div class="device-preview-container">
+          <div class="device-preview macbook-preview">
+            <div class="device-frame macbook">
+              <div class="device-screen">
+                <div class="device-content">Keeper Sentinel</div>
+              </div>
+            </div>
+          </div>
+          <div class="device-preview iphone-preview">
+            <div class="device-frame iphone">
+              <div class="device-screen">
+                <div class="device-content">Keeper</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="download-buttons-container">
+            <a href="#" class="download-button macos-button" aria-label="Download for macOS" onclick="return false;">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.05 20.28c-.98.95-2.05.88-3.08.4-1.09-.5-2.08-.48-3.24 0-1.44.62-2.2.44-3.06-.4C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.09l-.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" fill="currentColor" /></svg>
+                Coming Soon - macOS
+            </a>
+            <a href="#" class="download-button windows-button" aria-label="Download for Windows" onclick="return false;">
+                <svg class="icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 5.45v6.11l8.78-.05V3.4L3 5.45zm8.78 6.87l-8.78-.05v6.18l8.78 2.05v-8.18zM12.95 3v8.45l8.05.05V4.77L12.95 3zm8.05 8.72l-8.05.05v8.45l8.05-1.73v-6.77z" fill="currentColor" /></svg>
+                Coming Soon - Windows
+            </a>
+            <a href="https://play.google.com/store/apps" target="_blank" rel="noopener noreferrer" class="download-button android-button play-store-button" aria-label="Download for Android">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3,20.5V3.5C3,2.91 3.34,2.39 3.84,2.15L13.69,12L3.84,21.85C3.34,21.6 3,21.09 3,20.5M16.81,15.12L6.05,21.34L14.54,12.85L16.81,15.12M20.16,10.81C20.5,11.08 20.75,11.5 20.75,12C20.75,12.5 20.5,12.92 20.16,13.19L16.81,15.12L14.54,12.85L16.81,10.81L20.16,10.81M6.05,2.66L16.81,8.88L14.54,11.15L6.05,2.66Z"/></svg>
+                <span>Get it on<br><strong>Google Play</strong></span>
+            </a>
+            <a href="https://apps.apple.com" target="_blank" rel="noopener noreferrer" class="download-button ios-button app-store-button" aria-label="Download for iOS">
+                <svg class="icon" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05,20.28C16.07,21.23 14.9,21.16 13.82,20.68C12.73,20.18 11.84,20.16 10.68,20.68C9.24,21.3 8.48,21.12 7.52,20.28C2.79,15.25 3.51,7.59 9.05,7.31C10.4,7.38 11.34,8.05 12.03,8.11C13.21,7.87 14.34,7.18 15.57,7.27C17.08,7.39 18.22,7.99 18.97,8.99C15.85,10.86 16.59,15.36 19.53,16.5C19.03,17.9 18.31,19.28 17.05,20.28M12.03,7.25C11.88,4.02 14.74,1.38 17.74,1.25C18.02,4.62 14.44,7.18 12.03,7.25Z"/></svg>
+                <span>Download on the<br><strong>App Store</strong></span>
+            </a>
+        </div>
+        <p class="coming-soon-note">Coming Soon</p>
+    </div>
+  </section>
+
+  <section class="section cta-section">
+    <div class="container">
+        <h2 class="section-title">Get Started with Keeper Today</h2>
+        <p class="section-subtitle">Subscribe to our newsletter to be the first one to receive updates when our products launch</p>
+        <form class="newsletter-form-inline" id="newsletterForm">
+          <input type="email" id="newsletterEmail" placeholder="Enter your email" class="newsletter-input" required>
+          <button type="submit" class="btn glass primary" style="margin-left: 10px;">Subscribe</button>
+        </form>
+    </div>
+  </section>
+  </main>
+
+  <div id="waitlistDrawer" class="waitlist-drawer" role="dialog" aria-modal="true" aria-labelledby="waitlistTitle" hidden>
+    <div class="waitlist-panel">
+      <button type="button" class="waitlist-close" aria-label="Close waitlist" id="waitlistClose">&times;</button>
+      <div class="waitlist-header">
+        <span class="waitlist-chip">Early access</span>
+        <h2 id="waitlistTitle">Join the Keeper waitlist</h2>
+        <p>Be the first to activate Keeper Neural Shield when the stable build ships. We will only email you once your access code is ready.</p>
+      </div>
+      <form id="waitlistForm" class="waitlist-form">
+        <label for="waitlistEmail">Email</label>
+        <input type="email" id="waitlistEmail" required placeholder="you@example.com">
+        <label for="waitlistUseCase">Primary security focus</label>
+        <select id="waitlistUseCase" required>
+          <option value="" disabled selected>Select an option</option>
+          <option value="personal">Personal password security</option>
+          <option value="enterprise">Enterprise identity program</option>
+          <option value="crypto">Digital asset protection with Kryptonite</option>
+          <option value="compliance">Compliance and auditing</option>
+        </select>
+        <button type="submit" class="btn glass primary" data-variant="glimmer">Notify me first</button>
+      </form>
+      <div class="waitlist-assurance">
+        <div class="assurance-item">
+          <span>Readiness updates only</span>
+        </div>
+        <div class="assurance-item">
+          <span>Opt out anytime</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="../JavaScript/main.js"></script>
+  <script src="../script.js"></script>
+  <script src="../JavaScript/nav.js"></script>
+  <script src="../JavaScript/footer-loader.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="../JavaScript/scroll-animation.js"></script>
+  <script src="../JavaScript/boot-animation.js"></script>
+  <script>
+    const newsletterForm = document.getElementById('newsletterForm');
+    if (newsletterForm) {
+      newsletterForm.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const emailField = document.getElementById('newsletterEmail');
+        const email = emailField.value.trim();
+        if (!email) return;
+        localStorage.setItem('newsletter_subscribed', 'true');
+        localStorage.setItem('newsletter_email', email);
+        window.location.href = 'newsletter-subscribed.html';
+      });
+    }
+
+    const lenis = new Lenis({
+      lerp: 0.05,
+      wheelMultiplier: 2.0,
+    });
+    
+    window.lenisInstance = lenis;
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
+
+    document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.lenisInstance.scrollTo(targetElement);
+        }
+      });
+    });
+
+    anime({
+      targets: '.feature-card',
+      opacity: [0, 1],
+      translateY: [50, 0],
+      delay: anime.stagger(100),
+      duration: 800,
+      easing: 'easeOutExpo'
+    });
+
+    const partnersTracks = document.querySelectorAll('.partners-track');
+    if (partnersTracks.length) {
+      partnersTracks.forEach(track => {
+        const clone = track.cloneNode(true);
+        track.parentElement.appendChild(clone);
+      });
+      let start = null;
+      const state = [...document.querySelectorAll('.partners-track')].map(t => ({
+        el: t,
+        dir: t.getAttribute('data-direction') === 'reverse' ? -1 : 1,
+        speed: parseFloat(t.getAttribute('data-speed')) || 0.2,
+        x: 0
+      }));
+      let running = false;
+      const io = new IntersectionObserver(entries => {
+        running = entries.some(e => e.isIntersecting);
+      }, { threshold: 0.2 });
+      const carousel = document.querySelector('.partners-carousel');
+      if (carousel) io.observe(carousel);
+      function step(ts) {
+        if (start === null) start = ts;
+        const dt = (ts - start) / 16;
+        start = ts;
+        if (running) {
+          state.forEach(s => {
+            s.x += s.dir * s.speed * dt;
+            if (s.x <= -50) s.x = 0;
+            if (s.x >= 50) s.x = 0;
+            s.el.style.transform = 'translateX(' + s.x + '%)';
+          });
+        }
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+      if (carousel) {
+        carousel.addEventListener('mouseenter', () => running = false);
+        carousel.addEventListener('mouseleave', () => running = true);
+      }
+    }
+
+    const inlineWaitlist = document.getElementById('waitlistInlineForm');
+    const waitlistDrawer = document.getElementById('waitlistDrawer');
+    const waitlistClose = document.getElementById('waitlistClose');
+    const toast = document.getElementById('toast');
+    function showToast(message) {
+      if (!toast) return;
+      toast.textContent = message;
+      toast.style.opacity = '1';
+      toast.style.transform = 'translateY(0)';
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(10px)';
+      }, 2500);
+    }
+    if (inlineWaitlist) {
+      inlineWaitlist.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('waitlistInlineEmail').value.trim();
+        if (!email) return;
+        localStorage.setItem('waitlist_email', email);
+        document.getElementById('waitlistEmail').value = email;
+        if (waitlistDrawer) {
+          waitlistDrawer.hidden = false;
+          document.body.classList.add('waitlist-open');
+        } else {
+          showToast('Added to waitlist');
+        }
+      });
+    }
+    if (waitlistClose && waitlistDrawer) {
+      waitlistClose.addEventListener('click', () => {
+        waitlistDrawer.hidden = true;
+        document.body.classList.remove('waitlist-open');
+      });
+    }
+    const waitlistForm = document.getElementById('waitlistForm');
+    if (waitlistForm) {
+      waitlistForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('waitlistEmail').value.trim();
+        const focus = document.getElementById('waitlistUseCase').value;
+        if (!email || !focus) return;
+        const existing = JSON.parse(localStorage.getItem('keeper_waitlist') || '[]');
+        existing.push({ email, focus, ts: Date.now() });
+        localStorage.setItem('keeper_waitlist', JSON.stringify(existing));
+        showToast('You are on the waitlist');
+        if (waitlistDrawer) {
+          waitlistDrawer.hidden = true;
+          document.body.classList.remove('waitlist-open');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

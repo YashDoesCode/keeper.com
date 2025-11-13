@@ -1,0 +1,169 @@
+/* Boot Animation Styles */
+.hero.loading .hero-background-video {
+  filter: blur(8px);
+  transition: filter 1.5s ease-out;
+}
+
+.hero.loading .hero-content > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out 0.5s;
+}
+
+.header-container.loading {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.8s ease-out 1.5s;
+}
+
+.header-container.loading .header {
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s;
+}
+
+.header-container.loading .top-right-buttons {
+  opacity: 0;
+  transition: opacity 0.5s ease-out 3s;
+}
+
+.header-container.loading .keeper-logo {
+  opacity: 0;
+  transition: opacity 0.5s ease-out 3s;
+}
+
+/* Boot hidden state */
+.boot-hidden {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.8s ease-out;
+}
+
+.header-container.boot-hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: all 0.8s ease-out 1.5s;
+}
+
+.header-container.boot-hidden .header {
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s;
+}
+
+.header-container.boot-hidden img {
+  opacity: 0;
+  transition: opacity 0.5s ease-out 3s;
+}
+
+.top-right-buttons.boot-hidden {
+  opacity: 0;
+  transition: opacity 0.5s ease-out 3s;
+}
+
+/* Phase 1: Blur effect on background */
+@keyframes blurToClear {
+  0% { filter: blur(8px); }
+  100% { filter: blur(0px); }
+}
+
+/* Phase 2: Cinematic text animation */
+@keyframes textCinematic {
+  0% {
+    opacity: 0;
+    transform: translateY(60px) scale(0.85);
+    filter: blur(8px);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  }
+  25% {
+    opacity: 0.5;
+    transform: translateY(30px) scale(0.9);
+    filter: blur(4px);
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.7);
+  }
+  75% {
+    opacity: 0.9;
+    transform: translateY(5px) scale(0.98);
+    filter: blur(1px);
+    text-shadow: 0 0 40px rgba(255, 255, 255, 0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0px);
+    text-shadow: 0 0 50px rgba(255, 255, 255, 1);
+  }
+}
+
+@keyframes buttonCinematic {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Phase 3: Navigation bar expansion */
+@keyframes navExpand {
+  0% {
+    transform: scaleX(0);
+    opacity: 0;
+  }
+  50% {
+    transform: scaleX(0.7);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scaleX(1);
+    opacity: 1;
+  }
+}
+
+@keyframes navWave {
+  0% {
+    clip-path: inset(0 50% 0 50%);
+  }
+  50% {
+    clip-path: inset(0 25% 0 25%);
+  }
+  100% {
+    clip-path: inset(0 0% 0 0%);
+  }
+}
+
+/* Phase 4: Logo and buttons fade */
+@keyframes fadeInCinematic {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animated-keeper-text {
+  font-size: 6em;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInMoveUp 2s forwards;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+@keyframes fadeInMoveUp {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
