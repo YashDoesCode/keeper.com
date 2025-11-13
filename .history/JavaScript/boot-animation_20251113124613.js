@@ -4,11 +4,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (hasPlayed) {
         document.body.style.opacity = '1';
-        // Remove boot-hidden classes for instant visibility
-        document.querySelectorAll('.boot-hidden').forEach(el => el.classList.remove('boot-hidden'));
-        // Add content-arrived class to main-content
-        const mainContent = document.querySelector('.main-content');
-        if (mainContent) mainContent.classList.add('content-arrived');
         return;
     }
 
@@ -26,15 +21,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Phase 2: Cinematic text animation
     setTimeout(() => {
         if (heroContent) {
-            heroContent.classList.remove('boot-hidden');
             heroContent.style.animation = 'textCinematic 1.5s ease-out forwards';
         }
         if (heroButtons) {
-            heroButtons.classList.remove('boot-hidden');
             heroButtons.style.animation = 'buttonCinematic 1s ease-out 0.3s forwards';
         }
         if (heroMetrics) {
-            heroMetrics.classList.remove('boot-hidden');
             heroMetrics.style.animation = 'buttonCinematic 1s ease-out 0.6s forwards';
         }
     }, 1500);
@@ -45,7 +37,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
         if (headerContainer) {
-            headerContainer.classList.remove('boot-hidden');
             headerContainer.classList.add('loading');
             if (header) {
                 header.style.animation = 'navExpand 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards';
@@ -62,11 +53,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     setTimeout(() => {
         if (keeperLogo) {
-            keeperLogo.classList.remove('boot-hidden');
             keeperLogo.style.animation = 'fadeInCinematic 0.5s ease-out forwards';
         }
         if (topRightButtons) {
-            topRightButtons.classList.remove('boot-hidden');
             topRightButtons.style.animation = 'fadeInCinematic 0.5s ease-out 0.2s forwards';
         }
     }, 3500);
@@ -76,9 +65,6 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.style.overflow = '';
         if (hero) hero.classList.remove('loading');
         if (headerContainer) headerContainer.classList.remove('loading');
-        // Add content-arrived class to main-content
-        const mainContent = document.querySelector('.main-content');
-        if (mainContent) mainContent.classList.add('content-arrived');
         localStorage.setItem(STORAGE_KEY, '1');
     }, 4000);
 });

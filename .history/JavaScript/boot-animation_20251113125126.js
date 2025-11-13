@@ -71,11 +71,15 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }, 3500);
 
-    // Remove loading classes and enable scrolling
+    // Remove loading classes, animate background blur, and enable scrolling
     setTimeout(() => {
         document.body.style.overflow = '';
         if (hero) hero.classList.remove('loading');
         if (headerContainer) headerContainer.classList.remove('loading');
+        // Animate background blur removal
+        if (heroBackground) {
+            heroBackground.style.animation = 'blurToClear 1.5s ease-out forwards';
+        }
         // Add content-arrived class to main-content
         const mainContent = document.querySelector('.main-content');
         if (mainContent) mainContent.classList.add('content-arrived');

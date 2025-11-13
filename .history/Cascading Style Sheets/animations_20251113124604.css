@@ -32,35 +32,6 @@
   transition: opacity 0.5s ease-out 3s;
 }
 
-/* Boot hidden state */
-.boot-hidden {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: all 0.8s ease-out;
-}
-
-.header-container.boot-hidden {
-  opacity: 0;
-  transform: translateY(-100%);
-  transition: all 0.8s ease-out 1.5s;
-}
-
-.header-container.boot-hidden .header {
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 2s;
-}
-
-.header-container.boot-hidden img {
-  opacity: 0;
-  transition: opacity 0.5s ease-out 3s;
-}
-
-.top-right-buttons.boot-hidden {
-  opacity: 0;
-  transition: opacity 0.5s ease-out 3s;
-}
-
 /* Phase 1: Blur effect on background */
 @keyframes blurToClear {
   0% { filter: blur(8px); }
