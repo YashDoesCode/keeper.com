@@ -3,15 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/redesign.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/header.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/redesign.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/animations.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
   <title>Pricing - Keeper</title>
+  <link rel="icon" type="image/gif" href="../Assets/Logomark/Icon TRS.png">
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="../JavaScript/header-loader.js" defer></script>
+  <script src="../JavaScript/header.js"></script>
   <style>
     .pricing-section {
       padding: 120px 20px 80px;
@@ -79,64 +85,55 @@
       right: 20px;
       background: rgba(138, 43, 226, 0.3);
       color: var(--text-color);
-      padding: 4px 12px;
-      border-radius: 12px;
+      padding: 6px 12px;
+      border-radius: 999px;
       font-size: 12px;
-      font-weight: 600;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
     }
 
-    .pricing-card.selected .pricing-badge {
-      background: rgba(138, 43, 226, 0.5);
-    }
-
     .pricing-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--text-color);
+      font-size: 1.8rem;
+      margin-bottom: 12px;
     }
 
     .pricing-price {
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--text-color);
-      margin: 24px 0 8px;
+      font-size: 2.8rem;
+      font-weight: 600;
+      margin-bottom: 8px;
     }
 
     .pricing-period {
-      color: var(--muted-color);
-      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.6);
       margin-bottom: 24px;
     }
 
     .pricing-description {
-      color: var(--muted-color);
-      font-size: 0.9rem;
+      color: rgba(255, 255, 255, 0.75);
       margin-bottom: 24px;
-      line-height: 1.6;
+      min-height: 60px;
     }
 
     .pricing-features {
       list-style: none;
       padding: 0;
-      margin: 0 0 32px;
+      margin: 0 0 28px 0;
+      display: grid;
+      gap: 12px;
     }
 
     .pricing-features li {
-      padding: 8px 0;
-      color: var(--text-color);
-      font-size: 0.9rem;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 10px;
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 0.95rem;
     }
 
     .pricing-features li::before {
-      content: '✓';
-      color: #4ade80;
-      font-weight: bold;
-      font-size: 1.2rem;
+      content: '✔';
+      color: rgba(138, 43, 226, 0.6);
+      font-size: 0.9rem;
     }
 
     .pricing-button {
@@ -209,317 +206,13 @@
       }
     }
   </style>
-  <script src="js/header.js"></script>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/redesign.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <title>Pricing - Keeper</title>
-  <meta name="theme-color" content="#000000" />
-  <meta name="color-scheme" content="dark" />
-  <style>
-    .pricing-section {
-      padding: 120px 20px 80px;
-      min-height: 100vh;
-      background: #000000;
-    }
-
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-      max-width: 1200px;
-      margin: 0 auto;
-      margin-top: 48px;
-    }
-
-    .pricing-card {
-      background: rgba(255, 255, 255, 0.05);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 24px;
-      padding: 32px;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-      position: relative;
-      overflow: hidden;
-      transition: all 0.3s ease;
-    }
-
-    .pricing-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      transition: left 0.6s ease;
-      z-index: 0;
-    }
-
-    .pricing-card:hover::before {
-      left: 100%;
-    }
-
-    .pricing-card:hover {
-      transform: translateY(-8px);
-      border-color: rgba(255, 255, 255, 0.3);
-      box-shadow: 0 12px 48px 0 rgba(138, 43, 226, 0.3);
-    }
-
-    .pricing-card.selected {
-      background: linear-gradient(135deg, rgba(138, 43, 226, 0.2), rgba(75, 0, 130, 0.15));
-      border-color: rgba(138, 43, 226, 0.5);
-    }
-
-    .pricing-card > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .pricing-badge {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      background: rgba(138, 43, 226, 0.3);
-      color: var(--text-color);
-      padding: 4px 12px;
-      border-radius: 12px;
-      font-size: 12px;
-      font-weight: 600;
-      text-transform: uppercase;
-    }
-
-    .pricing-card.selected .pricing-badge {
-      background: rgba(138, 43, 226, 0.5);
-    }
-
-    .pricing-title {
-      font-size: 1.5rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--text-color);
-    }
-
-    .pricing-price {
-      font-size: 3rem;
-      font-weight: 700;
-      color: var(--text-color);
-      margin: 24px 0 8px;
-    }
-
-    .pricing-period {
-      color: var(--muted-color);
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-    }
-
-    .pricing-description {
-      color: var(--muted-color);
-      font-size: 0.9rem;
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-
-    .pricing-features {
-      list-style: none;
-      padding: 0;
-      margin: 0 0 32px;
-    }
-
-    .pricing-features li {
-      padding: 8px 0;
-      color: var(--text-color);
-      font-size: 0.9rem;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
-
-    .pricing-features li::before {
-      content: '✓';
-      color: #4ade80;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
-
-    .pricing-button {
-      width: 100%;
-      padding: 14px;
-      background: rgba(138, 43, 226, 0.3);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(138, 43, 226, 0.5);
-      border-radius: 12px;
-      color: var(--text-color);
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-      text-align: center;
-      display: block;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-    }
-
-    .pricing-button::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: left 0.6s ease;
-      z-index: 0;
-    }
-
-    .pricing-button:hover::before {
-      left: 100%;
-    }
-
-    .pricing-button:hover {
-      background: rgba(138, 43, 226, 0.5);
-      border-color: rgba(138, 43, 226, 0.7);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
-    }
-
-    .pricing-button > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .coming-soon {
-      opacity: 0.6;
-      cursor: not-allowed;
-    }
-
-    .coming-soon .pricing-button {
-      background: rgba(128, 128, 128, 0.2);
-      border-color: rgba(128, 128, 128, 0.3);
-      cursor: not-allowed;
-    }
-
-    .coming-soon .pricing-button:hover {
-      transform: none;
-      background: rgba(128, 128, 128, 0.2);
-    }
-
-    @media (max-width: 768px) {
-      .pricing-grid {
-        grid-template-columns: 1fr;
-      }
-    }
-  </style>
-  <script src="js/header.js"></script>
 </head>
 <body>
-  <div class="header-container">
-    <header class="header">
-        <div class="nav-group">
-            <a href="index.html" class="logo-link">
-                <img src="Assets/Logomark/Keeper Security.png" alt="Keeper Logo" class="logo-mark" onerror="this.src='Assets/Logomark/Keeper Logo.gif'">
-            </a>
-        </div>
-
-        <nav class="nav-group nav-links">
-            <a href="index.html#features" class="nav-link">Features</a>
-            <div class="nav-item has-dropdown">
-                <a href="#" class="nav-link">Products</a>
-                <div class="dropdown">
-                    <div class="dropdown-grid">
-                        <a href="password-manager.html" class="dropdown-item">Password Manager</a>
-                        <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
-                        <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
-                        <a href="account-manager.html" class="dropdown-item">Account Manager</a>
-                        <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
-                        <a href="antivirus.html" class="dropdown-item">Antivirus</a>
-                        <a href="web-guard.html" class="dropdown-item">Web Guard</a>
-                    </div>
-                </div>
-            </div>
-            <a href="pricing.html" class="nav-link">Pricing</a>
-            <a href="index.html#download" class="nav-link">Download</a>
-            <div class="nav-item has-dropdown">
-                <a href="#" class="nav-link">Support</a>
-                <div class="dropdown">
-                    <div class="dropdown-grid">
-                        <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
-                        <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
-                        <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <div class="nav-group">
-            <a href="login.html" class="btn login-btn">Log In</a>
-            <button class="hamburger-menu" aria-label="Toggle mobile menu">
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-            </button>
-        </div>
-    </header>
-  </div>
-
-  <div class="mobile-nav">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="index.html#features" class="nav-link">Features</a>
-    <div class="nav-item has-dropdown">
-        <a href="#" class="nav-link">Products</a>
-        <div class="dropdown">
-            <div class="dropdown-grid">
-                <a href="password-manager.html" class="dropdown-item">Password Manager</a>
-                <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
-                <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
-                <a href="account-manager.html" class="dropdown-item">Account Manager</a>
-                <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
-                <a href="antivirus.html" class="dropdown-item">Antivirus</a>
-                <a href="web-guard.html" class="dropdown-item">Web Guard</a>
-            </div>
-        </div>
-    </div>
-    <a href="pricing.html" class="nav-link">Pricing</a>
-    <a href="index.html#download" class="nav-link">Download</a>
-    <div class="nav-item has-dropdown">
-        <a href="#" class="nav-link">Support</a>
-        <div class="dropdown">
-            <div class="dropdown-grid">
-                <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
-                <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
-                <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
-        </div>
-    </div>
-    <a href="pricing.html" class="nav-link">Pricing</a>
-    <a href="index.html#download" class="nav-link">Download</a>
-    <div class="nav-item has-dropdown">
-        <a href="#" class="nav-link">Support</a>
-        <div class="dropdown">
-            <div class="dropdown-grid">
-                <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
-                <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
-                <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
-            </div>
-        </div>
-    </div>
-    <div class="mobile-nav-buttons">
-        <a href="login.html" class="btn login-btn">Log In</a>
-    </div>
-  </div>
-
   <section class="pricing-section">
     <div class="container">
       <h2 class="section-title">Pricing Plans</h2>
       <p class="section-subtitle">Choose the perfect plan for your security needs.</p>
-      
+
       <div class="pricing-grid">
         <div class="pricing-card selected">
           <div class="pricing-badge">Free</div>
@@ -588,6 +281,26 @@
       </div>
     </div>
   </section>
+
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="../JavaScript/main.js"></script>
+  <script src="../script.js"></script>
+  <script src="../JavaScript/nav.js"></script>
+  <script src="../JavaScript/boot-animation.js"></script>
+  <script src="../JavaScript/footer-loader.js"></script>
+  <script>
+    const lenis = new Lenis({
+      lerp: 0.05,
+      wheelMultiplier: 2.0,
+    });
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  </script>
 </body>
 </html>
 

@@ -1,3 +1,7 @@
+html.booting body {
+  overflow: hidden;
+}
+
 .hero.loading .hero-background-video {
   filter: blur(8px);
   transition: filter 1.5s ease-out;

@@ -575,8 +575,8 @@ body::after {
     }
 }
 
+/* Container for other pages */
 .page-container {
-
     max-width: 1200px;
     margin: 0 auto;
     padding: 120px 48px 80px;

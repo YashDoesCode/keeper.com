@@ -7,7 +7,6 @@ html, body {
     background-color: #000000;
     background-size: cover;
     background-repeat: no-repeat;
-    scroll-behavior: smooth;
 }
 
 :root {
@@ -147,11 +146,8 @@ body.waitlist-open {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    filter: saturate(1.15) brightness(0.92);
+    filter: saturate(1.2) brightness(0.9);
     opacity: 0.85;
-    will-change: opacity, transform, filter;
-    backface-visibility: hidden;
-    mix-blend-mode: normal;
 }
 
 .hero-frame {
@@ -321,20 +317,20 @@ body.waitlist-open {
 }
 
 .hero-motion {
-    transform: none;
-    filter: none;
+    transform: scale(1.03);
+    filter: blur(10px) brightness(0.9);
 }
 
 .hero-motion .hero-backdrop {
-    transform: none;
-    filter: none;
-    transition: none;
+    transform: scale(1.08);
+    filter: blur(16px) brightness(0.75);
+    transition: transform 0.9s ease, filter 0.9s ease;
 }
 
 .hero-motion .hero-frame {
-    transform: none;
-    filter: none;
-    opacity: 1;
+    transform: translateY(-40px) scale(0.97);
+    filter: blur(6px) saturate(0.85);
+    opacity: 0.75;
 }
 
 .hero-media {

@@ -455,8 +455,8 @@ body::after {
     font-family: 'Courier New', monospace;
 }
 
+/* Mobile Menu */
 .mobile-menu-toggle {
-
     display: none;
     flex-direction: column;
     gap: 4px;
@@ -504,8 +504,8 @@ body::after {
     color: var(--olsa-purple-light);
 }
 
+/* Responsive Design */
 @media (max-width: 1024px) {
-
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -575,8 +575,8 @@ body::after {
     }
 }
 
+/* Container for other pages */
 .page-container {
-
     max-width: 1200px;
     margin: 0 auto;
     padding: 120px 48px 80px;

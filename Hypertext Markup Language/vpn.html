@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/header.css" />
-  <link rel="stylesheet" href="css/redesign.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/header.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/redesign.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/animations.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -12,6 +13,10 @@
   <title>Advanced VPN - Keeper</title>
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="../JavaScript/header-loader.js" defer></script>
+  <script src="../JavaScript/header.js"></script>
   <style>
     .feature-page {
       min-height: 100vh;
@@ -158,91 +163,12 @@
       }
     }
   </style>
-  <script src="js/header.js"></script>
+  
 </head>
 <body>
-  <div class="header-container">
-    <header class="header">
-        <div class="nav-group">
-            <a href="index.html" class="logo-link">
-                <img src="Assets/Logomark/Keeper Security.png" alt="Keeper Logo" class="logo-mark" onerror="this.src='Assets/Logomark/Keeper Logo.gif'">
-            </a>
-        </div>
+  
 
-        <nav class="nav-group nav-links">
-            <a href="index.html#features" class="nav-link">Features</a>
-            <div class="nav-item has-dropdown">
-                <a href="#" class="nav-link">Products</a>
-                <div class="dropdown">
-                    <div class="dropdown-grid">
-                        <a href="password-manager.html" class="dropdown-item">Password Manager</a>
-                        <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
-                        <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
-                        <a href="account-manager.html" class="dropdown-item">Account Manager</a>
-                        <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
-                        <a href="antivirus.html" class="dropdown-item">Antivirus</a>
-                        <a href="web-guard.html" class="dropdown-item">Web Guard</a>
-                    </div>
-                </div>
-            </div>
-            <a href="pricing.html" class="nav-link">Pricing</a>
-            <a href="index.html#download" class="nav-link">Download</a>
-            <div class="nav-item has-dropdown">
-                <a href="#" class="nav-link">Support</a>
-                <div class="dropdown">
-                    <div class="dropdown-grid">
-                        <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
-                        <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
-                        <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
-                    </div>
-                </div>
-            </div>
-        </nav>
-
-        <div class="nav-group">
-            <a href="login.html" class="btn login-btn">Log In</a>
-            <button class="hamburger-menu" aria-label="Toggle mobile menu">
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-                <span class="hamburger-bar"></span>
-            </button>
-        </div>
-    </header>
-  </div>
-
-  <div class="mobile-nav">
-    <a href="index.html" class="nav-link">Home</a>
-    <a href="index.html#features" class="nav-link">Features</a>
-    <div class="nav-item has-dropdown">
-        <a href="#" class="nav-link">Products</a>
-        <div class="dropdown">
-            <div class="dropdown-grid">
-                <a href="password-manager.html" class="dropdown-item">Password Manager</a>
-                <a href="2fa-authenticator.html" class="dropdown-item">2FA & Passkey</a>
-                <a href="vpn.html" class="dropdown-item">Advanced VPN</a>
-                <a href="account-manager.html" class="dropdown-item">Account Manager</a>
-                <a href="file-encryption.html" class="dropdown-item">File Encryption</a>
-                <a href="antivirus.html" class="dropdown-item">Antivirus</a>
-                <a href="web-guard.html" class="dropdown-item">Web Guard</a>
-            </div>
-        </div>
-    </div>
-    <a href="pricing.html" class="nav-link">Pricing</a>
-    <a href="index.html#download" class="nav-link">Download</a>
-    <div class="nav-item has-dropdown">
-        <a href="#" class="nav-link">Support</a>
-        <div class="dropdown">
-            <div class="dropdown-grid">
-                <a href="support.html#raise-issue" class="dropdown-item">Raise an Issue/Error</a>
-                <a href="support.html#report-problem" class="dropdown-item">Report a Problem</a>
-                <a href="https://www.verdicto.info" target="_blank" rel="noopener noreferrer" class="dropdown-item">Lodge Legal Complaint</a>
-            </div>
-        </div>
-    </div>
-    <div class="mobile-nav-buttons">
-        <a href="login.html" class="btn login-btn">Log In</a>
-    </div>
-  </div>
+  
 
   <div class="feature-page">
     <div class="container">
@@ -324,6 +250,22 @@
     }
     setInterval(updateTimer, 1000);
     updateTimer();
+  </script>
+  <script src="../JavaScript/main.js"></script>
+  <script src="../script.js"></script>
+  <script src="../JavaScript/nav.js"></script>
+  <script src="../JavaScript/boot-animation.js"></script>
+  <script src="../JavaScript/footer-loader.js"></script>
+  <script>
+    const lenis = new Lenis({
+      lerp: 0.05,
+      wheelMultiplier: 2.0,
+    });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
   </script>
 </body>
 </html>
