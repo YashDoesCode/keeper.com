@@ -10,79 +10,109 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <title>Web Guard & Ad Blocker - Keeper</title>
+  <title>Web Guard & Ad Blocker - Keeper Sentinel</title>
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="../JavaScript/header-loader.js" defer></script>
   <script src="../JavaScript/header.js"></script>
-  <style>
-    .feature-page { min-height: 100vh; padding: 120px 20px 80px; background: #000000; }
-    .feature-hero { text-align: center; margin-bottom: 4rem; }
-    .feature-hero h1 { font-size: 3rem; font-weight: 700; margin-bottom: 1rem; color: var(--text-color); }
-    .feature-hero p { font-size: 1.2rem; color: var(--muted-color); max-width: 800px; margin: 0 auto; }
-    .feature-details { max-width: 1200px; margin: 0 auto; }
-    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin: 3rem 0; }
-    .feature-detail-card { background: rgba(255, 255, 255, 0.05); -webkit-backdrop-filter: blur(20px) saturate(180%); backdrop-filter: blur(20px) saturate(180%); border: 1px solid rgba(255, 255, 255, 0.18); border-radius: 20px; padding: 2rem; transition: all 0.3s ease; }
-    .feature-detail-card:hover { transform: translateY(-5px); border-color: rgba(138, 43, 226, 0.5); box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3); }
-    .feature-detail-card h3 { font-size: 1.5rem; font-weight: 700; margin-bottom: 1rem; color: var(--primary-color); }
-    .feature-detail-card p { color: var(--muted-color); line-height: 1.8; }
-    @media (max-width: 768px) { .feature-hero h1 { font-size: 2rem; } }
-  </style>
-  
 </head>
 <body>
-  
-  
-  <div class="feature-page">
+  <main class="page-shell">
     <div class="container">
-      <div class="feature-hero">
-        <h1>Web Guard & Ad Blocker</h1>
-        <p>Chromium-based browser extension with safe site indicators, custom ad blocking, phishing protection, LAN intrusion prevention, and configurable filters.</p>
-      </div>
-      <div class="feature-details">
-        <div class="feature-grid">
-          <div class="feature-detail-card">
-            <h3>Safe Site Indicators</h3>
-            <p>Visual indicators show the security status of websites you visit. Green indicators show safe sites, while warnings appear for potentially dangerous or suspicious websites.</p>
+      <section class="page-hero">
+        <span class="eyebrow">Keeper Sentinel Feature</span>
+        <h1>Web Guard & Ad Intelligence</h1>
+        <p>A Chromium-based sentinel that scores every page before it renders. Toggle curated filters for ads, phishing, LAN intrusions, and corporate safety policies while maintaining a lightning-fast browsing experience.</p>
+        <div class="page-hero-actions">
+          <a href="pricing.html" class="btn glass primary" data-variant="pulse">Include in your plan</a>
+          <a href="support.html#report-problem" class="btn glass secondary" data-variant="halo">Request enterprise policies</a>
+        </div>
+      </section>
+    </div>
+    <section class="page-section">
+      <div class="container split-layout">
+        <div class="callout-panel">
+          <h3>Predictive protection for modern browsing</h3>
+          <p>Keeper Web Guard inspects URLs, page scripts, and network calls before they reach the browser. If a site fails risk scoring, the extension blocks rendering, rewrites dangerous elements, or routes traffic through isolated views.</p>
+          <div class="tag-stack">
+            <span class="tag-chip">Predictive Scoring</span>
+            <span class="tag-chip">Tracker Control</span>
+            <span class="tag-chip">LAN Intrusion Shield</span>
           </div>
-          <div class="feature-detail-card">
-            <h3>Custom Ad Blocking</h3>
-            <p>Block ads across all websites with customizable filters. Choose which types of ads to block and customize your browsing experience to be ad-free and distraction-free.</p>
+          <div class="metric-board">
+            <div class="metric-chip">
+              <span>1.8 ms</span>
+              <span>Average time to classify and score a page before render</span>
+            </div>
+            <div class="metric-chip">
+              <span>98%</span>
+              <span>Reduction in third-party trackers after deploying curated filters</span>
+            </div>
+            <div class="metric-chip">
+              <span>4 modes</span>
+              <span>Adaptive browsing profiles for work, travel, and high-risk research</span>
+            </div>
           </div>
-          <div class="feature-detail-card">
-            <h3>Phishing Protection</h3>
-            <p>Advanced phishing detection identifies and blocks malicious websites designed to steal your credentials. Get instant warnings when visiting known phishing sites.</p>
+        </div>
+        <div class="detail-grid">
+          <div class="detail-card">
+            <h3>Safe Site Intelligence</h3>
+            <p>Real-time scores appear before links open, leveraging Keeper’s threat graph and global partner feeds. Users know instantly when a destination is trusted, unknown, or hostile.</p>
           </div>
-          <div class="feature-detail-card">
-            <h3>LAN Intrusion Prevention</h3>
-            <p>Protect against local network attacks and prevent unauthorized access to your device from other devices on the same network. Keep your data safe from local threats.</p>
+          <div class="detail-card">
+            <h3>Precision Ad Controls</h3>
+            <p>Create granular filters for ad categories, trackers, and in-app banners. Teams can maintain brand-safe lists while individuals customize personal preferences.</p>
           </div>
-          <div class="feature-detail-card">
-            <h3>Configurable Filters</h3>
-            <p>Customize filtering rules to meet your specific needs. Block trackers, malicious scripts, and unwanted content while allowing trusted websites to function normally.</p>
+          <div class="detail-card">
+            <h3>Phishing Countermeasures</h3>
+            <p>Keeper analyses DOM structures, login prompts, and certificate mismatches to block credential theft in real time. Suspicious pages open in a hardened sandbox for inspection.</p>
           </div>
-          <div class="feature-detail-card">
-            <h3>Tracker Blocking</h3>
-            <p>Block tracking cookies and scripts that follow you across the web. Maintain your privacy and prevent advertisers from building profiles based on your browsing behavior.</p>
+          <div class="detail-card">
+            <h3>LAN Intrusion Defense</h3>
+            <p>Detects ARP spoofing, rogue DHCP servers, and unexpected peer scans on local networks. Users receive guidance to disconnect, while admins can auto-block compromised segments.</p>
           </div>
-          <div class="feature-detail-card">
-            <h3>Malicious Script Protection</h3>
-            <p>Automatically block malicious JavaScript and other scripts that could harm your device or steal your information. Browse safely without worrying about malicious code.</p>
+          <div class="detail-card">
+            <h3>Policy Management</h3>
+            <p>Administrators push enforcement bundles with safe-site allowlists, privacy expectations, and productivity rules. Traveller modes ease restrictions automatically when roaming.</p>
           </div>
-          <div class="feature-detail-card">
-            <h3>Privacy-First Design</h3>
-            <p>All filtering and blocking happens locally on your device. Your browsing data never leaves your computer, ensuring complete privacy and security.</p>
-          </div>
-          <div class="feature-detail-card">
-            <h3>Cross-Browser Support</h3>
-            <p>Works with all Chromium-based browsers including Chrome, Edge, Brave, and Opera. Install once and enjoy protection across all your browsers.</p>
+          <div class="detail-card">
+            <h3>Telemetry for Insights</h3>
+            <p>Aggregated analytics reveal top blocked threats, ad savings, and compliance gaps. Export summaries to data warehouses or training programs to reinforce user awareness.</p>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </section>
+    <section class="page-section">
+      <div class="container split-layout">
+        <div class="callout-panel">
+          <h3>Personalized browsing profiles</h3>
+          <p>Create profiles for finance teams, developers, or family members. Each profile stores filter rules, tracking tolerance, and session persistence so switching contexts is effortless yet safe.</p>
+          <div class="tag-stack">
+            <span class="tag-chip">Profile Isolation</span>
+            <span class="tag-chip">Family-Ready</span>
+            <span class="tag-chip">Enterprise Governance</span>
+          </div>
+        </div>
+        <div class="timeline-grid">
+          <div class="timeline-step">
+            <strong>Assess</strong>
+            <p>Keeper scrutinizes page metadata, TLS fingerprints, and script behaviors before load. If risk is detected, users receive guidance and optional secure preview.</p>
+          </div>
+          <div class="timeline-step">
+            <strong>Control</strong>
+            <p>Block or reshape ads, trackers, and malicious scripts. LAN intrusion shields run concurrently, monitoring for network-level tampering.</p>
+          </div>
+          <div class="timeline-step">
+            <strong>Report</strong>
+            <p>Generate insights for security teams, compliance officers, or parents. Keeper tracks attempts, user overrides, and provides recommended policy refinements.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
   <script src="../JavaScript/main.js"></script>
   <script src="../script.js"></script>
   <script src="../JavaScript/nav.js"></script>

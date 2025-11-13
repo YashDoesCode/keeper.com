@@ -10,7 +10,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-  <title>Support - Keeper</title>
+  <title>Support - Keeper Sentinel</title>
   <link rel="icon" type="image/gif" href="../Assets/Logomark/Icon TRS.png">
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
@@ -18,267 +18,153 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="../JavaScript/header-loader.js" defer></script>
   <script src="../JavaScript/header.js"></script>
-  <style>
-    .support-page {
-      min-height: 100vh;
-      padding: 120px 20px 80px;
-      background: #000000;
-    }
-
-    .support-section {
-      margin-bottom: 64px;
-    }
-
-    .support-form {
-      max-width: 700px;
-      margin: 0 auto;
-      background: rgba(255, 255, 255, 0.05);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 24px;
-      padding: 40px;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .support-form::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
-      transition: left 0.6s ease;
-      z-index: 0;
-    }
-
-    .support-form:hover::before {
-      left: 100%;
-    }
-
-    .support-form > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .form-group {
-      margin-bottom: 24px;
-    }
-
-    .form-label {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--text-color);
-      font-weight: 500;
-      font-size: 14px;
-    }
-
-    .form-input,
-    .form-select,
-    .form-textarea {
-      width: 100%;
-      padding: 12px 16px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 12px;
-      color: var(--text-color);
-      font-size: 15px;
-      font-family: inherit;
-      transition: all 0.3s ease;
-      box-sizing: border-box;
-    }
-
-    .form-input:focus,
-    .form-select:focus,
-    .form-textarea:focus {
-      outline: none;
-      border-color: rgba(138, 43, 226, 0.5);
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
-    }
-
-    .form-textarea {
-      resize: vertical;
-      min-height: 120px;
-    }
-
-    .form-actions {
-      display: flex;
-      gap: 12px;
-      margin-top: 32px;
-    }
-
-    .btn-submit {
-      padding: 14px 28px;
-      background: rgba(138, 43, 226, 0.3);
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(138, 43, 226, 0.5);
-      border-radius: 12px;
-      color: var(--text-color);
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-
-    .btn-submit::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: -100%;
-      width: 100%;
-      height: 100%;
-      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-      transition: left 0.6s ease;
-      z-index: 0;
-    }
-
-    .btn-submit:hover::before {
-      left: 100%;
-    }
-
-    .btn-submit:hover {
-      background: rgba(138, 43, 226, 0.5);
-      border-color: rgba(138, 43, 226, 0.7);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
-    }
-
-    .btn-submit > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .btn-back {
-      padding: 14px 24px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 12px;
-      color: var(--text-color);
-      font-size: 16px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      display: inline-block;
-    }
-
-    .btn-back:hover {
-      background: rgba(255, 255, 255, 0.08);
-      border-color: rgba(255, 255, 255, 0.25);
-    }
-
-    .section-anchor {
-      scroll-margin-top: 120px;
-    }
-  </style>
 </head>
 <body>
-  <div class="support-page">
+  <main class="page-shell">
     <div class="container">
-      <h2 class="section-title">Support & Feedback</h2>
-      <p class="section-subtitle">We're here to help. Choose an option below to get assistance.</p>
-
-      <section id="raise-issue" class="support-section section-anchor">
-        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 24px;">Raise an Issue/Error</h3>
-        <p class="section-subtitle" style="margin-bottom: 32px;">Report a bug or technical issue you've encountered.</p>
-        <form id="raiseIssueForm" class="support-form">
-          <div class="form-group">
-            <label class="form-label" for="issueName">Name</label>
-            <input type="text" id="issueName" name="name" class="form-input" required placeholder="Full name" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="issueEmail">Email</label>
-            <input type="email" id="issueEmail" name="email" class="form-input" required placeholder="email@example.com" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="issueType">Issue Type</label>
-            <select id="issueType" name="issueType" class="form-select">
-              <option>Bug</option>
-              <option>Error</option>
-              <option>Crash</option>
-              <option>Performance Issue</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="issueDescription">Issue Description</label>
-            <textarea id="issueDescription" name="description" class="form-textarea" required placeholder="Describe the issue in detail. Include steps to reproduce if possible."></textarea>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn-submit">Submit Issue</button>
-            <a href="index.html" class="btn-back">Back to Home</a>
-          </div>
-        </form>
-      </section>
-
-      <section id="report-problem" class="support-section section-anchor">
-        <h3 class="section-title" style="font-size: 1.8rem; margin-bottom: 24px;">Report a Problem</h3>
-        <p class="section-subtitle" style="margin-bottom: 32px;">Report a general problem or concern with Keeper.</p>
-        <form id="reportProblemForm" class="support-form">
-          <div class="form-group">
-            <label class="form-label" for="problemName">Name</label>
-            <input type="text" id="problemName" name="name" class="form-input" required placeholder="Full name" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="problemEmail">Email</label>
-            <input type="email" id="problemEmail" name="email" class="form-input" required placeholder="email@example.com" />
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="problemCategory">Category</label>
-            <select id="problemCategory" name="category" class="form-select">
-              <option>Feature request</option>
-              <option>Design</option>
-              <option>Usability</option>
-              <option>Security concern</option>
-              <option>Other</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label class="form-label" for="problemMessage">Message</label>
-            <textarea id="problemMessage" name="message" class="form-textarea" required placeholder="Describe the problem or suggestion in detail..."></textarea>
-          </div>
-
-          <div class="form-actions">
-            <button type="submit" class="btn-submit">Report Problem</button>
-            <a href="index.html" class="btn-back">Back to Home</a>
-          </div>
-        </form>
+      <section class="page-hero">
+        <span class="eyebrow">Keeper Sentinel Care</span>
+        <h1>Security experts on-call, globally</h1>
+        <p>Keeper Sentinel support teams operate alongside our SOC, legal, and customer success squads. Whether you are defending from an active attack or orchestrating a rollout, we have a dedicated signal path for you.</p>
+        <div class="page-hero-actions">
+          <a href="mailto:care@keeper.com" class="btn glass primary" data-variant="pulse">Email care@keeper.com</a>
+          <a href="partners.html" class="btn glass secondary" data-variant="halo">Engage a certified partner</a>
+        </div>
       </section>
     </div>
-  </div>
-
+    <section class="page-section">
+      <div class="container split-layout">
+        <div class="callout-panel">
+          <h3>Response lanes tailored to urgency</h3>
+          <p>Select the lane that matches your situation so our operations desk can route you instantly. Active incidents trigger high-priority escalation, while roadmap requests and program reviews receive consultative treatment.</p>
+          <div class="tag-stack">
+            <span class="tag-chip">24/7 Response</span>
+            <span class="tag-chip">Global Coverage</span>
+            <span class="tag-chip">AI-Enhanced Follow-up</span>
+          </div>
+        </div>
+        <div class="detail-grid">
+          <div class="detail-card">
+            <h3>Incident Hotline</h3>
+            <p>For compromised credentials, VPN breaches, or malware outbreaks. Our responders join your war room, issue containment guidance, and coordinate product-side mitigations.</p>
+          </div>
+          <div class="detail-card">
+            <h3>Program Success</h3>
+            <p>Strategic reviews, roadmap planning, license alignment, and proof-of-value sessions to evolve your Keeper implementation.</p>
+          </div>
+          <div class="detail-card">
+            <h3>Compliance Desk</h3>
+            <p>Receive export packages, audit letters, and data processing agreements tailored to your regulatory region.</p>
+          </div>
+          <div class="detail-card">
+            <h3>Partner Enablement</h3>
+            <p>Partners can schedule enablement workshops, request marketing resources, or ask for competitive positioning support.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section" id="raise-issue">
+      <div class="container split-layout">
+        <div class="callout-panel">
+          <h3>Raise an issue or error</h3>
+          <p>Provide the context below and Sentinel will log the case, respond with an automated summary, and assign the appropriate responder. You may be contacted for additional telemetry or secure file uploads.</p>
+          <form id="raiseIssueForm" class="form-panel">
+            <div class="form-row">
+              <label for="issueName">Full name</label>
+              <input type="text" id="issueName" name="name" required placeholder="Alex Rivera" />
+            </div>
+            <div class="form-row">
+              <label for="issueEmail">Work email</label>
+              <input type="email" id="issueEmail" name="email" required placeholder="alex@company.com" />
+            </div>
+            <div class="form-row">
+              <label for="issueType">Issue type</label>
+              <select id="issueType" name="issueType" required>
+                <option>Bug</option>
+                <option>Error</option>
+                <option>Crash</option>
+                <option>Performance Issue</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="issueDescription">Describe the issue</label>
+              <textarea id="issueDescription" name="description" required placeholder="Include steps, timestamps, and impacted users"></textarea>
+            </div>
+            <div class="form-panel-actions">
+              <button type="submit" class="btn glass primary" data-variant="pulse">Submit issue</button>
+              <a href="support.html" class="btn glass secondary" data-variant="halo">Back to overview</a>
+            </div>
+          </form>
+        </div>
+        <div class="callout-panel" id="report-problem">
+          <h3>Report a problem or request</h3>
+          <p>Use this channel for product ideas, data deletion requests, or business-critical changes. Our AI assistant drafts secure correspondence and monitors follow-ups until closure.</p>
+          <form id="reportProblemForm" class="form-panel">
+            <div class="form-row">
+              <label for="problemName">Full name</label>
+              <input type="text" id="problemName" name="name" required placeholder="Jordan Malik" />
+            </div>
+            <div class="form-row">
+              <label for="problemEmail">Email</label>
+              <input type="email" id="problemEmail" name="email" required placeholder="jordan@company.com" />
+            </div>
+            <div class="form-row">
+              <label for="problemCategory">Category</label>
+              <select id="problemCategory" name="category" required>
+                <option>Feature request</option>
+                <option>Design</option>
+                <option>Usability</option>
+                <option>Security concern</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <label for="problemMessage">Message</label>
+              <textarea id="problemMessage" name="message" required placeholder="Share as much detail as possible"></textarea>
+            </div>
+            <div class="form-panel-actions">
+              <button type="submit" class="btn glass primary" data-variant="pulse">Report problem</button>
+              <a href="mailto:care@keeper.com" class="btn glass secondary" data-variant="halo">Email care@keeper.com</a>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="container split-layout">
+        <div class="detail-grid">
+          <div class="detail-card">
+            <h3>Support playbooks</h3>
+            <p>Access incident runbooks, knowledge-base articles, and downloadable configuration guides from the Sentinel documentation hub.</p>
+          </div>
+          <div class="detail-card">
+            <h3>Community briefings</h3>
+            <p>Join monthly webinars with Keeper experts, threat intelligence updates, and live Q&amp;A sessions to stay ahead of emerging risks.</p>
+          </div>
+          <div class="detail-card">
+            <h3>Compliance packages</h3>
+            <p>Download SOC 2, ISO 27001, PCI DSS, and GDPR documentation bundles tailored to your auditors.</p>
+          </div>
+        </div>
+        <div class="callout-panel">
+          <h3>Hotline directory</h3>
+          <p>For urgent assistance call the regional hotline closest to you. Each number routes directly to Keeper’s security operations desk.</p>
+          <div class="tag-stack">
+            <span class="tag-chip">AMER +1 844-KEEPER</span>
+            <span class="tag-chip">EMEA +44 20 3808 7220</span>
+            <span class="tag-chip">APAC +65 3129 7550</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   <div id="toast" role="status" aria-live="polite"></div>
   <script src="../JavaScript/main.js"></script>
   <script src="../script.js"></script>
   <script src="../JavaScript/nav.js"></script>
   <script src="../JavaScript/boot-animation.js"></script>
   <script src="../JavaScript/footer-loader.js"></script>
-  <script>
-    const lenis = new Lenis({
-      lerp: 0.05,
-      wheelMultiplier: 2.0,
-    });
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  </script>
   <script>
     document.getElementById('raiseIssueForm').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -316,16 +202,15 @@
       this.reset();
     });
 
-    window.addEventListener('load', () => {
-      if (window.location.hash) {
-        const element = document.querySelector(window.location.hash);
-        if (element) {
-          setTimeout(() => {
-            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }, 100);
-        }
-      }
+    const lenis = new Lenis({
+      lerp: 0.05,
+      wheelMultiplier: 2.0,
     });
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+    requestAnimationFrame(raf);
   </script>
 </body>
 </html>

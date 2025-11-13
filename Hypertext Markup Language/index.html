@@ -67,7 +67,7 @@
       </div>
       <form class="newsletter-form-inline" id="newsletterForm">
         <input type="email" id="newsletterEmail" placeholder="Enter your email" class="newsletter-input" required>
-        <button type="submit" class="btn glass primary" style="margin-left: 10px;">Subscribe</button>
+        <button type="submit" class="btn glass primary">Subscribe</button>
       </form>
     </div>
   </section>
@@ -147,70 +147,121 @@
     </div>
   </section>
 
-  <section id="features" class="section">
+  <section id="features" class="page-shell">
     <div class="container">
-      <h2 class="section-title">Introducing Sentinel</h2>
-      <p class="section-subtitle">
-        A standalone Security System with that perfect User Experience. Engineered for Excellency.
-        <br><br>
-      </p>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="try-button-wrapper">
-              <a href="password-generator.html" class="try-button">Try</a>
-          </div>
-          <div class="icon-wrapper"><span class="icon material-symbols-outlined">password</span></div>
+      <div class="page-hero">
+        <span class="eyebrow">Keeper Sentinel Platform</span>
+        <h2>A standalone all-in-one product engineered for uncompromised control</h2>
+        <p>Keeper Sentinel unifies zero-trust secrets management, account lifecycle automation, and real-time defense into a single command surface. Each module is built to meet regulated industry requirements while staying intuitive for everyday operators.</p>
+        <div class="page-hero-actions">
+          <a href="pricing.html" class="btn glass primary" data-variant="pulse">Review deployment tiers</a>
+          <a href="#download" class="btn glass secondary" data-variant="halo">Secure early access</a>
+        </div>
+      </div>
+      <div class="feature-showcase">
+        <article class="feature-card">
           <h3>Password Manager</h3>
-          <p>Zero-knowledge password manager using Argon2id + SHA256-Bit-CBC encryption. Store and manage all your passwords securely with offline export, breach alerts, and passkey-ready authentication.</p>
-          <a href="password-manager.html" class="feature-link">Learn More →</a>
-        </div>
-        <div class="feature-card">
-          <div class="icon-wrapper"><span class="icon material-symbols-outlined">pin</span></div>
-          <h3>2FA & Passkey Authenticator</h3>
-          <p>Two-factor authentication and passkey support for enhanced security. TOTP/Push notifications with offline backup codes and seamless device transfer.</p>
-          <a href="2fa-authenticator.html" class="feature-link">Learn More →</a>
-        </div>
-        <div class="feature-card">
-          <div class="icon-wrapper"><span class="icon material-symbols-outlined">vpn_key</span></div>
-          <h3>Virtual Private Network (VPN)</h3>
-          <p>Site-specific VPN or full computer protection. Features industry-standard encryption, tunneling, kill switch, layering, cookie protection, and optional Onion Router (Tor) integration.</p>
-          <a href="vpn.html" class="feature-link">Learn More →</a>
-        </div>
-        <div class="feature-card">
-          <div class="icon-wrapper"><span class="icon material-symbols-outlined">manage_accounts</span></div>
-          <h3>Account Manager</h3>
-          <p>Create and manage accounts (Google, Microsoft, etc.) with admin console access. Monitor and recover hacked accounts, revoke service access, request data deletion via AI, and access direct account deletion links.</p>
-          <a href="account-manager.html" class="feature-link">Learn More →</a>
-        </div>
-        <div class="feature-card">
-          <div class="icon-wrapper"><span class="icon material-symbols-outlined">enhanced_encryption</span></div>
-          <h3>File Encryption</h3>
-          <p>Argon2id + SHA256-Bit-CBC encryption for files and folders. Integration with Windows File Manager and macOS Finder, fingerprint/Windows Hello unlock, stealth mode (PNG disguise), hidden folders, and Google Drive encryption.</p>
-          <a href="file-encryption.html" class="feature-link">Learn More →</a>
-        </div>
-        <div class="feature-card">
-          <div class="icon-wrapper"><span class="icon material-symbols-outlined">shield</span></div>
-          <h3>Antivirus & Web Security</h3>
-          <p>World's first lightweight solution combining recognized malware databases (partnered with Kaspersky, McAfee, etc.) and Google's dark web scan in a single scan.</p>
-          <a href="antivirus.html" class="feature-link">Learn More →</a>
-        </div>
-        <div class="feature-card">
-          <div class="icon-wrapper"><span class="icon material-symbols-outlined">security</span></div>
-          <h3>Web Guard & Ad Blocker</h3>
-          <p>Chromium-based browser extension with safe site indicators, custom ad blocking, phishing protection, LAN intrusion prevention, and configurable filters.</p>
-          <a href="web-guard.html" class="feature-link">Learn More →</a>
-        </div>
-        <div class="feature-card">
-          <div class="icon-wrapper"><span class="icon material-symbols-outlined">token</span></div>
-          <h3>Cryptocurrency Vault</h3>
-          <p>Institutional-grade crypto and digital asset command center with MPC wallets, automated compliance attestations, anomaly detection and zero-knowledge hardware escrow.</p>
-          <a href="account-manager.html" class="feature-link">Discover the roadmap →</a>
-        </div>
+          <p>Argon2id seals every vault with memory-hard protection while SHA256-Bit-CBC maintains integrity across replicas. Secrets live locally first, then sync through encrypted courier channels with device-bound hardware keys.</p>
+          <div class="feature-meta">
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Core protections</span>
+              <span class="feature-meta-value">Argon2id derivation, SHA256-Bit-CBC sealing, hardware-backed key attestations, breach telemetry fused with dark web intelligence.</span>
+            </div>
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Operational value</span>
+              <span class="feature-meta-value">Offline exports with rehydrated passphrases, delegated secret sharing, adaptive rotation policies, and passkey-ready authentication workflows.</span>
+            </div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <h3>2FA &amp; Passkey Authenticator</h3>
+          <p>A unified authenticator issues TOTPs, WebAuthn passkeys, and device-bound push approvals from one pane. Recovery kits are automatically maintained and encrypted for rapid incident response.</p>
+          <div class="feature-meta">
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Signals</span>
+              <span class="feature-meta-value">Biometric attestation, device health posture, geo-velocity checks, and AI-evaluated phishing resistance for every authentication challenge.</span>
+            </div>
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Deployment</span>
+              <span class="feature-meta-value">Roll out organization-wide with policy bundles, auto-migrate legacy OTP seeds, and integrate with identity providers through SCIM and OIDC.</span>
+            </div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <h3>Modular VPN Mesh</h3>
+          <p>Route traffic per application, per domain, or system-wide. Keeper Sentinel enforces AES-256-GCM tunnels with multi-hop layering, onion routing collaboration, and automated kill switches.</p>
+          <div class="feature-meta">
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Granular routing</span>
+              <span class="feature-meta-value">Site-specific isolation, workstation-wide protection modes, split tunneling, session pinning, and cookie sanitization safeguards.</span>
+            </div>
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Advanced stack</span>
+              <span class="feature-meta-value">IKEv2/IPsec, WireGuard, Onion Router collab, kill switch enforcement, and anomaly scoring to quarantine suspicious hops in milliseconds.</span>
+            </div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <h3>Account Creator &amp; Manager</h3>
+          <p>Keeper provisions Google Workspace, Microsoft 365, and critical SaaS identities with dual-admin control. Users receive the same console power Keeper uses, supported by AI-driven monitoring.</p>
+          <div class="feature-meta">
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Continuity</span>
+              <span class="feature-meta-value">Automated recovery workflows, delegated admin escalation, and session playback so users and Keeper jointly expel intruders without vendor intervention.</span>
+            </div>
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Lifecycle automation</span>
+              <span class="feature-meta-value">Service connection registry, one-click access revocation, AI-authored data deletion requests, compliance follow-ups, and direct account closure routing.</span>
+            </div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <h3>BitLocker &amp; File Encryption</h3>
+          <p>Transparent encryption for Windows Explorer and macOS Finder with biometric unlock. Stealth modes disguise vaults as benign file types while cloud sync remains encrypted end-to-end.</p>
+          <div class="feature-meta">
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Device integration</span>
+              <span class="feature-meta-value">Windows Hello and Touch ID unlock, context-aware policies, hidden vault visibility toggles, and encryption-as-you-sync for cloud folders.</span>
+            </div>
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Deception tooling</span>
+              <span class="feature-meta-value">Vault cloaking into PNG or ZIP façades, shrouded directories, and remote destruction triggers for lost devices.</span>
+            </div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <h3>Antivirus &amp; Web Security</h3>
+          <p>The world’s first dual-intelligence scanner blends leading malware databases, Keeper telemetry, and Google’s dark web feeds to neutralize threats in a single lightweight pass.</p>
+          <div class="feature-meta">
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Threat fusion</span>
+              <span class="feature-meta-value">Partnership feeds from premier cyber vendors, behavioral sandboxing, and real-time dark web correlation for immediate containment.</span>
+            </div>
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Performance</span>
+              <span class="feature-meta-value">Streamlined agent footprint, autonomous remediation playbooks, and risk dashboards aligned to SOC and compliance reporting.</span>
+            </div>
+          </div>
+        </article>
+        <article class="feature-card">
+          <h3>Web Guard &amp; Ad Blocker</h3>
+          <p>A Chromium-based guardian that scores every page before it renders. Users activate curated filters for ads, phishing, LAN intrusions, and brand-specific safety policies.</p>
+          <div class="feature-meta">
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Protection layers</span>
+              <span class="feature-meta-value">Predictive URL scoring, credential-outflow prevention, LAN threat detection, and enterprise-safe site trust lists.</span>
+            </div>
+            <div class="feature-meta-row">
+              <span class="feature-meta-label">Experience</span>
+              <span class="feature-meta-value">Per-site profiles, synchronized policy bundles, analytics for blocked trackers, and rapid toggles for travel or high-risk browsing scenarios.</span>
+            </div>
+          </div>
+        </article>
       </div>
     </div>
   </section>
 
-  <section id="ai-defense" class="section ai-defense" style="padding: 60px 0;">
+  <section id="ai-defense" class="section ai-defense compact-section">
     <div class="container ai-defense-grid">
       <div class="ai-defense-copy">
         <span class="eyebrow">Intelligent protection</span>
@@ -250,7 +301,7 @@
       </div>
       <div class="data-protection-content">
         <div class="protection-visual">
-          <img src="../Assets/Web-Elements/Lock.gif" alt="Data stream transitioning from raw to encrypted within Keeper" style="margin-bottom: 20px;">
+          <img src="../Assets/Web-Elements/Lock.gif" alt="Data stream transitioning from raw to encrypted within Keeper" class="data-visual">
         </div>
         <div class="protection-features">
           <div class="protection-card">
@@ -308,21 +359,8 @@
     <div class="container">
         <h2 class="section-title">Download Keeper</h2>
         <p class="section-subtitle">Get started with Keeper on your favorite platform.</p>
-        <div class="device-preview-container">
-          <div class="device-preview macbook-preview">
-            <div class="device-frame macbook">
-              <div class="device-screen">
-                <div class="device-content">Keeper Sentinel</div>
-              </div>
-            </div>
-          </div>
-          <div class="device-preview iphone-preview">
-            <div class="device-frame iphone">
-              <div class="device-screen">
-                <div class="device-content">Keeper</div>
-              </div>
-            </div>
-          </div>
+        <div class="device-gallery">
+          <img src="../Assets/Web-Elements/iPhone.png" alt="Keeper Sentinel mobile interface" class="device-gallery-image">
         </div>
         <div class="download-buttons-container">
             <a href="#" class="download-button macos-button" aria-label="Download for macOS" onclick="return false;">

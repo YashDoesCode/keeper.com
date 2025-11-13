@@ -16,7 +16,9 @@ document.addEventListener('DOMContentLoaded', () => {
     const strengthText = document.getElementById('strengthText');
     const crackTimeText = document.getElementById('crackTime');
     const passwordHistory = document.getElementById('passwordHistory');
+    const clearHistoryBtn = document.getElementById('clearHistoryBtn');
 
+    const storageKey = 'keeperSentinelPasswordHistory';
     const chars = {
         uppercase: 'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
         lowercase: 'abcdefghijklmnopqrstuvwxyz',
@@ -25,23 +27,42 @@ document.addEventListener('DOMContentLoaded', () => {
         ambiguous: 'l1IO0',
     };
 
-    let history = [];
+    let history = JSON.parse(localStorage.getItem(storageKey) || '[]');
+
+    const controls = [
+        includeUppercase,
+        includeLowercase,
+        includeNumbers,
+        includeSpecialChars,
+        ambiguityFree,
+        minNumbers,
+        minSpecialChars,
+    ];
+
+    controls.forEach(control => {
+        const eventType = control.type === 'number' ? 'input' : 'change';
+        control.addEventListener(eventType, generatePassword);
+    });
 
     lengthSlider.addEventListener('input', () => {
         lengthValue.textContent = lengthSlider.value;
         generatePassword();
     });
 
-    includeUppercase.addEventListener('change', generatePassword);
-    includeLowercase.addEventListener('change', generatePassword);
-    includeNumbers.addEventListener('change', generatePassword);
-    includeSpecialChars.addEventListener('change', generatePassword);
-    minNumbers.addEventListener('input', generatePassword);
-    minSpecialChars.addEventListener('input', generatePassword);
-    ambiguityFree.addEventListener('change', generatePassword);
-
     generateButton.addEventListener('click', generatePassword);
     copyButton.addEventListener('click', copyToClipboard);
+    clearHistoryBtn.addEventListener('click', clearHistory);
+
+    passwordHistory.addEventListener('click', event => {
+        const target = event.target;
+        if (target.dataset.action === 'copy') {
+            copyFromHistory(target.dataset.password);
+        } else if (target.dataset.action === 'use') {
+            useFromHistory(target.dataset.password);
+        } else if (target.dataset.action === 'remove') {
+            removeFromHistory(target.dataset.password);
+        }
+    });
 
     function generatePassword() {
         let charset = '';
@@ -54,15 +75,18 @@ document.addEventListener('DOMContentLoaded', () => {
             charset = charset.split('').filter(char => !chars.ambiguous.includes(char)).join('');
         }
 
-        if (charset === '') {
+        if (!charset) {
             passwordDisplay.value = 'Select at least one character set';
+            strengthIndicator.style.width = '0%';
+            strengthText.textContent = 'Weak';
+            crackTimeText.textContent = 'Unavailable';
             return;
         }
 
         let password = '';
-        let passwordLength = lengthSlider.value;
-        let minNums = parseInt(minNumbers.value, 10);
-        let minSpecs = parseInt(minSpecialChars.value, 10);
+        const passwordLength = parseInt(lengthSlider.value, 10);
+        const minNums = parseInt(minNumbers.value, 10);
+        const minSpecs = parseInt(minSpecialChars.value, 10);
 
         for (let i = 0; i < minNums; i++) {
             password += chars.numbers.charAt(Math.floor(Math.random() * chars.numbers.length));
@@ -80,57 +104,57 @@ document.addEventListener('DOMContentLoaded', () => {
 
         passwordDisplay.value = password;
         addToHistory(password);
-        updateStrengthIndicator();
-        calculateCrackTime();
+        updateStrengthIndicator(password);
+        calculateCrackTime(password, charset.length);
     }
 
     function copyToClipboard() {
-        passwordDisplay.select();
-        document.execCommand('copy');
-        copyButton.classList.add('copied');
-        copyButton.textContent = 'Copied!';
-
-        setTimeout(() => {
-            copyButton.classList.remove('copied');
-            copyButton.textContent = 'Copy';
-        }, 2000);
-    }
-
-    function updateStrengthIndicator() {
-        const length = passwordDisplay.value.length;
-        let strength = 0;
-        if (length > 8) strength++;
-        if (length > 12) strength++;
-        if (includeNumbers.checked) strength++;
-        if (includeUppercase.checked) strength++;
-        if (includeLowercase.checked) strength++;
-        if (includeSpecialChars.checked) strength++;
-
-        let strengthLabel = '';
-        let color = '';
-        if (strength <= 2) {
-            strengthLabel = 'Weak';
-            color = 'red';
-        } else if (strength <= 4) {
-            strengthLabel = 'Medium';
-            color = 'orange';
-        } else {
-            strengthLabel = 'Strong';
-            color = 'green';
+        const pass = passwordDisplay.value;
+        if (!pass || pass === 'Select at least one character set') {
+            generatePassword();
+            return;
         }
-
-        strengthIndicator.style.width = (strength / 6 * 100) + '%';
-        strengthIndicator.style.backgroundColor = color;
-        strengthText.textContent = strengthLabel;
+        navigator.clipboard.writeText(pass).then(() => {
+            copyButton.textContent = 'Copied!';
+            setTimeout(() => {
+                copyButton.textContent = 'Copy';
+            }, 2000);
+        });
     }
 
-    function calculateCrackTime() {
-        const password = passwordDisplay.value;
-        const charsetSize = getCharsetSize();
-        const combinations = Math.pow(charsetSize, password.length);
-        const guessesPerSecond = 1e9; 
-        const seconds = combinations / guessesPerSecond;
+    function updateStrengthIndicator(password) {
+        const length = password.length;
+        let strength = 0;
+        if (length >= 8) strength++;
+        if (length >= 12) strength++;
+        if (length >= 16) strength++;
+        if (/[A-Z]/.test(password)) strength++;
+        if (/[0-9]/.test(password)) strength++;
+        if (/[^A-Za-z0-9]/.test(password)) strength++;
 
+        const percentage = Math.min(strength / 6, 1) * 100;
+        strengthIndicator.style.width = percentage + '%';
+
+        if (strength <= 2) {
+            strengthText.textContent = 'Weak';
+            strengthIndicator.style.backgroundColor = '#ff4d4f';
+        } else if (strength <= 4) {
+            strengthText.textContent = 'Medium';
+            strengthIndicator.style.backgroundColor = '#ffa940';
+        } else {
+            strengthText.textContent = 'Strong';
+            strengthIndicator.style.backgroundColor = '#52c41a';
+        }
+    }
+
+    function calculateCrackTime(password, charsetSize) {
+        if (!password) {
+            crackTimeText.textContent = 'Unavailable';
+            return;
+        }
+        const combinations = Math.pow(charsetSize, password.length);
+        const guessesPerSecond = 1e9;
+        const seconds = combinations / guessesPerSecond;
         if (seconds < 60) {
             crackTimeText.textContent = '< 1 minute';
         } else if (seconds < 3600) {
@@ -139,9 +163,60 @@ document.addEventListener('DOMContentLoaded', () => {
             crackTimeText.textContent = Math.round(seconds / 3600) + ' hours';
         } else if (seconds < 31536000) {
             crackTimeText.textContent = Math.round(seconds / 86400) + ' days';
-        } else {
+        } else if (seconds < 3153600000) {
             crackTimeText.textContent = Math.round(seconds / 31536000) + ' years';
+        } else {
+            crackTimeText.textContent = 'Centuries+';
         }
+    }
+
+    function addToHistory(password) {
+        history = history.filter(item => item !== password);
+        history.unshift(password);
+        if (history.length > 12) {
+            history = history.slice(0, 12);
+        }
+        localStorage.setItem(storageKey, JSON.stringify(history));
+        renderHistory();
+    }
+
+    function renderHistory() {
+        if (!history.length) {
+            passwordHistory.innerHTML = '<div class="generator-history-item">No passwords generated yet.</div>';
+            return;
+        }
+        passwordHistory.innerHTML = history.map(password => {
+            return `<div class="generator-history-item">
+              <div>${password}</div>
+              <div class="generator-actions" style="margin-top:0.75rem;">
+                <button class="btn glass secondary" data-variant="halo" data-action="copy" data-password="${password}">Copy</button>
+                <button class="btn glass tertiary" data-variant="flare" data-action="use" data-password="${password}">Use</button>
+                <button class="btn glass tertiary" data-variant="flare" data-action="remove" data-password="${password}">Remove</button>
+              </div>
+            </div>`;
+        }).join('');
+    }
+
+    function clearHistory() {
+        history = [];
+        localStorage.removeItem(storageKey);
+        renderHistory();
+    }
+
+    function copyFromHistory(password) {
+        navigator.clipboard.writeText(password);
+    }
+
+    function useFromHistory(password) {
+        passwordDisplay.value = password;
+        updateStrengthIndicator(password);
+        calculateCrackTime(password, getCharsetSize());
+    }
+
+    function removeFromHistory(password) {
+        history = history.filter(item => item !== password);
+        localStorage.setItem(storageKey, JSON.stringify(history));
+        renderHistory();
     }
 
     function getCharsetSize() {
@@ -153,25 +228,9 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ambiguityFree.checked) {
             size -= chars.ambiguous.length;
         }
-        return size;
+        return Math.max(size, 1);
     }
 
-    function addToHistory(password) {
-        history.unshift(password);
-        if (history.length > 10) {
-            history.pop();
-        }
-        renderHistory();
-    }
-
-    function renderHistory() {
-        passwordHistory.innerHTML = '';
-        history.forEach(password => {
-            const li = document.createElement('li');
-            li.textContent = password;
-            passwordHistory.appendChild(li);
-        });
-    }
-
+    renderHistory();
     generatePassword();
 });

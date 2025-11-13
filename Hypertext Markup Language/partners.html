@@ -3,77 +3,137 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="../Cascading Style Sheets/style.css" />
   <link rel="stylesheet" href="../Cascading Style Sheets/header.css" />
   <link rel="stylesheet" href="../Cascading Style Sheets/redesign.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  <title>Partners - Keeper Sentinel</title>
+  <title>Keeper Sentinel Partner Ecosystem</title>
   <link rel="icon" type="image/gif" href="../Assets/Logomark/Icon TRS.png">
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
   <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="../JavaScript/header-loader.js" defer></script>
+  <script src="../JavaScript/header.js"></script>
 </head>
 <body>
-  
-
-  <main class="main-content" style="padding-top: 100px;">
-
-  <main class="main-content" style="padding-top: 100px;">
-    <section class="partners-section section" aria-label="Our Partners">
-      <div class="container">
-        <div class="partners-header">
-          <span class="partners-eyebrow">Our Partners</span>
-          <h2 class="gradient-hover">Trusted by the World's Leading Companies</h2>
-          <p class="section-subtitle">Keeper Sentinel works with industry leaders to deliver enterprise-grade security solutions.</p>
+  <main class="page-shell">
+    <div class="container">
+      <section class="page-hero">
+        <span class="eyebrow">Keeper Sentinel Alliance</span>
+        <h1>Build resilient defenses with Keeper Sentinel</h1>
+        <p>Keeper partners with global technology leaders, MSSPs, and compliance experts to deliver integrated security programs. Together we combine zero-trust capabilities with deployment velocity and executive-ready reporting.</p>
+        <div class="page-hero-actions">
+          <a href="support.html#report-problem" class="btn glass primary" data-variant="pulse">Apply to the partner program</a>
+          <a href="pricing.html" class="btn glass secondary" data-variant="halo">Review solution bundles</a>
         </div>
-        <div class="partners-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-top: 60px;">
-          <div class="partner-item" style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.03); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease;">
-            <img src="../Assets/Partners/Google-1.png" alt="Google" style="max-width: 100%; height: auto; filter: brightness(0.9);">
+      </section>
+    </div>
+    <section class="page-section">
+      <div class="container split-layout">
+        <div class="callout-panel">
+          <h3>Partner with Keeper to unlock a unified zero-trust stack</h3>
+          <p>Channel partners receive dedicated enablement teams, co-branded launch kits, and access to Sentinel’s roadmap. Together we deliver security architectures that scale from startups to multinational enterprises.</p>
+          <div class="tag-stack">
+            <span class="tag-chip">Revenue Acceleration</span>
+            <span class="tag-chip">Joint GTM</span>
+            <span class="tag-chip">Product Influence</span>
           </div>
-          <div class="partner-item" style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.03); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease;">
-            <img src="../Assets/Partners/Microsoft-1.png" alt="Microsoft" style="max-width: 100%; height: auto; filter: brightness(0.9);">
+        </div>
+        <div class="detail-grid">
+          <div class="detail-card">
+            <h3>Technology Alliance</h3>
+            <p>Integrate Keeper APIs with SIEM, SOAR, and IAM platforms. Joint engineering sprints ensure seamless onboarding flows, shared analytics, and actionable alerts for joint customers.</p>
           </div>
-          <div class="partner-item" style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.03); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease;">
-            <img src="../Assets/Partners/Atlassian.png" alt="Atlassian" style="max-width: 100%; height: auto; filter: brightness(0.9);">
+          <div class="detail-card">
+            <h3>Managed Service Providers</h3>
+            <p>MSSPs receive multi-tenant console access, playbook automation, and 24/7 escalation routes into Keeper’s incident response cadre.</p>
           </div>
-          <div class="partner-item" style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.03); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease;">
-            <img src="../Assets/Partners/Deloitte.png" alt="Deloitte" style="max-width: 100%; height: auto; filter: brightness(0.9);">
+          <div class="detail-card">
+            <h3>Advisory & Compliance</h3>
+            <p>Consultancies leverage Keeper reporting to craft audit evidence, accelerate risk assessments, and guide clients through zero-trust adoption journeys.</p>
           </div>
-          <div class="partner-item" style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.03); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease;">
-            <img src="../Assets/Partners/Sony.png" alt="Sony" style="max-width: 100%; height: auto; filter: brightness(0.9);">
+          <div class="detail-card">
+            <h3>Co-Marketing & Enablement</h3>
+            <p>Partners gain go-to-market campaigns, executive briefings, and co-hosted events that highlight measurable risk reduction.</p>
           </div>
-          <div class="partner-item" style="text-align: center; padding: 30px; background: rgba(255, 255, 255, 0.03); border-radius: 16px; border: 1px solid rgba(255, 255, 255, 0.1); transition: transform 0.3s ease;">
-            <img src="../Assets/Partners/Tesla.png" alt="Tesla" style="max-width: 100%; height: auto; filter: brightness(0.9);">
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="container">
+        <div class="page-hero align-left">
+          <span class="eyebrow">Global trust</span>
+          <h2>Trusted by leading security innovators</h2>
+          <p>From hyperscale cloud platforms to digital forensics specialists, Keeper Sentinel collaborates with organizations that push the boundaries of defensive innovation.</p>
+        </div>
+        <div class="detail-grid">
+          <div class="detail-card centered">
+            <img src="../Assets/Partners/Google-1.png" alt="Google">
+            <p>Cloud platform integration across Workspace and Chronicle delivers unified threat response pipelines.</p>
+          </div>
+          <div class="detail-card centered">
+            <img src="../Assets/Partners/Microsoft-1.png" alt="Microsoft">
+            <p>Microsoft partnerships extend Defender for Cloud posture data with Sentinel’s zero-trust vault telemetry.</p>
+          </div>
+          <div class="detail-card centered">
+            <img src="../Assets/Partners/Atlassian.png" alt="Atlassian">
+            <p>DevSecOps teams orchestrate credential rotation and incident playbooks directly inside Jira and Confluence.</p>
+          </div>
+          <div class="detail-card centered">
+            <img src="../Assets/Partners/Deloitte.png" alt="Deloitte">
+            <p>Advisory partners leverage Keeper analytics to accelerate compliance, mergers, and regulated industry audits.</p>
+          </div>
+          <div class="detail-card centered">
+            <img src="../Assets/Partners/Sony.png" alt="Sony">
+            <p>Media and gaming organizations rely on Keeper for secure contractor onboarding and high-availability credential workflows.</p>
+          </div>
+          <div class="detail-card centered">
+            <img src="../Assets/Partners/Tesla.png" alt="Tesla">
+            <p>Manufacturing giants reinforce connected factory security with Keeper’s encrypted secrets orchestration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page-section">
+      <div class="container split-layout">
+        <div class="timeline-grid">
+          <div class="timeline-step">
+            <strong>Onboard</strong>
+            <p>Meet your Keeper partner success lead, align on regional go-to-market strategy, and receive enablement resources.</p>
+          </div>
+          <div class="timeline-step">
+            <strong>Enable</strong>
+            <p>Complete technical certification paths, integrate Keeper APIs, and build tailored demos for your vertical.</p>
+          </div>
+          <div class="timeline-step">
+            <strong>Grow</strong>
+            <p>Access MDF funds, co-author case studies, and tap Keeper’s product teams for roadmap previews.</p>
+          </div>
+        </div>
+        <div class="callout-panel">
+          <h3>Ready to join the alliance?</h3>
+          <p>Submit your partner profile to receive access to Keeper Sentinel’s enablement portal. Our go-to-market architects will craft a tailored program that matches your region, specialization, and target industries.</p>
+          <div class="page-hero-actions left">
+            <a href="mailto:alliances@keeper.com" class="btn glass primary" data-variant="pulse">Email alliances@keeper.com</a>
+            <a href="support.html#report-problem" class="btn glass secondary" data-variant="halo">Book a discovery call</a>
           </div>
         </div>
       </div>
     </section>
   </main>
-
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="../JavaScript/main.js"></script>
+  <script src="../script.js"></script>
   <script src="../JavaScript/nav.js"></script>
   <script src="../JavaScript/boot-animation.js"></script>
   <script src="../JavaScript/footer-loader.js"></script>
   <script>
-    document.querySelectorAll('.partner-item').forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        item.style.transform = 'translateY(-10px)';
-        item.style.background = 'rgba(255, 255, 255, 0.05)';
-      });
-      item.addEventListener('mouseleave', () => {
-        item.style.transform = 'translateY(0)';
-        item.style.background = 'rgba(255, 255, 255, 0.03)';
-      });
-    });
-
     const lenis = new Lenis({
       lerp: 0.05,
       wheelMultiplier: 2.0,
     });
-    
-    window.lenisInstance = lenis;
-    
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
