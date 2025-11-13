@@ -1873,6 +1873,52 @@ body.waitlist-open {
     justify-content: center;
 }
 
+.platform-section {
+    position: relative;
+    overflow: hidden;
+}
+
+.platform-section::before {
+    content: "";
+    position: absolute;
+    inset: -30% -10% auto -10%;
+    height: 420px;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.18), rgba(120, 120, 120, 0.08) 45%, rgba(0, 0, 0, 0) 75%);
+    filter: blur(20px);
+    opacity: 0.8;
+    pointer-events: none;
+}
+
+.platform-hero {
+    position: relative;
+}
+
+.platform-hero h2 {
+    background: linear-gradient(135deg, #ffffff, #c9c9c9 45%, #9f9f9f);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+.platform-badges {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.platform-badge {
+    padding: 0.45rem 1.1rem;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.22), rgba(180, 180, 180, 0.12));
+    border: 1px solid rgba(220, 220, 220, 0.35);
+    color: rgba(30, 30, 30, 0.8);
+    font-size: 0.8rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+}
+
 .feature-showcase {
     display: grid;
     gap: 1.5rem;
