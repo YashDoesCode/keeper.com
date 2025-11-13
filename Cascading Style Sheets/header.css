@@ -1,23 +1,12 @@
-
 .header-container {
     position: fixed;
-    top: 20px;
+    top: 10px;
     left: 0;
     right: 0;
     z-index: 1001;
     display: flex;
     justify-content: center;
     padding: 0 20px;
-}
-
-.auth-buttons-container {
-    position: fixed;
-    top: 20px; /* Align with header-container's top */
-    right: 20px; /* Align with header-container's right padding */
-    z-index: 1001; /* Same z-index as header-container */
-    display: flex;
-    gap: 16px; /* Space between buttons */
-    align-items: center;
 }
 
 .header {
@@ -34,7 +23,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 10px; /* Reduced padding */
+    padding: 4px 15px;
     position: relative;
     overflow: hidden;
 }
@@ -88,9 +77,9 @@
 .nav-link {
     color: var(--text-color);
     text-decoration: none;
-    padding: 10px 16px;
+    padding: 5px 10px;
     display: inline-block;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
     transition: all 0.3s ease;
     border-radius: 20px;
@@ -100,7 +89,7 @@
 
 .nav-link:hover {
     color: var(--primary-color);
-    background: linear-gradient(135deg, #c0c0c0, #a0a0a0);
+    background: rgba(255, 255, 255, 0.1);
 }
 
 .nav-link::after {
@@ -119,7 +108,39 @@
     width: 60%;
 }
 
+.logo-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
 
+.logo-link:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.keeper-brand {
+    background: rgba(30, 30, 50, 0.8);
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+}
+
+.logo-mark {
+    height: 24px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover .logo-mark {
+    transform: scale(1.1);
+}
 
 .sign-in-link {
     color: #ffffff;
@@ -303,23 +324,6 @@
     z-index: 1;
 }
 
-.btn.signup-btn {
-    background: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    color: var(--text-color);
-    padding: 10px 24px;
-    border-radius: 999px;
-    font-size: 15px;
-    font-weight: 500;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
 .btn.login-btn::before {
     content: '';
     position: absolute;
@@ -343,11 +347,13 @@
     box-shadow: 0 4px 12px rgba(138, 43, 226, 0.4);
 }
 
-.btn.signup-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    border-color: rgba(255, 255, 255, 0.5);
-    transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
+.top-right-buttons {
+    position: fixed;
+    top: 20px; /* Adjust as needed */
+    right: 20px; /* Adjust as needed */
+    z-index: 1000; /* Ensure it's above other content */
+    display: flex;
+    gap: 10px; /* Space between buttons */
 }
 
 .header .btn.primary {
@@ -367,7 +373,7 @@
     .hamburger-menu {
         display: flex;
     }
-    .auth-buttons-container { /* Hide auth buttons on mobile */
+    .header .nav-group .btn.login-btn {
         display: none;
     }
 }

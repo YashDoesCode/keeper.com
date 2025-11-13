@@ -11,22 +11,17 @@ html, body {
 
 :root {
     --amoled-black: #000000;
-    --amoled-black: #000000;
     --text-color: #ffffff;
-    --primary-color: #8A2BE2;
+    --primary-color: #C0C0C0;
     --muted-color: #9b9b9b;
     --card-background: rgba(18, 18, 18, 0.5);
-    --card-background: rgba(18, 18, 18, 0.5);
     --border-color: rgba(255, 255, 255, 0.1);
-    --hover-color: #a040ff;
+    --hover-color: #E0E0E0;
 
-    --font-family: 'Inter', 'Roboto', sans-serif;
-    --h1-size: 6rem;
     --font-family: 'Inter', 'Roboto', sans-serif;
     --h1-size: 6rem;
     --h2-size: 2.5rem;
     --h3-size: 1.5rem;
-    --p-size: 1.2rem;
     --p-size: 1.2rem;
     --line-height: 1.6;
 }
@@ -49,9 +44,6 @@ body.waitlist-open {
 }
 
 .section .container {
-}
-
-.section .container {
     padding: 0 2rem;
 }
 
@@ -63,16 +55,12 @@ body.waitlist-open {
     max-width: 800px; 
     margin: 0 auto 2rem auto; 
     text-align: left; 
-    max-width: 800px; 
-    margin: 0 auto 2rem auto; 
-    text-align: left; 
 }
 
 .section-title {
     font-size: var(--h2-size);
     margin-bottom: 1rem;
-    color: var(--primary-color);
-    text-align: center; 
+    color: #ffffff;
     text-align: center; 
 }
 
@@ -84,13 +72,9 @@ body.waitlist-open {
     margin-left: auto;
     margin-right: auto;
     text-align: center; 
-    text-align: center; 
 }
 
 .content-paragraph {
-    background: rgba(22, 22, 24, 0.5);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     background: rgba(22, 22, 24, 0.5);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -124,7 +108,7 @@ body.waitlist-open {
     display: flex;
     align-items: center;
     overflow: hidden;
-    background: radial-gradient(circle at 50% 10%, rgba(120, 60, 255, 0.35), rgba(0, 0, 0, 0.95) 55%);
+    background: radial-gradient(circle at 50% 10%, rgba(192, 192, 192, 0.35), rgba(0, 0, 0, 0.95) 55%);
     transition: transform 0.9s ease, filter 0.9s ease;
 }
 
@@ -151,7 +135,7 @@ body.waitlist-open {
     width: 1400px;
     height: 900px;
     transform: translateX(-50%);
-    background: radial-gradient(ellipse at 50% 70%, rgba(122, 92, 255, 0.85) 0%, rgba(122, 92, 255, 0.35) 35%, rgba(0,0,0,0) 70%);
+    background: radial-gradient(ellipse at 50% 70%, rgba(192, 192, 192, 0.85) 0%, rgba(192, 192, 192, 0.35) 35%, rgba(0,0,0,0) 70%);
     filter: blur(100px) saturate(120%);
     opacity: 0.9;
 }
@@ -255,7 +239,7 @@ body.waitlist-open {
     padding: 6px;
     -webkit-backdrop-filter: blur(18px) saturate(160%);
     backdrop-filter: blur(18px) saturate(160%);
-    box-shadow: 0 18px 60px rgba(104, 74, 205, 0.25);
+    box-shadow: 0 18px 60px rgba(160, 160, 160, 0.25);
 }
 
 .waitlist-inline-field input {
@@ -314,8 +298,8 @@ body.waitlist-open {
 
 .metric:hover {
     transform: translateY(-6px);
-    border-color: rgba(122, 92, 255, 0.55);
-    background: rgba(122, 92, 255, 0.12);
+    border-color: rgba(192, 192, 192, 0.55);
+    background: rgba(192, 192, 192, 0.12);
 }
 
 .metric-value {
@@ -354,7 +338,7 @@ body.waitlist-open {
     max-width: 840px;
     border-radius: 38px;
     padding: 28px;
-    background: linear-gradient(135deg, rgba(18, 18, 28, 0.75), rgba(32, 20, 54, 0.55));
+    background: linear-gradient(135deg, rgba(30, 30, 30, 0.75), rgba(50, 50, 50, 0.55));
     border: 1px solid rgba(255, 255, 255, 0.12);
     -webkit-backdrop-filter: blur(24px);
     backdrop-filter: blur(24px);
@@ -682,7 +666,6 @@ body.waitlist-open {
     transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease, background 0.4s ease;
     border: 1px solid transparent;
     color: var(--text-color);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
 }
 
 .btn.glass {
@@ -694,8 +677,8 @@ body.waitlist-open {
 }
 
 .btn.primary {
-    background: linear-gradient(130deg, rgba(130, 77, 255, 0.9), rgba(71, 35, 162, 0.9));
-    border-color: rgba(197, 177, 255, 0.6);
+    background: linear-gradient(130deg, rgba(192, 192, 192, 0.9), rgba(112, 112, 112, 0.9));
+    border-color: rgba(224, 224, 224, 0.6);
 }
 
 .btn.secondary {
@@ -712,7 +695,7 @@ body.waitlist-open {
 
 .btn:hover {
     transform: translateY(-4px);
-    box-shadow: 0 28px 60px rgba(122, 92, 255, 0.3);
+    box-shadow: 0 28px 60px rgba(192, 192, 192, 0.3);
 }
 
 .btn:active {
@@ -832,7 +815,7 @@ body.waitlist-open {
     overflow: hidden;
     border-radius: 22px;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    background: linear-gradient(120deg, rgba(18, 18, 28, 0.8), rgba(28, 18, 46, 0.55));
+    background: linear-gradient(120deg, rgba(30, 30, 30, 0.8), rgba(45, 45, 45, 0.55));
     padding: 28px 0;
     display: flex;
     flex-direction: column;
@@ -925,30 +908,10 @@ body.waitlist-open {
     background: var(--card-background);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    background: var(--card-background);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     padding: 2rem;
     border-radius: 10px;
     text-align: center; 
-    text-align: center; 
     border: 1px solid var(--border-color);
-    transition: all 0.3s ease;
-    position: relative;
-    overflow: hidden;
-    z-index: 1;
-}
-
-.feature-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-    transition: all 0.7s ease;
-    z-index: -1;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
@@ -976,13 +939,6 @@ body.waitlist-open {
 
 .feature-card:hover::before {
     left: 100%;
-    background: rgba(26, 26, 26, 0.7);
-    border-color: #555555;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.feature-card:hover::before {
-    left: 100%;
 }
 
 .try-button-wrapper {
@@ -993,10 +949,6 @@ body.waitlist-open {
 }
 
 .try-button {
-    background: rgba(138, 43, 226, 0.5);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--border-color);
     background: rgba(138, 43, 226, 0.5);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -1012,12 +964,9 @@ body.waitlist-open {
 
 .try-button:hover {
     background: rgba(160, 64, 255, 0.7);
-    background: rgba(160, 64, 255, 0.7);
 }
 
 .icon-wrapper {
-    width: 60px; 
-    height: 60px; 
     width: 60px; 
     height: 60px; 
     display: flex;
@@ -1028,15 +977,13 @@ body.waitlist-open {
     border-radius: 50%; 
     margin: 0 auto 1rem auto; 
     border: 1px solid rgba(255, 255, 255, 0.18);
-    background: radial-gradient(circle at 30% 30%, rgba(122, 92, 255, 0.3), rgba(0, 0, 0, 0.8));
-    box-shadow: inset 0 0 18px rgba(122, 92, 255, 0.25), 0 8px 24px rgba(122, 92, 255, 0.2);
+    background: radial-gradient(circle at 30% 30%, rgba(192, 192, 192, 0.3), rgba(0, 0, 0, 0.8));
+    box-shadow: inset 0 0 18px rgba(192, 192, 192, 0.25), 0 8px 24px rgba(192, 192, 192, 0.2);
 }
 
 .icon-wrapper .icon {
     position: relative;
     z-index: 1;
-    font-size: 2.5rem; 
-    color: var(--text-color); 
     font-size: 2.5rem; 
     color: var(--text-color); 
     border-radius: 50%;
@@ -1068,12 +1015,12 @@ body.waitlist-open {
 
 .feature-card:hover {
     transform: translateY(-10px) scale(1.02);
-    box-shadow: 0 20px 40px rgba(138, 43, 226, 0.3);
-    border-color: rgba(138, 43, 226, 0.5);
+    box-shadow: 0 20px 40px rgba(192, 192, 192, 0.3);
+    border-color: rgba(192, 192, 192, 0.5);
 }
 
 .ai-defense {
-    background: linear-gradient(135deg, rgba(22, 14, 40, 0.85), rgba(4, 4, 8, 0.95));
+    background: linear-gradient(135deg, rgba(35, 35, 35, 0.85), rgba(10, 10, 10, 0.95));
     border-top: 1px solid rgba(255, 255, 255, 0.04);
 }
 
@@ -1127,8 +1074,8 @@ body.waitlist-open {
     width: 10px;
     height: 10px;
     border-radius: 50%;
-    background: linear-gradient(135deg, rgba(130, 77, 255, 1), rgba(43, 210, 255, 1));
-    box-shadow: 0 0 12px rgba(130, 77, 255, 0.8);
+    background: linear-gradient(135deg, rgba(192, 192, 192, 1), rgba(160, 160, 160, 1));
+    box-shadow: 0 0 12px rgba(192, 192, 192, 0.8);
 }
 
 .ai-defense-visual {
@@ -1232,7 +1179,7 @@ body.waitlist-open {
     content: '';
     position: absolute;
     inset: -40% -50%;
-    background: radial-gradient(circle, rgba(130, 77, 255, 0.35), transparent 60%);
+    background: radial-gradient(circle, rgba(192, 192, 192, 0.35), transparent 60%);
     opacity: 0.6;
 }
 
@@ -1309,8 +1256,8 @@ body.waitlist-open {
 .waitlist-form input:focus,
 .waitlist-form select:focus {
     outline: none;
-    border-color: rgba(130, 77, 255, 0.6);
-    box-shadow: 0 0 0 3px rgba(130, 77, 255, 0.2);
+    border-color: rgba(192, 192, 192, 0.6);
+    box-shadow: 0 0 0 3px rgba(192, 192, 192, 0.2);
 }
 
 .waitlist-assurance {
@@ -1364,11 +1311,7 @@ body.waitlist-open {
 }
 
 
-
 .testimonial-card {
-    background: var(--card-background);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     background: var(--card-background);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -1388,11 +1331,7 @@ body.waitlist-open {
 }
 
 
-
 .cta-section {
-    background: var(--card-background);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
     background: var(--card-background);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -1431,10 +1370,6 @@ body.waitlist-open {
   gap: 12px;
   padding: 16px 24px;
   margin: 8px;
-  background: rgba(255, 255, 255, 0.05);
-  -webkit-backdrop-filter: blur(20px) saturate(180%);
-  backdrop-filter: blur(20px) saturate(180%);
-  border: 1px solid rgba(255, 255, 255, 0.18);
   background: rgba(255, 255, 255, 0.05);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   backdrop-filter: blur(20px) saturate(180%);
@@ -1495,9 +1430,6 @@ body.waitlist-open {
     background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
     transition: left 0.6s ease;
     z-index: 0; 
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    transition: left 0.6s ease;
-    z-index: 0; 
 }
 
 .download-button:hover::before {
@@ -1509,19 +1441,10 @@ body.waitlist-open {
   border-color: rgba(255, 255, 255, 0.25);
   transform: translateY(-2px);
   box-shadow: 0 12px 48px 0 rgba(138, 43, 226, 0.3);
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.25);
-  transform: translateY(-2px);
-  box-shadow: 0 12px 48px 0 rgba(138, 43, 226, 0.3);
 }
 
 .download-button:active {
   transform: translateY(0);
-}
-
-.download-button > * {
-  position: relative;
-  z-index: 1;
 }
 
 .download-button > * {
@@ -1541,9 +1464,6 @@ body.waitlist-open {
   font-size: 0.9rem;
   color: var(--muted-color);
   border-top: 1px solid var(--border-color);
-  background: rgba(17, 17, 17, 0.5);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
   background: rgba(17, 17, 17, 0.5);
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -1591,7 +1511,7 @@ body.waitlist-open {
 }
 
 .data-protection-section {
-    background: linear-gradient(135deg, rgba(75, 0, 130, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(110, 110, 110, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
     position: relative;
     overflow: hidden;
 }
@@ -1650,7 +1570,7 @@ body.waitlist-open {
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background: radial-gradient(circle at 30% 50%, rgba(138, 43, 226, 0.8), rgba(75, 0, 130, 0.4));
+    background: radial-gradient(circle at 30% 50%, rgba(192, 192, 192, 0.8), rgba(110, 110, 110, 0.4));
     position: absolute;
     filter: blur(40px);
     animation: pulse-orb 4s ease-in-out infinite;
@@ -1709,8 +1629,8 @@ body.waitlist-open {
 
 .protection-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(138, 43, 226, 0.5);
-    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+    border-color: rgba(192, 192, 192, 0.5);
+    box-shadow: 0 10px 30px rgba(192, 192, 192, 0.3);
 }
 
 .protection-icon {
@@ -1758,8 +1678,8 @@ body.waitlist-open {
 
 .confidentiality-card:hover {
     transform: translateY(-5px);
-    border-color: rgba(138, 43, 226, 0.5);
-    box-shadow: 0 10px 30px rgba(138, 43, 226, 0.3);
+    border-color: rgba(192, 192, 192, 0.5);
+    box-shadow: 0 10px 30px rgba(192, 192, 192, 0.3);
 }
 
 .conf-icon {
@@ -1900,9 +1820,7 @@ body.waitlist-open {
     font-size: 15px;
 }
 
-.newsletter-input:focus {
-    outline: none;
-    border-color: rgba(138, 43, 226, 0.5);
+    border-color: rgba(192, 192, 192, 0.5);
     background: rgba(255, 255, 255, 0.08);
 }
 
@@ -1961,7 +1879,7 @@ body.waitlist-open {
 
 .newsletter-input-full:focus {
     outline: none;
-    border-color: rgba(138, 43, 226, 0.5);
+    border-color: rgba(192, 192, 192, 0.5);
     background: rgba(255, 255, 255, 0.08);
 }
 

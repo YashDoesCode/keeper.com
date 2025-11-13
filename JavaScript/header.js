@@ -97,10 +97,8 @@ document.addEventListener('DOMContentLoaded', () => {
         const link = item.querySelector('.nav-link');
         if (link) {
             link.addEventListener('click', function(e) {
-                if (window.innerWidth <= 900) {
-                    e.preventDefault();
-                    item.classList.toggle('open');
-                }
+                e.preventDefault();
+                item.classList.toggle('open');
             });
         }
     });

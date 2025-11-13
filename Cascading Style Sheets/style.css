@@ -8,8 +8,8 @@
   --muted:#b6bcc6;
   --card:#0f1115cc;
   --line:#1a1f25;
-  --accent:#7a5cff;
-  --accent-2:#00e0a4;
+  --accent:#c0c0c0;
+  --accent-2:#a0a0a0;
   --radius:16px;
   --shadow:0 10px 40px rgba(0,0,0,.45);
 }
@@ -60,8 +60,8 @@ p{margin:.5rem 0 1rem}
   min-height: 100vh;
   padding: 0 2rem;
   background-color: #000;
-  background-image: radial-gradient(circle at top right, rgba(122, 92, 255, 0.1), transparent 40%),
-                    radial-gradient(circle at bottom left, rgba(0, 224, 164, 0.1), transparent 40%);
+  background-image: radial-gradient(circle at top right, rgba(192, 192, 192, 0.1), transparent 40%),
+                    radial-gradient(circle at bottom left, rgba(160, 160, 160, 0.1), transparent 40%);
 }
 
 .hero-copy {
@@ -83,7 +83,7 @@ p{margin:.5rem 0 1rem}
 .hero .cta{display:flex;gap:.8rem;flex-wrap:wrap}
 .btn{display:inline-flex;gap:.6rem;align-items:center;padding:.8rem 1rem;border-radius:12px;border:1px solid var(--line);background:#0d0f13;color:var(--text);transition:transform .14s ease, background .3s ease, border-color .3s ease}
 .btn:hover{transform:translateY(-1px);background:#12151b;border-color:#243042}
-.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:transparent;color:#051013;box-shadow:0 10px 30px rgba(122,92,255,.25), 0 4px 16px rgba(0,224,164,.2)}
+.btn.primary{background:linear-gradient(135deg,var(--accent),var(--accent-2));border-color:transparent;color:#051013;box-shadow:0 10px 30px rgba(192,192,192,.25), 0 4px 16px rgba(160,160,160,.2)}
 .btn.ghost{background:#0c0c0c}
 
 

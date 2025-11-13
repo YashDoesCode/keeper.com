@@ -5,11 +5,16 @@
     --olsa-border: rgba(255, 255, 255, 0.1);
     --olsa-text-primary: #ffffff;
     --olsa-text-secondary: #a0a0a8;
-    --olsa-purple: #8b5cf6;
-    --olsa-purple-dark: #7c3aed;
-    --olsa-purple-light: #a78bfa;
+    --olsa-silver-light: #e0e0e0;
+    --olsa-silver: #c0c0c0;
+    --olsa-silver-dark: #a0a0a0;
+    --olsa-silver-gradient: linear-gradient(135deg, #c0c0c0, #a0a0a0);
+    --olsa-silver-glow: rgba(192, 192, 192, 0.3);
+    --olsa-purple: var(--olsa-silver);
+    --olsa-purple-dark: var(--olsa-silver-dark);
+    --olsa-purple-light: var(--olsa-silver-light);
     --olsa-blue: #3b82f6;
-    --olsa-glow: rgba(139, 92, 246, 0.3);
+    --olsa-glow: var(--olsa-silver-glow);
 }
 
 * {
@@ -176,9 +181,10 @@ body::after {
 .btn-primary:hover {
     background: var(--olsa-purple-dark);
     transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(139, 92, 246, 0.4);
+    box-shadow: 0 4px 12px rgba(192, 192, 192, 0.4);
 }
 
+/* Beta Banner */
 .beta-banner {
     margin-top: 100px;
     display: flex;
@@ -206,6 +212,7 @@ body::after {
     border-radius: 2px;
 }
 
+/* Hero Section */
 .olsa-hero {
     text-align: center;
     padding: 60px 48px 120px;
@@ -275,7 +282,7 @@ body::after {
     height: 40px;
     border-radius: 50%;
     border: 2px solid var(--olsa-dark-bg);
-    background: linear-gradient(135deg, var(--olsa-purple), var(--olsa-blue));
+    background: var(--olsa-silver-gradient);
     margin-left: -8px;
 }
 
@@ -289,6 +296,7 @@ body::after {
     margin-left: 12px;
 }
 
+/* Feature Cards Section */
 .features-section {
     padding: 80px 48px;
     max-width: 1400px;
@@ -312,7 +320,7 @@ body::after {
 .feature-card:hover {
     transform: translateY(-4px);
     border-color: var(--olsa-purple);
-    box-shadow: 0 8px 32px rgba(139, 92, 246, 0.2);
+    box-shadow: 0 8px 32px rgba(192, 192, 192, 0.2);
 }
 
 .card-header {
@@ -360,6 +368,7 @@ body::after {
     border-color: var(--olsa-purple);
 }
 
+/* Exchange Card Specific Styles */
 .exchange-card {
     display: flex;
     flex-direction: column;
@@ -410,6 +419,7 @@ body::after {
     transform: rotate(180deg);
 }
 
+/* Credit Card Styles */
 .credit-card-header {
     display: flex;
     justify-content: space-between;
@@ -445,6 +455,7 @@ body::after {
     font-family: 'Courier New', monospace;
 }
 
+/* Mobile Menu */
 .mobile-menu-toggle {
     display: none;
     flex-direction: column;
@@ -492,6 +503,8 @@ body::after {
 .mobile-nav a:hover {
     color: var(--olsa-purple-light);
 }
+
+/* Responsive Design */
 @media (max-width: 1024px) {
     .features-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -561,6 +574,8 @@ body::after {
         text-align: center;
     }
 }
+
+/* Container for other pages */
 .page-container {
     max-width: 1200px;
     margin: 0 auto;
