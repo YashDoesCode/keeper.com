@@ -6,11 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
   let sequenceTriggered = false;
 
   const enableScroll = () => {
-    if (window.lenisInstance) window.lenisInstance.start();
+    if (window.smoothScrollInstance) {
+      window.smoothScrollInstance.isScrolling = false;
+    }
   };
 
   const disableScroll = () => {
-    if (window.lenisInstance) window.lenisInstance.stop();
+    if (window.smoothScrollInstance) {
+      window.smoothScrollInstance.isScrolling = true;
+    }
   };
 
   const runSequence = () => {

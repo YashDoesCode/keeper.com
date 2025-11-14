@@ -15,7 +15,7 @@
   <link rel="icon" type="image/gif" href="../Assets/Logomark/Icon TRS.png">
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="../JavaScript/smooth-scroll.js"></script>
   <script src="../JavaScript/header-loader.js" defer></script>
   <script src="../JavaScript/header.js"></script>
   <style>
@@ -452,29 +452,7 @@
       });
     }
 
-    const lenis = new Lenis({
-      lerp: 0.07,
-      wheelMultiplier: 1,
-    });
-    
-    window.lenisInstance = lenis;
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.lenisInstance.scrollTo(targetElement);
-        }
-      });
-    });
 
     anime({
       targets: '.feature-card',

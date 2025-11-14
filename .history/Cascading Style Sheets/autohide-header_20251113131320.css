@@ -1,8 +1,0 @@
-
-.header {
-  transition: top 0.3s ease;
-}
-
-.header.hidden {
-  top: -100%;
-}

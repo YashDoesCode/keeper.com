@@ -1,30 +1,15 @@
 const headerState = { bound: false };
 
 function smoothScrollToElement(targetId) {
-  const targetElement = document.getElementById(targetId);
-  if (!targetElement) return;
-  const headerHeight = document.querySelector('.header-container')?.offsetHeight || 0;
-  const targetPosition = targetElement.offsetTop - headerHeight - 20;
-  const mobileNav = document.querySelector('.mobile-nav');
-  const hamburgerMenu = document.querySelector('.hamburger-menu');
-  if (mobileNav) {
-    mobileNav.classList.remove('open');
-    if (hamburgerMenu) {
-      hamburgerMenu.classList.remove('open');
-    }
-  }
-  if (typeof Lenis !== 'undefined' && window.lenisInstance) {
-    window.lenisInstance.scrollTo(targetElement, {
-      offset: -(headerHeight + 20),
-      duration: 1.5,
-      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-    });
-  } else {
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
-  }
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) return;
+    const headerHeight = document.querySelector('.header-container')?.offsetHeight || 0;
+    const mobileNav = document.querySelector('.mobile-nav');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    if (mobileNav) mobileNav.classList.remove('open');
+    if (hamburgerMenu) hamburgerMenu.classList.remove('open');
+    const offset = -headerHeight - 20;
+    if (window.smoothScrollInstance) window.smoothScrollInstance.scrollToElement(targetElement, offset);
 }
 
 function isHomePage() {
