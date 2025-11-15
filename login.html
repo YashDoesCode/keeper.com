@@ -14,46 +14,6 @@
   <link rel="icon" type="image/gif" href="../Assets/Logomark/Icon TRS.png">
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
-<<<<<<< Updated upstream
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
-  <script src="../JavaScript/header-loader.js" defer></script>
-  <script src="../JavaScript/header.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
-  <style>
-    .login-container {
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 120px 20px 40px;
-      background: #000000;
-    }
-
-    .login-wrapper {
-      display: flex;
-      gap: 60px;
-      max-width: 1000px;
-      width: 100%;
-      align-items: center;
-    }
-
-    .login-form-container {
-      flex: 1;
-      max-width: 450px;
-    }
-
-    .login-card {
-      background: rgba(255, 255, 255, 0.05);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 24px;
-      padding: 40px;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-      position: relative;
-      overflow: hidden;
-    }
-=======
   <script src="../JavaScript/header-loader.js" defer></script>
   <script src="../JavaScript/header.js" defer></script>
   <style>
@@ -65,7 +25,6 @@
     .login-form-container {background:rgba(255,255,255,.06);-webkit-backdrop-filter:blur(18px) saturate(180%);backdrop-filter:blur(18px) saturate(180%);border:1px solid rgba(255,255,255,.14);color:#fff;padding:48px}
 
     .login-card {background:transparent;border:none;box-shadow:none;padding:0}
->>>>>>> Stashed changes
 
     .login-card::before {
       content: '';
@@ -93,45 +52,6 @@
       margin-bottom: 32px;
     }
 
-<<<<<<< Updated upstream
-    .login-header h1 {
-      font-size: 2rem;
-      margin-bottom: 8px;
-      color: var(--text-color);
-    }
-
-    .login-header p {
-      color: var(--muted-color);
-      font-size: 0.95rem;
-    }
-
-    .auth-tabs {
-      display: flex;
-      gap: 8px;
-      margin-bottom: 24px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      padding: 4px;
-    }
-
-    .auth-tab {
-      flex: 1;
-      padding: 10px 16px;
-      background: transparent;
-      border: none;
-      color: var(--muted-color);
-      font-size: 15px;
-      font-weight: 500;
-      border-radius: 8px;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .auth-tab.active {
-      background: rgba(138, 43, 226, 0.3);
-      color: var(--text-color);
-    }
-=======
     .login-header h1 {font-size:2rem;margin-bottom:8px;color:#fff}
 
     .login-header p {color:rgba(255,255,255,.72);font-size:.95rem}
@@ -141,7 +61,6 @@
     .auth-tab {flex:1;padding:10px 16px;background:transparent;border:none;color:#ccc;font-size:15px;font-weight:500;border-radius:8px;cursor:pointer;transition:.3s}
 
     .auth-tab.active {background:rgba(255,255,255,.18);color:#fff}
->>>>>>> Stashed changes
 
     .auth-tab:hover:not(.active) {
       background: rgba(255, 255, 255, 0.1);
@@ -160,86 +79,24 @@
       margin-bottom: 20px;
     }
 
-<<<<<<< Updated upstream
-    .form-label {
-      display: block;
-      margin-bottom: 8px;
-      color: var(--text-color);
-      font-size: 14px;
-      font-weight: 500;
-    }
-
-    .form-input {
-      width: 100%;
-      padding: 12px 16px;
-      background: rgba(255, 255, 255, 0.05);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 12px;
-      color: var(--text-color);
-      font-size: 15px;
-      font-family: inherit;
-      transition: all 0.3s ease;
-      box-sizing: border-box;
-    }
-
-    .form-input:focus {
-      outline: none;
-      border-color: rgba(138, 43, 226, 0.5);
-      background: rgba(255, 255, 255, 0.08);
-      box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
-    }
-=======
     .form-label {display:block;margin-bottom:8px;color:#fff;font-size:14px;font-weight:600}
 
     .form-input {width:100%;padding:14px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:12px;color:#fff;font-size:15px;font-family:inherit;transition:.2s;box-sizing:border-box}
 
     .form-input:focus {outline:none;border-color:rgba(255,255,255,.6);box-shadow:0 0 0 2px rgba(255,255,255,.15)}
->>>>>>> Stashed changes
 
     .form-input::placeholder {
       color: var(--muted-color);
     }
 
-<<<<<<< Updated upstream
-    .forgot-password {
-      display: block;
-      text-align: right;
-      margin-top: -12px;
-      margin-bottom: 24px;
-      color: var(--primary-color);
-      text-decoration: none;
-      font-size: 14px;
-      transition: color 0.3s ease;
-    }
-=======
     .forgot-password {display:block;text-align:right;margin-top:-12px;margin-bottom:24px;color:#aaa;text-decoration:none;font-size:14px}
->>>>>>> Stashed changes
 
     .forgot-password:hover {
       color: var(--hover-color);
     }
 
-<<<<<<< Updated upstream
-    .login-btn-submit {
-      width: 100%;
-      padding: 14px;
-      background: linear-gradient(135deg, rgba(255, 255, 255, 0.45), rgba(200, 200, 200, 0.2));
-      -webkit-backdrop-filter: blur(10px);
-      backdrop-filter: blur(10px);
-      border: 1px solid rgba(210, 210, 210, 0.5);
-      border-radius: 12px;
-      color: var(--text-color);
-      font-size: 16px;
-      font-weight: 600;
-      cursor: pointer;
-      transition: all 0.3s ease;
-      position: relative;
-      overflow: hidden;
-    }
-=======
     .login-btn-submit {width:100%;padding:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:12px;color:#fff;font-size:16px;font-weight:600;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
     .login-btn-submit::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0),rgba(255,255,255,.4),rgba(255,255,255,0));transform:translateX(-120%);transition:transform .6s cubic-bezier(.22,.61,.36,1)}
->>>>>>> Stashed changes
 
     .login-btn-submit::before {
       content: '';
@@ -253,122 +110,24 @@
       z-index: 0;
     }
 
-<<<<<<< Updated upstream
-    .login-btn-submit:hover::before {
-      left: 100%;
-    }
-
-    .login-btn-submit:hover {
-      background: linear-gradient(135deg, rgba(240, 240, 240, 0.7), rgba(180, 180, 180, 0.35));
-      border-color: rgba(220, 220, 220, 0.7);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(220, 220, 220, 0.35);
-    }
-=======
     .login-btn-submit:hover {transform:translateY(-1px)}
     .login-btn-submit:hover::after{transform:translateX(120%)}
->>>>>>> Stashed changes
 
     .login-btn-submit > * {
       position: relative;
       z-index: 1;
     }
 
-<<<<<<< Updated upstream
-    .qr-section {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      max-width: 300px;
-    }
-
-    .qr-container {
-      background: rgba(255, 255, 255, 0.05);
-      -webkit-backdrop-filter: blur(20px) saturate(180%);
-      backdrop-filter: blur(20px) saturate(180%);
-      border: 1px solid rgba(255, 255, 255, 0.18);
-      border-radius: 20px;
-      padding: 24px;
-      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-    }
-
-    .qr-code {
-      width: 200px;
-      height: 200px;
-      background: white;
-      border-radius: 12px;
-      padding: 12px;
-      margin-bottom: 16px;
-    }
-
-    .qr-code canvas {
-      width: 100% !important;
-      height: 100% !important;
-    }
-
-    .qr-label {
-      text-align: center;
-      color: var(--muted-color);
-      font-size: 14px;
-      margin-top: 12px;
-    }
-
-    @media (max-width: 768px) {
-      .login-wrapper {
-        flex-direction: column;
-        gap: 40px;
-      }
-
-      .qr-section {
-        max-width: 100%;
-        order: -1;
-      }
-
-      .login-form-container {
-        max-width: 100%;
-      }
-
-      .login-card {
-        padding: 32px 24px;
-      }
-    }
-=======
     .visual-panel {position:relative;background:radial-gradient(circle at 60% 40%, rgba(150,120,255,.28), rgba(40,20,80,.18) 45%, transparent 70%)}
     .visual-inner{display:grid;place-items:center;height:100%;padding:0}
     .glass-card{display:none}
     .visual-image{display:block;width:100%;height:100%;object-fit:cover}
 
     @media (max-width: 900px){.auth-shell{grid-template-columns:1fr}.visual-panel{display:none}}
->>>>>>> Stashed changes
   </style>
 </head>
 <body>
   <div class="login-container">
-<<<<<<< Updated upstream
-    <div class="login-wrapper">
-      <div class="login-form-container">
-        <div class="login-card">
-          <div class="login-header">
-            <h1>Welcome to Keeper</h1>
-            <p>Sign in to your account or create a new one</p>
-          </div>
-
-          <div class="auth-tabs">
-            <button class="auth-tab active" data-form="signin">Sign In</button>
-            <button class="auth-tab" data-form="signup">Sign Up</button>
-          </div>
-
-          <form id="signinForm" class="auth-form active">
-            <div class="form-group">
-              <label class="form-label" for="signinEmail">Email</label>
-              <input type="email" id="signinEmail" class="form-input" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="signinPassword">Password</label>
-              <input type="password" id="signinPassword" class="form-input" placeholder="Enter your password" required>
-=======
     <div class="auth-shell">
       <div class="login-wrapper">
       <div class="login-form-container">
@@ -391,40 +150,10 @@
             <div class="form-group">
               <label class="form-label" for="signinPassword">Password</label>
               <input type="password" id="signinPassword" class="form-input" placeholder="Password" required>
->>>>>>> Stashed changes
             </div>
             <a href="#" class="forgot-password">Forgot password?</a>
             <button type="submit" class="login-btn-submit">Sign In</button>
           </form>
-<<<<<<< Updated upstream
-
-          <form id="signupForm" class="auth-form">
-            <div class="form-group">
-              <label class="form-label" for="signupName">Full Name</label>
-              <input type="text" id="signupName" class="form-input" placeholder="Enter your full name" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="signupEmail">Email</label>
-              <input type="email" id="signupEmail" class="form-input" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="signupPassword">Password</label>
-              <input type="password" id="signupPassword" class="form-input" placeholder="Create a password" required>
-            </div>
-            <div class="form-group">
-              <label class="form-label" for="signupConfirmPassword">Confirm Password</label>
-              <input type="password" id="signupConfirmPassword" class="form-input" placeholder="Confirm your password" required>
-            </div>
-            <button type="submit" class="login-btn-submit">Sign Up</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="qr-section">
-        <div class="qr-container">
-          <div class="qr-code" id="qrCode"></div>
-          <p class="qr-label">Scan with your mobile phone to sign in</p>
-=======
           <form id="signupForm" class="auth-form">
             <div class="form-group">
               <label class="form-label" for="signupName">Full Name</label>
@@ -449,38 +178,18 @@
       <div class="visual-panel">
         <div class="visual-inner">
           <img class="visual-image" src="Assets/Background/Be Awake -Keeper.gif" alt="Preview" />
->>>>>>> Stashed changes
         </div>
       </div>
     </div>
   </div>
 
   <div id="toast" role="status" aria-live="polite"></div>
-<<<<<<< Updated upstream
-  <script src="../JavaScript/main.js"></script>
-  <script src="../script.js"></script>
-  <script src="../JavaScript/nav.js"></script>
-  <script src="../JavaScript/boot-animation.js"></script>
-  <script src="../JavaScript/footer-loader.js"></script>
-  <script>
-      lerp: 0.07,
-      wheelMultiplier: 1,
-    });
-
-    function raf(time) {
-      requestAnimationFrame(raf);
-    }
-
-    requestAnimationFrame(raf);
-  </script>
-=======
   <script src="../JavaScript/main.js" defer></script>
   <script src="../script.js" defer></script>
   <script src="../JavaScript/nav.js" defer></script>
   <script src="../JavaScript/boot-animation.js" defer></script>
   <script src="../JavaScript/footer-loader.js" defer></script>
   
->>>>>>> Stashed changes
   <script>
     const authTabs = document.querySelectorAll('.auth-tab');
     const authForms = document.querySelectorAll('.auth-form');
@@ -492,41 +201,10 @@
         authForms.forEach(f => f.classList.remove('active'));
         tab.classList.add('active');
         document.getElementById(formId + 'Form').classList.add('active');
-<<<<<<< Updated upstream
-        generateQRCode();
-      });
-    });
-
-    function generateQRCode() {
-      const qrContainer = document.getElementById('qrCode');
-      qrContainer.innerHTML = '';
-      const sessionId = 'keeper-' + Date.now() + '-' + Math.random().toString(36).substr(2, 9);
-      const qrData = JSON.stringify({
-        sessionId: sessionId,
-        timestamp: Date.now(),
-        type: 'login'
-      });
-      const canvas = document.createElement('canvas');
-      qrContainer.appendChild(canvas);
-      QRCode.toCanvas(canvas, qrData, {
-        width: 200,
-        margin: 2,
-        color: {
-          dark: '#000000',
-          light: '#FFFFFF'
-        }
-      }, function (error) {
-        if (error) console.error(error);
-      });
-    }
-
-    generateQRCode();
-=======
       });
     });
 
     
->>>>>>> Stashed changes
 
     document.getElementById('signinForm').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -543,12 +221,9 @@
       }
       alert('Sign up functionality will be implemented soon!');
     });
-<<<<<<< Updated upstream
-=======
 
     document.getElementById('loginGoogle').addEventListener('click',()=>alert('Google sign-in coming soon'));
     document.getElementById('loginApple').addEventListener('click',()=>alert('Apple sign-in coming soon'));
->>>>>>> Stashed changes
   </script>
 </body>
 </html>
