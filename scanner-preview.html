@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/header.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/redesign.css" />
+  <title>File Scanner Preview - Keeper Sentinel</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <script src="../JavaScript/header-loader.js" defer></script>
+  <script src="../JavaScript/header.js" defer></script>
+  <style>
+    .scan-card{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:24px;max-width:720px;margin:0 auto;display:grid;gap:12px}
+    .scan-progress{height:10px;background:rgba(255,255,255,.1);border-radius:999px;overflow:hidden}
+    .scan-bar{height:100%;width:0;background:linear-gradient(90deg,#81fbb8,#28c76f);transition:width .2s ease}
+    .scan-status{display:flex;justify-content:space-between;color:rgba(255,255,255,.8)}
+    .scan-report{display:none;margin-top:12px}
+    .badge{display:inline-block;padding:6px 10px;border-radius:999px;border:1px solid rgba(255,255,255,.2);margin-right:6px}
+    .actions{display:flex;gap:10px;flex-wrap:wrap}
+    .disabled-input{opacity:.6;pointer-events:none}
+  </style>
+</head>
+<body>
+  <main class="page-shell">
+    <div class="container">
+      <section class="page-hero">
+        <span class="eyebrow">Preview</span>
+        <h1>File Scanner</h1>
+        <p>Coming soon: upload archives and binaries for deep scanning. This preview shows the experience without uploading any files.</p>
+      </section>
+      <div class="scan-card">
+        <label>File</label>
+        <input class="disabled-input" type="file" disabled>
+        <div class="actions">
+          <button id="startScan" class="btn glass primary" data-variant="pulse">Start scanning</button>
+          <button id="resetScan" class="btn glass secondary" data-variant="halo">Reset</button>
+        </div>
+        <div class="scan-progress"><div class="scan-bar" id="scanBar"></div></div>
+        <div class="scan-status"><span id="scanPhase">Idle</span><span id="scanPct">0%</span></div>
+        <div class="scan-report" id="scanReport">
+          <div class="tag-stack">
+            <span class="badge">Safe</span>
+            <span class="badge">No known malware signatures</span>
+          </div>
+          <div class="detail-grid" style="margin-top:12px">
+            <div class="detail-card"><h3>Heuristics</h3><p>No suspicious entropy spikes or obfuscated sections</p></div>
+            <div class="detail-card"><h3>Sandbox</h3><p>No outbound network calls observed in sample run</p></div>
+            <div class="detail-card"><h3>Recommendations</h3><p>Keep software updated and verify file source signatures</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script>
+    const start=document.getElementById('startScan');
+    const reset=document.getElementById('resetScan');
+    const bar=document.getElementById('scanBar');
+    const pct=document.getElementById('scanPct');
+    const phase=document.getElementById('scanPhase');
+    const report=document.getElementById('scanReport');
+    let t=null,p=0;
+    function step(){p=Math.min(100,p+Math.random()*8+2);bar.style.width=p+'%';pct.textContent=Math.round(p)+'%';
+      if(p<30) phase.textContent='Indexing archive';
+      else if(p<60) phase.textContent='Heuristic analysis';
+      else if(p<85) phase.textContent='Behavioral sandbox';
+      else phase.textContent='Correlating threat intel';
+      if(p<100) t=requestAnimationFrame(step); else {phase.textContent='Complete';report.style.display='block';}
+    }
+    start.addEventListener('click',()=>{if(t) return; p=0; bar.style.width='0%'; pct.textContent='0%'; report.style.display='none'; step();});
+    reset.addEventListener('click',()=>{if(t) cancelAnimationFrame(t); t=null; p=0; bar.style.width='0%'; pct.textContent='0%'; phase.textContent='Idle'; report.style.display='none';});
+  </script>
+  <script src="../JavaScript/main.js" defer></script>
+  <script src="../script.js" defer></script>
+  <script src="../JavaScript/nav.js" defer></script>
+  <script src="../JavaScript/boot-animation.js" defer></script>
+  <script src="../JavaScript/footer-loader.js" defer></script>
+</body>
+</html>

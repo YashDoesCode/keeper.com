@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/header.css" />
+  <link rel="stylesheet" href="../Cascading Style Sheets/redesign.css" />
+  <title>Technology - Keeper Sentinel</title>
+  <meta name="theme-color" content="#000000" />
+  <meta name="color-scheme" content="dark" />
+  <script src="../JavaScript/header-loader.js" defer></script>
+  <script src="../JavaScript/header.js" defer></script>
+</head>
+<body>
+  <main class="page-shell">
+    <div class="container">
+      <section class="page-hero align-left">
+        <span class="eyebrow">Technology</span>
+        <h1>Cryptography, identity, detection, and privacy</h1>
+        <p>Keeper documents its model choices transparently. The stack below reflects the target capabilities of the product suite.</p>
+      </section>
+      <div class="tech-gifs" style="display:flex;gap:16px;flex-wrap:wrap;align-items:center;justify-content:center;margin-bottom:24px">
+        <img src="../Assets/Web-Elements/Lock.gif" alt="Encryption" style="height:72px">
+        <img src="../Assets/Web-Elements/Fingerprint.gif" alt="Biometrics" style="height:72px">
+        <img src="../Assets/Web-Elements/Panels.gif" alt="Defense panels" style="height:72px">
+      </div>
+      <section class="page-section">
+        <div class="feature-showcase">
+          <article class="feature-card"><h3>Password Manager</h3><p>AES‑256 and ChaCha20‑Poly1305 with PBKDF2 and Argon2id. Zero‑knowledge SRP‑based login.</p><ul><li>Zero‑knowledge proofs</li><li>SRP verifier login</li><li>Anomaly detection (IForest/LSTM‑AE)</li><li>Scrypt</li><li>Shamir’s Secret Sharing</li></ul></article>
+          <article class="feature-card"><h3>2FA & Identity</h3><p>Phishing‑resistant MFA and passkeys.</p><ul><li>HOTP/TOTP</li><li>FIDO2/WebAuthn</li><li>OAuth2/OIDC/SAML</li><li>Rotating JWKs</li><li>Risk models & biometrics</li><li>Device fingerprinting, PIM</li></ul></article>
+          <article class="feature-card"><h3>Account Management</h3><p>Continuous governance, audit, and adaptive controls.</p><ul><li>RBAC/ABAC/PBAC</li><li>CAE</li><li>Audit telemetry</li><li>Insider detection (GNN)</li><li>Session anomaly (LSTM/transformer)</li><li>Token binding, scoped tokens</li></ul></article>
+          <article class="feature-card"><h3>Crypto</h3><p>Wallet and key management.</p><ul><li>BIP‑32/39/44</li><li>Multisig</li><li>TSS/MPC</li><li>Secure chips, enclave MPC</li></ul></article>
+          <article class="feature-card"><h3>VPN</h3><p>Private networking with fast protocols.</p><ul><li>WireGuard, IKEv2/IPsec</li><li>TLS 1.3 PFS</li><li>ChaCha20/Curve25519</li><li>Multi‑hop, fingerprint randomization</li><li>Shadowsocks/obfs4</li></ul></article>
+          <article class="feature-card"><h3>File Encryption</h3><p>Device and cloud encryption.</p><ul><li>TPM sealing, XTS‑AES</li><li>Secure Boot, PCR attestation</li><li>Enclave keys, rotation</li><li>Client‑side AES‑GCM, DEK/KEK, KMS</li><li>Blind index (FHE/PEKS)</li></ul></article>
+          <article class="feature-card"><h3>Antivirus</h3><p>Static and behavioral defenses.</p><ul><li>Heuristics, sandboxing, EDR</li><li>IDS/IPS, CNN/BERT malware</li><li>Phishing classifiers, syscall anomaly</li><li>Kernel hooks, forensics</li><li>Cert pinning, RAG intel</li></ul></article>
+          <article class="feature-card"><h3>Stealth Workspace</h3><p>Hidden encrypted workspace and volumes.</p><ul><li>Hidden volumes</li><li>MPC wallet signing</li><li>BIP‑32/29/44, UBA</li></ul></article>
+        </div>
+      </section>
+    </div>
+  </main>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script src="../JavaScript/main.js" defer></script>
+  <script src="../script.js" defer></script>
+  <script src="../JavaScript/nav.js" defer></script>
+  <script src="../JavaScript/boot-animation.js" defer></script>
+  <script src="../JavaScript/footer-loader.js" defer></script>
+</body>
+</html>

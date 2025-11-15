@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
+<<<<<<< Updated upstream
   const hero = document.querySelector('.hero');
   const mainContent = document.querySelector('.main-content');
   if (!hero || !mainContent) return;
@@ -24,47 +25,44 @@ document.addEventListener('DOMContentLoaded', () => {
     hero.classList.add('hero-motion');
     requestAnimationFrame(() => {
       mainContent.classList.add('content-arrived');
+=======
+  const reveals = document.querySelectorAll('.feature-card');
+  if (reveals.length) {
+    reveals.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(40px)';
+>>>>>>> Stashed changes
     });
-    setTimeout(() => {
-      hero.classList.remove('hero-motion');
-      enableScroll();
-    }, 1100);
-  };
-
-  const wheelHandler = (event) => {
-    if (sequenceTriggered) return;
-    if (event.deltaY > 0) {
-      event.preventDefault();
-      runSequence();
-    }
-  };
-
-  const touchHandler = () => {
-    runSequence();
-  };
-
-  hero.addEventListener('wheel', wheelHandler, { passive: false });
-  hero.addEventListener('touchmove', touchHandler, { passive: true });
-
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'ArrowDown' || event.key === 'PageDown' || event.key === ' ') {
-      runSequence();
-    }
-  });
-
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (!sequenceTriggered && entry.intersectionRatio < 0.6) runSequence();
-    });
-  }, { threshold: 0.6 });
-
-  observer.observe(hero);
-
-  if (window.scrollY > hero.offsetHeight * 0.6) {
-    runSequence();
+    const revObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.animate([
+            { opacity: 0, transform: 'translateY(40px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+          ], { duration: 700, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'forwards' });
+          revObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    reveals.forEach(el => revObs.observe(el));
   }
 
-  setTimeout(() => {
-    if (!sequenceTriggered) runSequence();
-  }, 8000);
+  const caps = document.querySelectorAll('.cap-card');
+  if (caps.length) {
+    caps.forEach(el => { el.style.opacity = '0'; el.style.transform = 'translateY(40px)'; });
+    const capObs = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.animate([
+            { opacity: 0, transform: 'translateY(40px)' },
+            { opacity: 1, transform: 'translateY(0)' }
+          ], { duration: 700, easing: 'cubic-bezier(.22,.61,.36,1)', fill: 'forwards' });
+          capObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    caps.forEach(el => capObs.observe(el));
+  }
+
+  
 });

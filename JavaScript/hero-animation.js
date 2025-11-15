@@ -1,10 +1,10 @@
 
 document.addEventListener('DOMContentLoaded', () => {
-    const heroArt = document.querySelector('.hero-art img');
+    const heroArt = document.querySelector('.hero-backdrop-image');
     if (!heroArt) return;
 
     const originalGifSrc = heroArt.src;
-    const staticImageSrc = 'Assets/Logomark/Keeper-Rebrand.png';
+    const staticImageSrc = '../Assets/Logomark/Keeper-Rebrand.png';
 
     function parseGifDuration(buffer) {
         try {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
             let totalDelayCentiseconds = 0;
 
             i = 13;
-            
+
             const gctFlag = (bytes[10] & 0x80) !== 0;
             if (gctFlag) {
                 const gctSize = 3 * Math.pow(2, (bytes[10] & 0x07) + 1);

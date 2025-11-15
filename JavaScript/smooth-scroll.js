@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 function smoothScrollTo(destination, duration = 4500, offset = 0) {
   console.log('Smooth scroll started...');
   const start = window.pageYOffset;
@@ -37,6 +38,46 @@ window.smoothScrollInstance = {
     smoothScrollTo(element, duration, offset);
   },
   scrollTo: (yPosition, offset = 0, duration = 5000) => {
+=======
+function smoothScrollTo(destination, baseDuration = 480, offset = 0) {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const start = window.pageYOffset;
+  const doc = document.documentElement;
+  const body = document.body;
+  const documentHeight = Math.max(body.scrollHeight, body.offsetHeight, doc.clientHeight, doc.scrollHeight, doc.offsetHeight);
+  const windowHeight = window.innerHeight || doc.clientHeight || body.clientHeight;
+  const destinationOffset = typeof destination === 'number' ? destination : destination.offsetTop;
+  const destinationOffsetToScroll = Math.round(documentHeight - destinationOffset < windowHeight ? documentHeight - windowHeight : destinationOffset);
+  const distance = destinationOffsetToScroll - start + offset;
+  if (distance === 0) return;
+  if (prefersReduced) {
+    window.scrollTo(0, start + distance);
+    return;
+  }
+  const abs = Math.abs(distance);
+  const duration = Math.min(1100, Math.max(240, baseDuration * (abs / 700)));
+  const startTime = ('now' in performance) ? performance.now() : Date.now();
+  const ease = t => t<.5?4*t*t*t:1-Math.pow(-2*t+2,3)/2;
+  window.smoothScrollInstance.isScrolling = true;
+  const tick = () => {
+    const now = ('now' in performance) ? performance.now() : Date.now();
+    const t = Math.min(1, (now - startTime) / duration);
+    const v = ease(t);
+    window.scrollTo(0, Math.round(start + v * distance));
+    if (t < 1) requestAnimationFrame(tick);
+    else window.smoothScrollInstance.isScrolling = false;
+  };
+  requestAnimationFrame(tick);
+}
+
+window.smoothScrollInstance = {
+  isScrolling: false,
+  scrollToElement: (element, offset = 0, duration = 480) => {
+    if (!element) return;
+    smoothScrollTo(element, duration, offset);
+  },
+  scrollTo: (yPosition, offset = 0, duration = 480) => {
+>>>>>>> Stashed changes
     smoothScrollTo(yPosition, duration, offset);
   }
 };

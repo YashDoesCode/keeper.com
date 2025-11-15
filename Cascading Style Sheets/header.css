@@ -475,6 +475,13 @@
     pointer-events: auto;
 }
 
+<<<<<<< Updated upstream
+=======
+.dropdown.floating{position:fixed;transform:none;opacity:1;visibility:visible;pointer-events:auto}
+
+.keeper-logo-link img{background:transparent;display:block}
+
+>>>>>>> Stashed changes
 .nav-wave {
     position: absolute;
     inset: 0;
@@ -489,3 +496,15 @@
 .header.show-wave .nav-wave {
     opacity: 1;
 }
+<<<<<<< Updated upstream
+=======
+.keeper-logo-link,
+.top-right-buttons{
+    scroll-margin-top: calc(var(--nav-height) + 24px);
+}
+
+@media (max-width: 900px){
+    .keeper-logo-link{display:none}
+    .top-right-buttons{display:none}
+}
+>>>>>>> Stashed changes
