@@ -16,12 +16,11 @@
   <link rel="icon" type="image/gif" href="../Assets/Logomark/Icon TRS.png">
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
-  <link rel="preload" as="image" href="" />
+  <link rel="preload" as="video" href="../Assets/Background/Keeper -Beyond the Ridge.mp4" type="video/mp4" />
   <script src="../JavaScript/smooth-scroll.js"></script>
   <script src="../JavaScript/header-loader.js" defer></script>
   <script src="../JavaScript/header.js"></script>
   <style>
-
     html, body {
       overflow-x: hidden;
       width: 100%;
@@ -32,7 +31,9 @@
   <div id="app" data-deferred-ui>
   <section class="hero hero-overview" id="home-hero">
     <div class="hero-backdrop" aria-hidden="true">
-      <img id="hero-gif" class="hero-backdrop-image" src="../Assets/Background/Keeper -Beyond the Ridge.gif" alt="" decoding="async" fetchpriority="high" loading="eager">
+      <video id="hero-video" class="hero-backdrop-image" playsinline muted autoplay preload="auto" disablepictureinpicture controlslist="nodownload noplaybackrate noremoteplayback nofullscreen" poster="../Assets/Logomark/Keeper-Rebrand.png">
+        <source src="../Assets/Background/Keeper -Beyond the Ridge.mp4" type="video/mp4">
+      </video>
     </div>
     <div class="container hero-frame">
     <div class="hero-intro" data-boot-hero>
@@ -61,14 +62,6 @@
           <span class="metric-label">uptime across global trust grid</span>
         </div>
       </div>
-
-    </div>
-  </section>
-  <section class="hero-subtitle-section section">
-    <div class="container">
-      <p class="hero-subtitle">
-        Never miss a threat, identity drift, or rogue session. Keeper unifies intelligence, automation, and encryption so every account, vault, and workflow stays invulnerable.
-      </p>
     </div>
   </section>
   <main class="main-content">
@@ -146,9 +139,6 @@
       </div>
     </div>
   </section>
-
-  
-
   <section id="features" class="page-shell platform-section">
     <div class="container">
       <div class="page-hero platform-hero">
@@ -338,6 +328,7 @@
   <script src="../JavaScript/main.js" defer></script>
   <script src="../script.js" defer></script>
   <script src="../JavaScript/nav.js" defer></script>
+  <script src="../JavaScript/hero-animation.js" defer></script>
   <script src="../JavaScript/boot-animation.js" defer></script>
   <script src="../JavaScript/footer-loader.js" defer></script>
   <script src="../JavaScript/scroll-animation.js" defer></script>
