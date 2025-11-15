@@ -1,37 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-<<<<<<< Updated upstream
-  const hero = document.querySelector('.hero');
-  const mainContent = document.querySelector('.main-content');
-  if (!hero || !mainContent) return;
-
-  let sequenceTriggered = false;
-
-  const enableScroll = () => {
-    if (window.smoothScrollInstance) {
-      window.smoothScrollInstance.isScrolling = false;
-    }
-  };
-
-  const disableScroll = () => {
-    if (window.smoothScrollInstance) {
-      window.smoothScrollInstance.isScrolling = true;
-    }
-  };
-
-  const runSequence = () => {
-    if (sequenceTriggered) return;
-    sequenceTriggered = true;
-    disableScroll();
-    hero.classList.add('hero-motion');
-    requestAnimationFrame(() => {
-      mainContent.classList.add('content-arrived');
-=======
   const reveals = document.querySelectorAll('.feature-card');
   if (reveals.length) {
     reveals.forEach(el => {
       el.style.opacity = '0';
       el.style.transform = 'translateY(40px)';
->>>>>>> Stashed changes
     });
     const revObs = new IntersectionObserver(entries => {
       entries.forEach(entry => {
