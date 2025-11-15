@@ -1,12 +1,4 @@
 function waitForHeader() {
-<<<<<<< Updated upstream
-  if (document.querySelector('.header')) {
-    return Promise.resolve();
-  }
-  return new Promise(resolve => {
-    document.addEventListener('headerLoaded', resolve, { once: true });
-  });
-=======
   if (document.querySelector('.header')) return Promise.resolve();
   return new Promise(resolve => document.addEventListener('headerLoaded', resolve, { once: true }));
 }
@@ -22,7 +14,6 @@ function stagger(elements, build, baseDelay, gap) {
   const tasks = [];
   elements.forEach((el, i) => tasks.push(seq(el, build(el), { delay: baseDelay + i * gap, duration: 260, easing: 'cubic-bezier(.22,.61,.36,1)' })));
   return Promise.all(tasks);
->>>>>>> Stashed changes
 }
 
 function animateHeader() {
@@ -33,124 +24,6 @@ function animateHeader() {
   const navActions = [...document.querySelectorAll('.header .hamburger-menu')];
   const keeperLogo = document.querySelector('[data-boot-logo]');
   const topRightButtons = document.querySelector('[data-boot-actions]');
-<<<<<<< Updated upstream
-  if (!headerContainer || !headerCore) {
-    return;
-  }
-  headerContainer.style.opacity = '0';
-  headerContainer.style.transform = 'translateY(-40px) scale(0.7)';
-  headerCore.style.transformOrigin = 'center';
-  headerCore.style.transform = 'scaleX(0.4)';
-  headerCore.style.opacity = '0';
-  if (navWave) {
-    navWave.style.transformOrigin = 'center';
-    navWave.style.transform = 'scaleX(0)';
-    navWave.style.opacity = '0';
-    navWave.style.background = 'linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,1), rgba(255,255,255,0.0))';
-  }
-  navLinks.forEach(link => {
-    link.style.opacity = '0';
-    link.style.transform = 'translateY(10px)';
-  });
-  navActions.forEach(action => {
-    action.style.opacity = '0';
-    action.style.transform = 'translateY(-8px)';
-  });
-  const headerTimeline = anime.timeline({ autoplay: false });
-  headerTimeline.add({
-    targets: headerContainer,
-    opacity: [0, 1],
-    translateY: ['-40px', '0px'],
-    scale: [0.7, 1],
-    duration: 600,
-    easing: 'easeOutCubic'
-  }).add({
-    targets: headerCore,
-    opacity: [0, 1],
-    scaleX: [0.4, 1],
-    duration: 420,
-    easing: 'easeOutCubic'
-  }, '-=420');
-  if (navWave) {
-    headerTimeline.add({
-      targets: navWave,
-      opacity: [0, 1, 0],
-      scaleX: [0, 1.05],
-      duration: 360,
-      easing: 'easeOutSine'
-    }, '-=200');
-  }
-  if (navLinks.length) {
-    const centerIndex = Math.floor((navLinks.length - 1) / 2);
-    const groups = [[navLinks[centerIndex]]];
-    for (let offset = 1; offset <= navLinks.length; offset += 1) {
-      const left = navLinks[centerIndex - offset];
-      const right = navLinks[centerIndex + offset];
-      const group = [];
-      if (left) group.push(left);
-      if (right) group.push(right);
-      if (group.length) groups.push(group);
-    }
-    groups.forEach((group, index) => {
-      headerTimeline.add({
-        targets: group,
-        opacity: [0, 1],
-        translateY: [10, 0],
-        duration: 260,
-        easing: 'easeOutQuad'
-      }, 460 + index * 140);
-    });
-  }
-  if (navActions.length) {
-    headerTimeline.add({
-      targets: navActions,
-      opacity: [0, 1],
-      translateY: [-8, 0],
-      duration: 240,
-      easing: 'easeOutQuad',
-      delay: anime.stagger(60)
-    }, '+=60');
-  }
-  const extras = [keeperLogo, topRightButtons].filter(Boolean);
-  if (extras.length) {
-    extras.forEach(element => {
-      element.style.opacity = '0';
-      element.style.transform = 'translateY(-6px)';
-    });
-    headerTimeline.add({
-      targets: extras,
-      opacity: [0, 1],
-      translateY: [-6, 0],
-      duration: 260,
-      easing: 'easeOutQuad',
-      delay: anime.stagger(90)
-    }, '+=40');
-  }
-  headerTimeline.finished.then(() => {
-    headerContainer.style.transform = '';
-    headerContainer.style.opacity = '';
-    headerCore.style.transform = '';
-    headerCore.style.opacity = '';
-    if (navWave) {
-      navWave.style.transform = '';
-      navWave.style.opacity = '';
-      navWave.style.background = '';
-    }
-    navLinks.forEach(link => {
-      link.style.opacity = '';
-      link.style.transform = '';
-    });
-    navActions.forEach(action => {
-      action.style.opacity = '';
-      action.style.transform = '';
-    });
-    extras.forEach(element => {
-      element.style.opacity = '';
-      element.style.transform = '';
-    });
-  });
-  headerTimeline.play();
-=======
   if (!headerContainer || !headerCore) return;
 
   headerContainer.style.willChange = 'transform, opacity';
@@ -225,15 +98,11 @@ function animateHeader() {
     if (keeperLogo) keeperLogo.style.opacity = '1';
     if (topRightButtons) topRightButtons.style.opacity = '1';
   });
->>>>>>> Stashed changes
 }
 
 function startBootSequence() {
   const isHomePage = location.pathname.endsWith('/') || location.pathname.endsWith('index.html');
   if (isHomePage) {
-<<<<<<< Updated upstream
-    animateHeader();
-=======
     const heroIntro = document.querySelector('.hero-intro');
     const waitlistForm = document.querySelector('.waitlist-inline');
     const heroMetrics = document.querySelector('.hero-metrics');
@@ -248,19 +117,15 @@ function startBootSequence() {
       if (mainContent) { mainContent.style.opacity = 1; mainContent.classList.add('content-arrived'); }
       animateHeader();
     }, 3000);
->>>>>>> Stashed changes
   }
 }
 
 document.addEventListener('DOMContentLoaded', () => {
   waitForHeader().then(startBootSequence);
 });
-<<<<<<< Updated upstream
-=======
 
 (function(){
   const app = document.getElementById('app');
   if (!app) return;
   app.style.visibility = 'visible';
 })();
->>>>>>> Stashed changes

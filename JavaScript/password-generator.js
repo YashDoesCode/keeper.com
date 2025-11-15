@@ -39,13 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
         ambiguous: 'l1IO0',
     };
 
-<<<<<<< Updated upstream
-=======
     const WORDS = [
       'able','acid','aged','also','area','army','away','baby','back','ball','band','bank','base','bath','bear','beat','been','beer','bell','belt','best','bill','bird','blow','blue','boat','body','bomb','bond','bone','book','boom','born','boss','both','bowl','bulk','burn','bush','busy','cake','call','calm','came','camp','card','care','case','cash','cast','cell','chat','chip','city','club','coal','coat','code','cold','come','cook','cool','cope','copy','core','cost','crew','crop','dark','data','date','dawn','days','dead','deal','debt','deep','deny','desk','dial','diet','disc','disk','does','done','door','dose','down','draw','drop','drug','dual','duke','dust','duty','each','earn','ease','east','easy','edge','else','even','ever','evil','exit','face','fact','fail','fair','fall','farm','fast','fate','fear','feed','feel','feet','file','fill','film','find','fine','fire','firm','fish','five','flat','flow','food','foot','ford','form','fort','four','free','from','fuel','full','fund','gain','game','gate','gave','gear','gene','gift','girl','give','glad','goal','goes','gold','golf','gone','good','gray','grew','grey','grow','gulf','hair','half','hall','hand','hang','hard','harm','hate','have','head','hear','heat','held','hell','help','here','hero','high','hill','hire','hold','hole','holy','home','hope','host','hour','huge','hung','hunt','hurt','idea','inch','into','iron','item','jean','join','jump','jury','just','keep','kent','kept','keys','kill','kind','king','knee','knew','know','lack','lady','laid','lake','land','lane','last','late','lead','left','less','life','lift','like','line','link','list','live','load','loan','lock','logo','long','look','lord','lose','loss','lost','love','luck','made','mail','main','make','male','many','mark','mass','matt','meal','mean','meat','meet','menu','meri','mice','mike','mile','milk','mill','mind','mine','miss','mode','mood','moon','more','most','move','much','must','name','navy','near','neck','need','news','next','nice','nick','nine','none','nose','note','okay','once','only','onto','open','oral','over','pace','pack','page','paid','pain','pair','palm','park','part','pass','past','path','peak','pick','pink','pipe','plan','play','plot','plug','plus','poll','pool','poor','port','post','pull','pure','push','race','rail','rain','rank','rare','rate','read','real','rear','rely','rent','rest','rice','rich','ride','ring','rise','risk','road','rock','role','roll','roof','room','root','rose','rule','rush','safe','said','sake','sale','salt','same','sand','save','seat','seed','seek','seem','seen','self','sell','send','sent','ship','shop','shot','show','shut','sick','side','sign','site','size','skin','slip','slow','snow','soft','soil','sold','sole','some','song','soon','sort','soul','spot','star','stay','step','stop','such','suit','sure','take','tale','talk','tall','tank','tape','task','team','tech','tell','tend','term','test','text','than','that','them','then','they','thin','this','thus','till','time','tiny','told','toll','tone','tony','took','tool','tour','town','tree','trip','true','tune','twin','type','unit','upon','used','user','vary','vast','very','vice','view','vote','wage','wait','wake','walk','wall','want','ward','warm','wash','wave','ways','weak','wear','week','well','went','were','west','what','when','whom','wide','wife','wild','will','wind','wine','wing','wire','wise','wish','with','wood','word','wore','work','yard','yeah','year','your'
     ];
 
->>>>>>> Stashed changes
     let history = JSON.parse(localStorage.getItem(storageKey) || '[]');
 
     const controls = [
@@ -56,8 +53,6 @@ document.addEventListener('DOMContentLoaded', () => {
         ambiguityFree,
         minNumbers,
         minSpecialChars,
-<<<<<<< Updated upstream
-=======
         avoidRepeats,
         avoidSequences,
         excludeChars,
@@ -68,7 +63,6 @@ document.addEventListener('DOMContentLoaded', () => {
         capitalizeWords,
         appendDigit,
         appendSymbol
->>>>>>> Stashed changes
     ];
 
     controls.forEach(control => {
@@ -81,8 +75,6 @@ document.addEventListener('DOMContentLoaded', () => {
         generatePassword();
     });
 
-<<<<<<< Updated upstream
-=======
     wordCount.addEventListener('input', () => {
       wordCountValue.textContent = wordCount.value;
       generatePassword();
@@ -91,23 +83,12 @@ document.addEventListener('DOMContentLoaded', () => {
     modePassword.addEventListener('change', toggleMode);
     modePassphrase.addEventListener('change', toggleMode);
 
->>>>>>> Stashed changes
     generateButton.addEventListener('click', generatePassword);
     copyButton.addEventListener('click', copyToClipboard);
     clearHistoryBtn.addEventListener('click', clearHistory);
 
     passwordHistory.addEventListener('click', event => {
         const target = event.target;
-<<<<<<< Updated upstream
-        if (target.dataset.action === 'copy') {
-            copyFromHistory(target.dataset.password);
-        } else if (target.dataset.action === 'use') {
-            useFromHistory(target.dataset.password);
-        } else if (target.dataset.action === 'remove') {
-            removeFromHistory(target.dataset.password);
-        }
-    });
-=======
         const row = target.closest('.generator-history-item');
         if (!row) return;
         if (target.classList.contains('history-remove')) {
@@ -133,7 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
       excludeChars.disabled = passMode;
       generatePassword();
     }
->>>>>>> Stashed changes
 
     function generatePassword() {
         if (modePassphrase.checked) {
@@ -150,14 +130,11 @@ document.addEventListener('DOMContentLoaded', () => {
             charset = charset.split('').filter(char => !chars.ambiguous.includes(char)).join('');
         }
 
-<<<<<<< Updated upstream
-=======
         if (excludeChars.value) {
           const blacklist = new Set(excludeChars.value.split(''));
           charset = charset.split('').filter(c => !blacklist.has(c)).join('');
         }
 
->>>>>>> Stashed changes
         if (!charset) {
             passwordDisplay.value = 'Select at least one character set';
             strengthIndicator.style.width = '0%';
@@ -170,12 +147,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const passwordLength = parseInt(lengthSlider.value, 10);
         const minNums = parseInt(minNumbers.value, 10);
         const minSpecs = parseInt(minSpecialChars.value, 10);
-<<<<<<< Updated upstream
-=======
         const needUpper = includeUppercase.checked ? 1 : 0;
         const needLower = includeLowercase.checked ? 1 : 0;
         let addedUpper = 0, addedLower = 0;
->>>>>>> Stashed changes
 
         for (let i = 0; i < minNums; i++) {
             password += chars.numbers.charAt(Math.floor(Math.random() * chars.numbers.length));
@@ -206,10 +180,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         passwordDisplay.value = password;
         addToHistory(password);
-<<<<<<< Updated upstream
-        updateStrengthIndicator(password);
-        calculateCrackTime(password, charset.length);
-=======
         updateStrengthIndicator(password, charset.length);
         calculateCrackTime(password, charset.length);
     }
@@ -231,7 +201,6 @@ document.addEventListener('DOMContentLoaded', () => {
       const entropy = (n * Math.log2(WORDS.length)) + (appendDigit.checked ? Math.log2(10) : 0) + (appendSymbol.checked ? Math.log2(8) : 0);
       renderStrengthFromEntropy(entropy);
       crackTimeText.textContent = estimateCrackTimeFromEntropy(entropy);
->>>>>>> Stashed changes
     }
 
     function copyToClipboard() {
@@ -246,35 +215,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 copyButton.textContent = 'Copy';
             }, 2000);
         });
-<<<<<<< Updated upstream
-    }
-
-    function updateStrengthIndicator(password) {
-        const length = password.length;
-        let strength = 0;
-        if (length >= 8) strength++;
-        if (length >= 12) strength++;
-        if (length >= 16) strength++;
-        if (/[A-Z]/.test(password)) strength++;
-        if (/[0-9]/.test(password)) strength++;
-        if (/[^A-Za-z0-9]/.test(password)) strength++;
-
-        const percentage = Math.min(strength / 6, 1) * 100;
-        strengthIndicator.style.width = percentage + '%';
-
-        if (strength <= 2) {
-            strengthText.textContent = 'Weak';
-            strengthIndicator.style.backgroundColor = '#ff4d4f';
-        } else if (strength <= 4) {
-            strengthText.textContent = 'Medium';
-            strengthIndicator.style.backgroundColor = '#ffa940';
-        } else {
-            strengthText.textContent = 'Strong';
-            strengthIndicator.style.backgroundColor = '#52c41a';
-        }
-    }
-
-=======
     }
 
     function updateStrengthIndicator(password, charsetSize) {
@@ -297,30 +237,10 @@ document.addEventListener('DOMContentLoaded', () => {
       strengthIndicator.style.backgroundColor = color;
     }
 
->>>>>>> Stashed changes
     function calculateCrackTime(password, charsetSize) {
         if (!password) {
             crackTimeText.textContent = 'Unavailable';
             return;
-<<<<<<< Updated upstream
-        }
-        const combinations = Math.pow(charsetSize, password.length);
-        const guessesPerSecond = 1e9;
-        const seconds = combinations / guessesPerSecond;
-        if (seconds < 60) {
-            crackTimeText.textContent = '< 1 minute';
-        } else if (seconds < 3600) {
-            crackTimeText.textContent = Math.round(seconds / 60) + ' minutes';
-        } else if (seconds < 86400) {
-            crackTimeText.textContent = Math.round(seconds / 3600) + ' hours';
-        } else if (seconds < 31536000) {
-            crackTimeText.textContent = Math.round(seconds / 86400) + ' days';
-        } else if (seconds < 3153600000) {
-            crackTimeText.textContent = Math.round(seconds / 31536000) + ' years';
-        } else {
-            crackTimeText.textContent = 'Centuries+';
-=======
->>>>>>> Stashed changes
         }
         const entropy = Math.log2(Math.max(charsetSize,1)) * password.length;
         crackTimeText.textContent = estimateCrackTimeFromEntropy(entropy);
@@ -382,55 +302,6 @@ document.addEventListener('DOMContentLoaded', () => {
         renderHistory();
     }
 
-    function addToHistory(password) {
-        history = history.filter(item => item !== password);
-        history.unshift(password);
-        if (history.length > 12) {
-            history = history.slice(0, 12);
-        }
-        localStorage.setItem(storageKey, JSON.stringify(history));
-        renderHistory();
-    }
-
-    function renderHistory() {
-        if (!history.length) {
-            passwordHistory.innerHTML = '<div class="generator-history-item">No passwords generated yet.</div>';
-            return;
-        }
-        passwordHistory.innerHTML = history.map(password => {
-            return `<div class="generator-history-item">
-              <div>${password}</div>
-              <div class="generator-actions" style="margin-top:0.75rem;">
-                <button class="btn glass secondary" data-variant="halo" data-action="copy" data-password="${password}">Copy</button>
-                <button class="btn glass tertiary" data-variant="flare" data-action="use" data-password="${password}">Use</button>
-                <button class="btn glass tertiary" data-variant="flare" data-action="remove" data-password="${password}">Remove</button>
-              </div>
-            </div>`;
-        }).join('');
-    }
-
-    function clearHistory() {
-        history = [];
-        localStorage.removeItem(storageKey);
-        renderHistory();
-    }
-
-    function copyFromHistory(password) {
-        navigator.clipboard.writeText(password);
-    }
-
-    function useFromHistory(password) {
-        passwordDisplay.value = password;
-        updateStrengthIndicator(password);
-        calculateCrackTime(password, getCharsetSize());
-    }
-
-    function removeFromHistory(password) {
-        history = history.filter(item => item !== password);
-        localStorage.setItem(storageKey, JSON.stringify(history));
-        renderHistory();
-    }
-
     function getCharsetSize() {
         let size = 0;
         if (includeUppercase.checked) size += chars.uppercase.length;
@@ -440,13 +311,6 @@ document.addEventListener('DOMContentLoaded', () => {
         if (ambiguityFree.checked) {
             size -= chars.ambiguous.length;
         }
-<<<<<<< Updated upstream
-        return Math.max(size, 1);
-    }
-
-    renderHistory();
-    generatePassword();
-=======
         if (excludeChars.value) size -= new Set(excludeChars.value.split('')).size;
         return Math.max(size, 1);
     }
@@ -468,5 +332,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     renderHistory();
     toggleMode();
->>>>>>> Stashed changes
 });

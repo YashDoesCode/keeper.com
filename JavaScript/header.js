@@ -68,12 +68,6 @@ function bindHeaderInteractions() {
     if (link) {
       link.addEventListener('click', event => {
         event.preventDefault();
-<<<<<<< Updated upstream
-        item.classList.toggle('open');
-      });
-    }
-  });
-=======
         const dropdown = item.querySelector('.dropdown');
         const backdrop = document.querySelector('.nav-backdrop');
         const opened = item.classList.toggle('open');
@@ -107,7 +101,6 @@ function bindHeaderInteractions() {
   };
   window.addEventListener('scroll', closeDropdowns, { passive:true });
   window.addEventListener('resize', closeDropdowns);
->>>>>>> Stashed changes
   headerState.bound = true;
 }
 
