@@ -136,11 +136,6 @@ body.waitlist-open {
     width: 100%;
     height: 100%;
     object-fit: cover;
-<<<<<<< Updated upstream
-    filter: saturate(1.15) brightness(0.92);
-    opacity: 0.85;
-=======
->>>>>>> Stashed changes
     will-change: opacity, transform, filter;
     backface-visibility: hidden;
     mix-blend-mode: normal;
@@ -1905,17 +1900,10 @@ body.waitlist-open {
 }
 
 .feature-card {
-<<<<<<< Updated upstream
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.08), rgba(8, 8, 12, 0.85));
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 24px;
-    padding: 2.4rem;
-=======
     background: linear-gradient(145deg, rgba(255, 255, 255, 0.06), rgba(8, 8, 12, 0.85));
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 18px;
     padding: 1.6rem;
->>>>>>> Stashed changes
     position: relative;
     overflow: hidden;
     transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
@@ -1951,16 +1939,8 @@ body.waitlist-open {
     line-height: 1.7;
 }
 
-<<<<<<< Updated upstream
-.feature-meta {
-    display: grid;
-    gap: 1.25rem;
-    margin-top: 1.75rem;
-}
-=======
 .feature-card p{display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
 .feature-meta {display:none}
->>>>>>> Stashed changes
 
 .feature-meta-row {
     display: flex;
@@ -2184,31 +2164,9 @@ body.waitlist-open {
     gap: 1.5rem;
 }
 
-<<<<<<< Updated upstream
-.generator-display {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.generator-display input {
-    flex: 1;
-    min-width: 220px;
-    padding: 16px 20px;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.16);
-    border-radius: 16px;
-    color: #ffffff;
-    font-family: 'Courier New', monospace;
-    font-size: 1rem;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-=======
 .generator-display {display:flex;gap:.6rem;align-items:center;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:999px;padding:.4rem .4rem .4rem 1rem;-webkit-backdrop-filter:blur(14px) saturate(160%);backdrop-filter:blur(14px) saturate(160%)}
 
 .generator-display input {flex:1;min-width:200px;padding:12px 8px;background:transparent;border:none;color:#ffffff;font-family:'Courier New', monospace;font-size:1rem;outline:none}
->>>>>>> Stashed changes
 
 .generator-display input:focus {
     outline: none;
@@ -2216,16 +2174,8 @@ body.waitlist-open {
     box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.15);
 }
 
-<<<<<<< Updated upstream
-.generator-actions {
-    display: flex;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-}
-=======
 .generator-actions {display:flex;gap:.5rem}
 .generator-actions .btn{padding:.6rem 1rem;border-radius:999px}
->>>>>>> Stashed changes
 
 .generator-settings {
     display: grid;
@@ -2249,15 +2199,7 @@ body.waitlist-open {
     color: rgba(255, 255, 255, 0.78);
 }
 
-<<<<<<< Updated upstream
-.generator-setting input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
-    accent-color: #8a2be2;
-}
-=======
 .generator-setting input[type="checkbox"] {width:20px;height:20px;accent-color:#c0c0c0}
->>>>>>> Stashed changes
 
 .generator-setting input[type="range"] {
     width: 100%;
@@ -2297,28 +2239,9 @@ body.waitlist-open {
     gap: 1rem;
 }
 
-<<<<<<< Updated upstream
-.generator-history-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.8rem;
-}
-
-.generator-history-item {
-    padding: 0.9rem 1.1rem;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 12px;
-    font-family: 'Courier New', monospace;
-    font-size: 0.9rem;
-    color: #ffffff;
-    word-break: break-word;
-}
-=======
 .generator-history-list {display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:.6rem}
 
 .generator-history-item {padding:.7rem .9rem;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.12);border-radius:12px;font-family:'Courier New', monospace;font-size:.88rem;color:#ffffff;word-break:break-word;display:flex;justify-content:space-between;align-items:center}
->>>>>>> Stashed changes
 
 .page-hero.align-left {
     text-align: left;
@@ -2367,9 +2290,6 @@ body.waitlist-open {
 .btn-compact {
     font-size: 0.85rem;
     padding: 0.55rem 1.2rem;
-<<<<<<< Updated upstream
-}
-=======
 }
 .capabilities-grid{display:grid;grid-template-columns:repeat(3, minmax(200px, 260px));gap:18px;justify-content:center;align-content:center;padding:12px}
 .cap-card{position:relative;border-radius:24px;padding:18px 18px 44px;color:#fff;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:0 16px 50px rgba(0,0,0,.35);transform:translateZ(0);transition:transform .25s ease, box-shadow .25s ease, border-color .25s ease, background .25s ease;backdrop-filter:saturate(160%) blur(16px);text-decoration:none;cursor:pointer;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02))}
@@ -2422,4 +2342,3 @@ body.waitlist-open {
   transform: translateY(12px);
   transition: opacity .4s ease, transform .4s ease;
 }
->>>>>>> Stashed changes
