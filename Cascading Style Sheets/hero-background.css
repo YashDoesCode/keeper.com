@@ -1,22 +1,15 @@
-.hero-background-gif {
+.hero-backdrop-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
+    background: #000;
     z-index: 1;
-    opacity: 0.85;
-    filter: brightness(1);
 }
 
-@media (max-width: 768px) {
-    .hero-background-gif {
-        opacity: 0.75;
-        filter: brightness(0.95);
-    }
-}
+.boot-hidden{visibility:hidden}
 
-.social-proof {
-    background-color: #000;
-}
+[data-deferred-ui]{visibility:hidden}

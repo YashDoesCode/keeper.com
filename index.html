@@ -7,6 +7,10 @@
   <link rel="stylesheet" href="../Cascading Style Sheets/redesign.css" />
   <link rel="stylesheet" href="../Cascading Style Sheets/hero-background.css" />
   <link rel="stylesheet" href="../Cascading Style Sheets/animations.css" />
+<<<<<<< Updated upstream
+=======
+  <link rel="stylesheet" href="../Cascading Style Sheets/download-buttons.css" />
+>>>>>>> Stashed changes
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -15,7 +19,11 @@
   <link rel="icon" type="image/gif" href="../Assets/Logomark/Icon TRS.png">
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<<<<<<< Updated upstream
+=======
+  <link rel="preload" as="image" href="" />
+>>>>>>> Stashed changes
+  <script src="../JavaScript/smooth-scroll.js"></script>
   <script src="../JavaScript/header-loader.js" defer></script>
   <script src="../JavaScript/header.js"></script>
   <style>
@@ -27,6 +35,7 @@
   </style>
 </head>
 <body>
+<<<<<<< Updated upstream
   <section class="hero hero-overview" id="home-hero">
     <div class="hero-backdrop" aria-hidden="true">
       <div class="hero-backdrop-glow"></div>
@@ -38,6 +47,16 @@
         <p class="hero-subtitle" data-boot-hero>
           Never miss a threat, identity drift, or rogue session. Keeper unifies intelligence, automation, and encryption so every account, vault, and workflow stays invulnerable.
         </p>
+=======
+  <div id="app" data-deferred-ui>
+  <section class="hero hero-overview" id="home-hero">
+    <div class="hero-backdrop" aria-hidden="true">
+      <img id="hero-gif" class="hero-backdrop-image" src="../Assets/Background/Keeper -Beyond the Ridge.gif" alt="" decoding="async" fetchpriority="high" loading="eager">
+    </div>
+    <div class="container hero-frame">
+    <div class="hero-intro" data-boot-hero>
+
+>>>>>>> Stashed changes
       </div>
       <form class="waitlist-inline" id="waitlistInlineForm" data-boot-hero>
         <label class="sr-only" for="waitlistInlineEmail">Email address</label>
@@ -45,12 +64,18 @@
           <input type="email" id="waitlistInlineEmail" required placeholder="you@example.com">
           <button type="submit" class="btn glass primary" data-variant="pulse">Join the waitlist</button>
         </div>
+<<<<<<< Updated upstream
         <span class="waitlist-inline-note">Early access members unlock Keeper Neural Shield and Keeper Kryptonite first.</span>
       </form>
       <div class="hero-secondary-actions">
         <a href="#features" class="btn glass secondary" data-variant="halo">Explore platform</a>
         <a href="pricing.html" class="btn glass tertiary" data-variant="flare">View pricing</a>
       </div>
+=======
+
+      </form>
+
+>>>>>>> Stashed changes
       <div class="hero-metrics" data-boot-hero>
         <div class="metric">
           <span class="metric-value">4.2B+</span>
@@ -68,6 +93,16 @@
 
     </div>
   </section>
+<<<<<<< Updated upstream
+=======
+  <section class="hero-subtitle-section section">
+    <div class="container">
+      <p class="hero-subtitle">
+        Never miss a threat, identity drift, or rogue session. Keeper unifies intelligence, automation, and encryption so every account, vault, and workflow stays invulnerable.
+      </p>
+    </div>
+  </section>
+>>>>>>> Stashed changes
   <main class="main-content">
   <section class="partners-section section" aria-label="Trusted by industry leaders">
     <div class="container">
@@ -144,6 +179,7 @@
     </div>
   </section>
 
+<<<<<<< Updated upstream
   <section id="features" class="page-shell platform-section">
     <div class="container">
       <div class="page-hero platform-hero">
@@ -259,6 +295,23 @@
             </div>
           </div>
         </article>
+=======
+  
+
+  <section id="features" class="page-shell platform-section">
+    <div class="container">
+      <div class="page-hero platform-hero">
+        <span class="eyebrow">All‑in‑one platform capabilities</span>
+        <h2>Your world, simplified in one dashboard</h2>
+        <p>Real‑time visibility, effortless control, and future‑proof security in one place.</p>
+      </div>
+      <div class="capabilities-grid">
+        <a class="cap-card" href="password-generator.html"><h3>Password Manager</h3><p>Create and guard credentials with device‑bound security.</p><span class="cta-link">Open</span></a>
+        <a class="cap-card" href="2fa-authenticator.html"><h3>2FA & Passkeys</h3><p>Effortless passwordless sign‑in and strong second factors.</p><span class="cta-link">Open</span></a>
+        <a class="cap-card" href="account-manager.html"><h3>Account Management</h3><p>Provision, review and revoke access in one place.</p><span class="cta-link">Open</span></a>
+        <a class="cap-card" href="vpn.html"><h3>VPN & Web</h3><p>Private networking and safer browsing, together.</p><span class="cta-link">Open</span></a>
+        <a class="cap-card" href="file-encryption.html"><h3>File & Stealth</h3><p>Encrypt files and hide sensitive work on any device.</p><span class="cta-link">Open</span></a>
+>>>>>>> Stashed changes
       </div>
     </div>
   </section>
@@ -397,6 +450,10 @@
     </div>
   </section>
   </main>
+<<<<<<< Updated upstream
+=======
+  </div>
+>>>>>>> Stashed changes
 
   <div id="waitlistDrawer" class="waitlist-drawer" role="dialog" aria-modal="true" aria-labelledby="waitlistTitle" hidden>
     <div class="waitlist-panel">
@@ -431,6 +488,7 @@
   </div>
 
   <div id="toast" role="status" aria-live="polite"></div>
+<<<<<<< Updated upstream
   <script src="../JavaScript/main.js"></script>
   <script src="../script.js"></script>
   <script src="../JavaScript/nav.js"></script>
@@ -452,29 +510,7 @@
       });
     }
 
-    const lenis = new Lenis({
-      lerp: 0.1,
-      wheelMultiplier: 1.5,
-    });
-    
-    window.lenisInstance = lenis;
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
-    document.querySelectorAll('a.smooth-scroll').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-          window.lenisInstance.scrollTo(targetElement);
-        }
-      });
-    });
 
     anime({
       targets: '.feature-card',
@@ -578,5 +614,13 @@
       });
     }
   </script>
+=======
+  <script src="../JavaScript/main.js" defer></script>
+  <script src="../script.js" defer></script>
+  <script src="../JavaScript/nav.js" defer></script>
+  <script src="../JavaScript/boot-animation.js" defer></script>
+  <script src="../JavaScript/footer-loader.js" defer></script>
+  <script src="../JavaScript/scroll-animation.js" defer></script>
+>>>>>>> Stashed changes
 </body>
 </html>

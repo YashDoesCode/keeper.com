@@ -175,3 +175,9 @@ html.booting body {
     transform: translateY(0);
   }
 }
+
+.hero-intro,
+.waitlist-inline,
+.hero-metrics {
+  animation: fadeInMoveUp 1s ease-out 3s both;
+}

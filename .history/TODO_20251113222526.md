@@ -1,5 +1,0 @@
-- [ ] Move newsletter form from hero section to CTA section in index.html
-- [ ] Adjust Lenis smooth scroll settings for better acceleration in index.html
-- [ ] Implement smooth scroll on sub pages (check and add to other HTML files if missing)
-- [ ] Test changes on homepage
-- [ ] Test changes on sub pages

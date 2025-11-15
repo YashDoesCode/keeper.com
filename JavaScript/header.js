@@ -1,30 +1,15 @@
 const headerState = { bound: false };
 
 function smoothScrollToElement(targetId) {
-  const targetElement = document.getElementById(targetId);
-  if (!targetElement) return;
-  const headerHeight = document.querySelector('.header-container')?.offsetHeight || 0;
-  const targetPosition = targetElement.offsetTop - headerHeight - 20;
-  const mobileNav = document.querySelector('.mobile-nav');
-  const hamburgerMenu = document.querySelector('.hamburger-menu');
-  if (mobileNav) {
-    mobileNav.classList.remove('open');
-    if (hamburgerMenu) {
-      hamburgerMenu.classList.remove('open');
-    }
-  }
-  if (typeof Lenis !== 'undefined' && window.lenisInstance) {
-    window.lenisInstance.scrollTo(targetElement, {
-      offset: -(headerHeight + 20),
-      duration: 1.5,
-      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t))
-    });
-  } else {
-    window.scrollTo({
-      top: targetPosition,
-      behavior: 'smooth'
-    });
-  }
+    const targetElement = document.getElementById(targetId);
+    if (!targetElement) return;
+    const headerHeight = document.querySelector('.header-container')?.offsetHeight || 0;
+    const mobileNav = document.querySelector('.mobile-nav');
+    const hamburgerMenu = document.querySelector('.hamburger-menu');
+    if (mobileNav) mobileNav.classList.remove('open');
+    if (hamburgerMenu) hamburgerMenu.classList.remove('open');
+    const offset = -headerHeight - 20;
+    if (window.smoothScrollInstance) window.smoothScrollInstance.scrollToElement(targetElement, offset);
 }
 
 function isHomePage() {
@@ -83,10 +68,46 @@ function bindHeaderInteractions() {
     if (link) {
       link.addEventListener('click', event => {
         event.preventDefault();
+<<<<<<< Updated upstream
         item.classList.toggle('open');
       });
     }
   });
+=======
+        const dropdown = item.querySelector('.dropdown');
+        const backdrop = document.querySelector('.nav-backdrop');
+        const opened = item.classList.toggle('open');
+        document.querySelectorAll('.has-dropdown').forEach(i=>{ if(i!==item) i.classList.remove('open'); });
+        if (dropdown) {
+          if (opened) {
+            const r = item.getBoundingClientRect();
+            dropdown.classList.add('floating');
+            dropdown.style.top = Math.round(r.bottom + 8) + 'px';
+            dropdown.style.left = Math.round(r.left + r.width/2 - dropdown.offsetWidth/2) + 'px';
+          } else {
+            dropdown.classList.remove('floating');
+            dropdown.style.top = dropdown.style.left = '';
+          }
+        }
+        if (backdrop) backdrop.classList.toggle('show', opened);
+      });
+    }
+  });
+  document.querySelector('.nav-backdrop')?.addEventListener('click', ()=>{
+    document.querySelectorAll('.has-dropdown').forEach(i=>i.classList.remove('open'));
+    document.querySelector('.nav-backdrop')?.classList.remove('show');
+  });
+  const closeDropdowns=()=>{
+    document.querySelectorAll('.has-dropdown').forEach(i=>{
+      i.classList.remove('open');
+      const d=i.querySelector('.dropdown');
+      if(d){d.classList.remove('floating');d.style.top='';d.style.left='';}
+    });
+    document.querySelector('.nav-backdrop')?.classList.remove('show');
+  };
+  window.addEventListener('scroll', closeDropdowns, { passive:true });
+  window.addEventListener('resize', closeDropdowns);
+>>>>>>> Stashed changes
   headerState.bound = true;
 }
 

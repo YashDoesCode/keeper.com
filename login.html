@@ -14,7 +14,7 @@
   <link rel="icon" type="image/gif" href="../Assets/Logomark/Icon TRS.png">
   <meta name="theme-color" content="#000000" />
   <meta name="color-scheme" content="dark" />
-  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+<<<<<<< Updated upstream
   <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
   <script src="../JavaScript/header-loader.js" defer></script>
   <script src="../JavaScript/header.js"></script>
@@ -53,6 +53,19 @@
       position: relative;
       overflow: hidden;
     }
+=======
+  <script src="../JavaScript/header-loader.js" defer></script>
+  <script src="../JavaScript/header.js" defer></script>
+  <style>
+    .login-container {min-height: calc(100vh - (var(--nav-height) + 24px));display:flex;align-items:center;justify-content:center;padding: calc(var(--nav-height) + 20px) 20px 40px;background:#000}
+    .auth-shell{width:100%;max-width:1100px;border-radius:28px;box-shadow:0 30px 100px rgba(0,0,0,.5);display:grid;grid-template-columns:1fr 1fr;overflow:hidden;background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.02));border:1px solid rgba(255,255,255,.12);backdrop-filter: blur(16px) saturate(160%)}
+
+    .login-wrapper {display: contents}
+
+    .login-form-container {background:rgba(255,255,255,.06);-webkit-backdrop-filter:blur(18px) saturate(180%);backdrop-filter:blur(18px) saturate(180%);border:1px solid rgba(255,255,255,.14);color:#fff;padding:48px}
+
+    .login-card {background:transparent;border:none;box-shadow:none;padding:0}
+>>>>>>> Stashed changes
 
     .login-card::before {
       content: '';
@@ -80,6 +93,7 @@
       margin-bottom: 32px;
     }
 
+<<<<<<< Updated upstream
     .login-header h1 {
       font-size: 2rem;
       margin-bottom: 8px;
@@ -117,6 +131,17 @@
       background: rgba(138, 43, 226, 0.3);
       color: var(--text-color);
     }
+=======
+    .login-header h1 {font-size:2rem;margin-bottom:8px;color:#fff}
+
+    .login-header p {color:rgba(255,255,255,.72);font-size:.95rem}
+
+    .auth-tabs {display:flex;gap:8px;margin:16px 0 24px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);border-radius:12px;padding:4px}
+
+    .auth-tab {flex:1;padding:10px 16px;background:transparent;border:none;color:#ccc;font-size:15px;font-weight:500;border-radius:8px;cursor:pointer;transition:.3s}
+
+    .auth-tab.active {background:rgba(255,255,255,.18);color:#fff}
+>>>>>>> Stashed changes
 
     .auth-tab:hover:not(.active) {
       background: rgba(255, 255, 255, 0.1);
@@ -135,6 +160,7 @@
       margin-bottom: 20px;
     }
 
+<<<<<<< Updated upstream
     .form-label {
       display: block;
       margin-bottom: 8px;
@@ -162,11 +188,19 @@
       background: rgba(255, 255, 255, 0.08);
       box-shadow: 0 0 0 3px rgba(138, 43, 226, 0.1);
     }
+=======
+    .form-label {display:block;margin-bottom:8px;color:#fff;font-size:14px;font-weight:600}
+
+    .form-input {width:100%;padding:14px 16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.18);border-radius:12px;color:#fff;font-size:15px;font-family:inherit;transition:.2s;box-sizing:border-box}
+
+    .form-input:focus {outline:none;border-color:rgba(255,255,255,.6);box-shadow:0 0 0 2px rgba(255,255,255,.15)}
+>>>>>>> Stashed changes
 
     .form-input::placeholder {
       color: var(--muted-color);
     }
 
+<<<<<<< Updated upstream
     .forgot-password {
       display: block;
       text-align: right;
@@ -177,11 +211,15 @@
       font-size: 14px;
       transition: color 0.3s ease;
     }
+=======
+    .forgot-password {display:block;text-align:right;margin-top:-12px;margin-bottom:24px;color:#aaa;text-decoration:none;font-size:14px}
+>>>>>>> Stashed changes
 
     .forgot-password:hover {
       color: var(--hover-color);
     }
 
+<<<<<<< Updated upstream
     .login-btn-submit {
       width: 100%;
       padding: 14px;
@@ -198,6 +236,10 @@
       position: relative;
       overflow: hidden;
     }
+=======
+    .login-btn-submit {width:100%;padding:14px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:12px;color:#fff;font-size:16px;font-weight:600;cursor:pointer;transition:.2s;position:relative;overflow:hidden}
+    .login-btn-submit::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,rgba(255,255,255,0),rgba(255,255,255,.4),rgba(255,255,255,0));transform:translateX(-120%);transition:transform .6s cubic-bezier(.22,.61,.36,1)}
+>>>>>>> Stashed changes
 
     .login-btn-submit::before {
       content: '';
@@ -211,6 +253,7 @@
       z-index: 0;
     }
 
+<<<<<<< Updated upstream
     .login-btn-submit:hover::before {
       left: 100%;
     }
@@ -221,12 +264,17 @@
       transform: translateY(-2px);
       box-shadow: 0 4px 12px rgba(220, 220, 220, 0.35);
     }
+=======
+    .login-btn-submit:hover {transform:translateY(-1px)}
+    .login-btn-submit:hover::after{transform:translateX(120%)}
+>>>>>>> Stashed changes
 
     .login-btn-submit > * {
       position: relative;
       z-index: 1;
     }
 
+<<<<<<< Updated upstream
     .qr-section {
       flex: 1;
       display: flex;
@@ -286,10 +334,19 @@
         padding: 32px 24px;
       }
     }
+=======
+    .visual-panel {position:relative;background:radial-gradient(circle at 60% 40%, rgba(150,120,255,.28), rgba(40,20,80,.18) 45%, transparent 70%)}
+    .visual-inner{display:grid;place-items:center;height:100%;padding:0}
+    .glass-card{display:none}
+    .visual-image{display:block;width:100%;height:100%;object-fit:cover}
+
+    @media (max-width: 900px){.auth-shell{grid-template-columns:1fr}.visual-panel{display:none}}
+>>>>>>> Stashed changes
   </style>
 </head>
 <body>
   <div class="login-container">
+<<<<<<< Updated upstream
     <div class="login-wrapper">
       <div class="login-form-container">
         <div class="login-card">
@@ -311,10 +368,35 @@
             <div class="form-group">
               <label class="form-label" for="signinPassword">Password</label>
               <input type="password" id="signinPassword" class="form-input" placeholder="Enter your password" required>
+=======
+    <div class="auth-shell">
+      <div class="login-wrapper">
+      <div class="login-form-container">
+        <div class="login-card">
+          <div class="login-header">
+            <h1>Keep your online life secure</h1>
+            <p>Sign in or create your account</p>
+          </div>
+          <button class="login-btn-submit" id="loginGoogle"><span style="display:inline-flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="#fff" d="M21.35 11.1h-9.17v2.98h5.3c-.23 1.5-1.6 4.39-5.3 4.39-3.19 0-5.8-2.64-5.8-5.9s2.61-5.9 5.8-5.9c1.82 0 3.05.77 3.75 1.43l2.55-2.46C17.2 3.96 15.12 3 12.18 3 6.99 3 2.8 7.19 2.8 12.37s4.19 9.37 9.38 9.37c5.41 0 8.97-3.79 8.97-9.14 0-.61-.06-1.07-.2-1.5z"/></svg>Continue with Google</span></button>
+          <button class="login-btn-submit" id="loginApple" style="margin-top:10px"><span style="display:inline-flex;align-items:center;gap:8px"><svg width="18" height="18" viewBox="0 0 24 24"><path fill="#fff" d="M16.365 1.43c0 1.14-.466 2.2-1.22 2.98-.78.8-2.08 1.43-3.17 1.34-.14-1.09.4-2.26 1.14-3.07.82-.9 2.25-1.58 3.25-1.65.02.13.02.27.02.4zm3.81 17.12c-.66 1.5-1.47 2.97-2.65 2.99-1.16.03-1.53-.77-3.09-.77-1.55 0-1.97.74-3.2.8-1.28.05-2.24-1.62-2.9-3.12-1.58-3.53-1.74-7.67-.38-9.85.99-1.59 2.55-2.52 3.99-2.52 1.49 0 2.42.86 3.66.86 1.2 0 1.92-.86 3.65-.86 1.34 0 2.76.72 3.75 2.07-3.3 1.8-2.79 6.53-.83 8.4z"/></svg>Continue with Apple</span></button>
+          <div class="auth-tabs" style="margin-top:16px">
+            <button class="auth-tab active" data-form="signin">Email</button>
+            <button class="auth-tab" data-form="signup">Create</button>
+          </div>
+          <form id="signinForm" class="auth-form active">
+            <div class="form-group">
+              <label class="form-label" for="signinEmail">Email</label>
+              <input type="email" id="signinEmail" class="form-input" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signinPassword">Password</label>
+              <input type="password" id="signinPassword" class="form-input" placeholder="Password" required>
+>>>>>>> Stashed changes
             </div>
             <a href="#" class="forgot-password">Forgot password?</a>
             <button type="submit" class="login-btn-submit">Sign In</button>
           </form>
+<<<<<<< Updated upstream
 
           <form id="signupForm" class="auth-form">
             <div class="form-group">
@@ -342,30 +424,63 @@
         <div class="qr-container">
           <div class="qr-code" id="qrCode"></div>
           <p class="qr-label">Scan with your mobile phone to sign in</p>
+=======
+          <form id="signupForm" class="auth-form">
+            <div class="form-group">
+              <label class="form-label" for="signupName">Full Name</label>
+              <input type="text" id="signupName" class="form-input" placeholder="Jane Doe" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signupEmail">Email</label>
+              <input type="email" id="signupEmail" class="form-input" placeholder="you@example.com" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signupPassword">Password</label>
+              <input type="password" id="signupPassword" class="form-input" placeholder="Create a strong password" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="signupConfirmPassword">Confirm Password</label>
+              <input type="password" id="signupConfirmPassword" class="form-input" placeholder="Repeat password" required>
+            </div>
+            <button type="submit" class="login-btn-submit">Create Account</button>
+          </form>
+        </div>
+      </div>
+      <div class="visual-panel">
+        <div class="visual-inner">
+          <img class="visual-image" src="Assets/Background/Be Awake -Keeper.gif" alt="Preview" />
+>>>>>>> Stashed changes
         </div>
       </div>
     </div>
   </div>
 
   <div id="toast" role="status" aria-live="polite"></div>
+<<<<<<< Updated upstream
   <script src="../JavaScript/main.js"></script>
   <script src="../script.js"></script>
   <script src="../JavaScript/nav.js"></script>
   <script src="../JavaScript/boot-animation.js"></script>
   <script src="../JavaScript/footer-loader.js"></script>
   <script>
-    const lenis = new Lenis({
-      lerp: 0.1,
-      wheelMultiplier: 2.0,
+      lerp: 0.07,
+      wheelMultiplier: 1,
     });
 
     function raf(time) {
-      lenis.raf(time);
       requestAnimationFrame(raf);
     }
 
     requestAnimationFrame(raf);
   </script>
+=======
+  <script src="../JavaScript/main.js" defer></script>
+  <script src="../script.js" defer></script>
+  <script src="../JavaScript/nav.js" defer></script>
+  <script src="../JavaScript/boot-animation.js" defer></script>
+  <script src="../JavaScript/footer-loader.js" defer></script>
+  
+>>>>>>> Stashed changes
   <script>
     const authTabs = document.querySelectorAll('.auth-tab');
     const authForms = document.querySelectorAll('.auth-form');
@@ -377,6 +492,7 @@
         authForms.forEach(f => f.classList.remove('active'));
         tab.classList.add('active');
         document.getElementById(formId + 'Form').classList.add('active');
+<<<<<<< Updated upstream
         generateQRCode();
       });
     });
@@ -405,6 +521,12 @@
     }
 
     generateQRCode();
+=======
+      });
+    });
+
+    
+>>>>>>> Stashed changes
 
     document.getElementById('signinForm').addEventListener('submit', function(e) {
       e.preventDefault();
@@ -421,6 +543,12 @@
       }
       alert('Sign up functionality will be implemented soon!');
     });
+<<<<<<< Updated upstream
+=======
+
+    document.getElementById('loginGoogle').addEventListener('click',()=>alert('Google sign-in coming soon'));
+    document.getElementById('loginApple').addEventListener('click',()=>alert('Apple sign-in coming soon'));
+>>>>>>> Stashed changes
   </script>
 </body>
 </html>
