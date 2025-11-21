@@ -37,6 +37,3 @@ html
     │
     └── div#toast (Notification Popups)
 ```
-*   **JSX**: Writing HTML inside JavaScript.
-*   **Props**: Passing data down to components (like passing a title to a Card).
-*   **Hooks**: `useState` (for variables that change) and `useEffect` (for things like the scroll observer).
