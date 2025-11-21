@@ -78,3 +78,6 @@ COPYRIGHT AND TRADEMARK NOTICE
 
 © 2025 Yash Srivastava - Keeper Pvt. Ltd. All rights reserved. The "Keeper" name, logo, cryptograph, encryption models, and all related software and services are the exclusive property of Yash Srivastava - Keeper Pvt. Ltd. Use of these trademarks is strictly prohibited without prior written consent.
 ```
+© 2025 Yash Srivastava. All rights reserved.
+<img width="200" height="200" align="right" alt="Signature (Updated) (2)" src="https://github.com/user-attachments/assets/45c038ad-d806-4bf0-8e10-c61be0db2a70" />
+
